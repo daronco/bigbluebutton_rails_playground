@@ -1,5 +1,11 @@
 PATH
-  remote: ../bigbluebutton-rails/
+  remote: ../bigbluebutton-api-ruby/
+  specs:
+    bigbluebutton-api-ruby (0.0.4)
+      nokogiri (~> 1.4.0)
+
+PATH
+  remote: ../bigbluebutton_rails/
   specs:
     bigbluebutton_rails (0.0.1)
       bigbluebutton-api-ruby (~> 0.0.4)
@@ -35,8 +41,12 @@ GEM
       activesupport (= 3.0.3)
     activesupport (3.0.3)
     arel (2.0.9)
-    bigbluebutton-api-ruby (0.0.4)
+    bcrypt-ruby (2.1.4)
     builder (2.1.2)
+    devise (1.2.1)
+      bcrypt-ruby (~> 2.1.2)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.0.3)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     i18n (0.5.0)
@@ -47,6 +57,8 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     mysql (2.8.1)
+    nokogiri (1.4.4)
+    orm_adapter (0.0.4)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -74,12 +86,16 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.24)
+    warden (1.0.3)
+      rack (>= 1.0.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  bigbluebutton-api-ruby!
   bigbluebutton_rails!
+  devise
   mysql
   rails (~> 3.0.3)
   sqlite3-ruby
