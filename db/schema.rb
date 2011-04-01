@@ -10,12 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110329155620) do
+ActiveRecord::Schema.define(:version => 20110401201007) do
 
   create_table "bigbluebutton_rooms", :force => true do |t|
     t.integer  "server_id"
+    t.integer  "owner_id"
+    t.string   "owner_type"
     t.string   "meeting_id"
-    t.string   "meeting_name"
+    t.string   "name"
     t.string   "attendee_password"
     t.string   "moderator_password"
     t.string   "welcome_msg"
@@ -31,6 +33,13 @@ ActiveRecord::Schema.define(:version => 20110329155620) do
     t.string   "url"
     t.string   "salt"
     t.string   "version"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "spaces", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

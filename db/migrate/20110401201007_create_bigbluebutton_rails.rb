@@ -10,8 +10,10 @@ class CreateBigbluebuttonRails < ActiveRecord::Migration
     end
     create_table :bigbluebutton_rooms do |t|
       t.integer :server_id
+      t.integer :owner_id
+      t.string :owner_type
       t.string :meeting_id
-      t.string :meeting_name
+      t.string :name
       t.string :attendee_password
       t.string :moderator_password
       t.string :welcome_msg
