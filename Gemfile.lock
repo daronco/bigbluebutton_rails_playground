@@ -1,7 +1,7 @@
 PATH
   remote: ../bigbluebutton-api-ruby/
   specs:
-    bigbluebutton-api-ruby (0.0.4)
+    bigbluebutton-api-ruby (0.0.5)
       nokogiri (~> 1.4.0)
 
 PATH
