@@ -1,14 +1,15 @@
 PATH
   remote: ../bigbluebutton-api-ruby/
   specs:
-    bigbluebutton-api-ruby (0.0.5)
+    bigbluebutton-api-ruby (0.0.9)
       nokogiri (~> 1.4.0)
 
 PATH
   remote: ../bigbluebutton_rails/
   specs:
-    bigbluebutton_rails (0.0.1)
-      bigbluebutton-api-ruby (~> 0.0.4)
+    bigbluebutton_rails (0.0.2)
+      bigbluebutton-api-ruby (~> 0.0.9)
+      rails (~> 3.0.3)
 
 GEM
   remote: http://rubygems.org/

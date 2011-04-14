@@ -1,5 +1,42 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  bigbluebutton_rails:
+    bigbluebutton: "BigBlueButton"
+    servers:
+      notice:
+        create:
+          success: "Your server was successfully created."
+        update:
+          success: "Your server was successfully updated."
+    rooms:
+      notice:
+        create:
+          success: "Your room was successfully created."
+        update:
+          success: "Your room was successfully updated."
+        end:
+          success: "The meeting was successfully ended."
+          not_running: "The meeting could not be ended because it is not running."
+
+  activerecord:
+    models:
+      bigbluebutton_server: "BigBlueButton Server"
+      bigbluebutton_room: "BigBlueButton Room"
+    attributes: 
+      bigbluebutton_server:
+        name: "Name"
+        url: "URL"
+        salt: "Security Salt"
+        version: "Version"
+      bigbluebutton_room:
+        server_id: "Server ID"
+        meeting_id: "Meeting ID"
+        private: "Private"
+        name: "Name"
+        attendee_password: "Attendee Password"
+        moderator_password: "Moderator Password"
+        welcome_msg: "Welcome Message"
+        logout_url: "Logout URL"
+        dial_number: "Dial Number"
+        voice_bridge: "Voice Bridge"
+        max_participants: "Maximum Number of Participants"
+

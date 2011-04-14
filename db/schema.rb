@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110401201007) do
+ActiveRecord::Schema.define(:version => 20110414143546) do
 
   create_table "bigbluebutton_rooms", :force => true do |t|
     t.integer  "server_id"
@@ -21,6 +21,11 @@ ActiveRecord::Schema.define(:version => 20110401201007) do
     t.string   "attendee_password"
     t.string   "moderator_password"
     t.string   "welcome_msg"
+    t.string   "logout_url"
+    t.string   "voice_bridge"
+    t.string   "dial_number"
+    t.integer  "max_participants"
+    t.boolean  "private",            :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
