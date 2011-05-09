@@ -1,0 +1,30 @@
+<div id="header">
+
+  <div id="header_login">
+    <div class="block">
+    <% if user_signed_in? %>
+      Current user: <br />
+      <%= current_user.name %>,
+      <%= current_user.email %>
+    <% else %>
+      No user logged.
+    <% end %>
+    </div>
+
+    <div class="block">
+    <% if user_signed_in? %>
+      <%= link_to 'Edit user', edit_user_registration_path %>
+      <br />
+      <%= link_to 'Logout', destroy_user_session_path %>
+    <% else %>
+      <%= link_to 'Login', new_user_session_path %>
+      <br />
+      <%= link_to 'Register', new_user_registration_path %>
+    <% end %>
+    </div>
+  </div>
+
+  <div id="header_logo"><a href="/">Bigbluebutton on Rails Test Application</a></div>
+  <div id="header_link"><a href="https://github.com/mconf/bigbluebutton_rails">https://github.com/mconf/bigbluebutton_rails</a></div>
+
+</div>

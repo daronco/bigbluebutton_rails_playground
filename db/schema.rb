@@ -10,13 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110414143546) do
+ActiveRecord::Schema.define(:version => 20110507234758) do
 
   create_table "bigbluebutton_rooms", :force => true do |t|
     t.integer  "server_id"
     t.integer  "owner_id"
     t.string   "owner_type"
-    t.string   "meeting_id"
+    t.string   "meetingid"
     t.string   "name"
     t.string   "attendee_password"
     t.string   "moderator_password"
@@ -25,13 +25,15 @@ ActiveRecord::Schema.define(:version => 20110414143546) do
     t.string   "voice_bridge"
     t.string   "dial_number"
     t.integer  "max_participants"
-    t.boolean  "private",            :default => false
+    t.boolean  "private",             :default => false
+    t.boolean  "randomize_meetingid", :default => true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "bigbluebutton_rooms", ["meeting_id"], :name => "index_bigbluebutton_rooms_on_meeting_id", :unique => true
+  add_index "bigbluebutton_rooms", ["meetingid"], :name => "index_bigbluebutton_rooms_on_meetingid", :unique => true
   add_index "bigbluebutton_rooms", ["server_id"], :name => "index_bigbluebutton_rooms_on_server_id"
+  add_index "bigbluebutton_rooms", ["voice_bridge"], :name => "index_bigbluebutton_rooms_on_voice_bridge", :unique => true
 
   create_table "bigbluebutton_servers", :force => true do |t|
     t.string   "name"

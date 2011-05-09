@@ -11,11 +11,17 @@ en:
       notice:
         create:
           success: "Your room was successfully created."
+          failure: "Your room could not be created."
         update:
           success: "Your room was successfully updated."
+          failure: "Your room could not be updated."
         end:
           success: "The meeting was successfully ended."
           not_running: "The meeting could not be ended because it is not running."
+      error:
+        auth:
+          failure: "Authentication failure."
+          not_running: "The meeting is not running. You must wait for a moderator to join."
 
   activerecord:
     models:
@@ -29,7 +35,8 @@ en:
         version: "Version"
       bigbluebutton_room:
         server_id: "Server ID"
-        meeting_id: "Meeting ID"
+        meetingid: "Meeting ID"
+        randomize_meetingid: "Randomize Meeting ID"
         private: "Private"
         name: "Name"
         attendee_password: "Attendee Password"

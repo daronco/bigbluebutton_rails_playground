@@ -1,21 +1,7 @@
 <h1>Home</h1>
 
 <% if user_signed_in? %>
-  Current user: <br />
-  <%= current_user.name %> <br />
-  <%= current_user.email %>
-<% else %>
-  No user logged.
-<% end %>
-
-<br />
-<br />
-<% if user_signed_in? %>
-  <%= link_to 'Edit user', edit_user_registration_path %>
-  <br />
-  <%= link_to 'Logout', destroy_user_session_path %>
-
-
+  Hi, <%= current_user.name %> (<%= current_user.email %>)
 
 <br />
 <br />
@@ -52,7 +38,6 @@
 <br />
 <br />
 
-
 <h1>Room list</h1>
 
 <table>
@@ -71,7 +56,7 @@
 <% @rooms.each do |room| %>
   <tr>
     <td><%= room.server.id %></td>
-    <td><%= room.meeting_id %></td>
+    <td><%= room.meetingid %></td>
     <td><%= room.name %></td>
     <td><%= room.attendee_password %></td>
     <td><%= room.moderator_password %></td>
@@ -85,9 +70,6 @@
 </table>
 
 <br />
-
-
-
 
 <% else %>
   <%= link_to 'Login', new_user_session_path %>
