@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BigbluebuttonRailsPlayground</title>
+  <title>Bigbluebutton on Rails Test Application</title>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag 'jquery.min', 'rails', 'application', 'heartbeat' %>
+  <%= javascript_include_tag 'jquery.min', 'rails', 'application' %>
   <%= csrf_meta_tag %>
 
     <script type="text/javascript" charset="utf-8">
@@ -15,7 +15,11 @@
 </head>
 <body>
 
-<%= yield %>
+<%= render 'layouts/header' %>
+
+<div id="content">
+  <%= yield %>
+</div>
 
 </body>
 </html>
