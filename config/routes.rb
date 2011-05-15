@@ -4,7 +4,7 @@ BigbluebuttonRailsPlayground::Application.routes.draw do
 
   devise_for :users
 
-  bigbluebutton_routes :default
+  bigbluebutton_routes :default, :controllers => { :servers => 'custom_servers', :rooms => 'custom_rooms' }
 
   resources :users do
     bigbluebutton_routes :room_matchers
