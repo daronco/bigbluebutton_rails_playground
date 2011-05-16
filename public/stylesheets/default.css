@@ -10,37 +10,39 @@ body {
 
 a { text-decoration: none; color: #000; }
 a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
+a:hover { color: #006; }
 
 #header {
-  background: #888;
+  -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+  background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+  background-color:#ededed;
   padding: 10px;
-  color: white;
+  color: #444;
 }
+
+#header a:hover { color: #66c; }
 
 #header_logo {
   font-weight: bold;
   font-size: 14px;
-  color:#777777;
   font-family:arial;
   font-size:15px;
   font-weight:bold;
   text-decoration:none;
-  text-shadow:1px 1px 0px #444;
+  text-shadow:1px 1px 0px #fff;
 }
 
-#header_logo a {
-  color: white;
-}
+#header_logo a { color: #777; }
 
 #header_link {
-  color: #ccc;
+  color: #444;
   font-style: italic;
 }
-
-#header_link a {
-  color: #ccc;
-}
+#header_link a { color: #444; }
 
 #header_login {
   float: right;
