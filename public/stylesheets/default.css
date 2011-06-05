@@ -12,6 +12,17 @@ a { text-decoration: none; color: #000; }
 a:visited { color: #666; }
 a:hover { color: #006; }
 
+.flash_alert, .flash_notice, .flash_error {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.flash_alert, .flash_error { background:#FBE3E4; color:#8a1f11; border-color:#FBC2C4; }
+.flash_notice { background:#FFF6BF; color:#514721; border-color:#FFD324; }
+
 #header {
   -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
   -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;

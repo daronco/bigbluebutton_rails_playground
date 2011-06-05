@@ -3,12 +3,16 @@
 <head>
   <title>Bigbluebutton on Rails Test Application</title>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag 'jquery.min', 'jquery_ujs', 'jquery.fancybox-1.3.4.pack' %>
+  <%= javascript_include_tag 'jquery.min', 'jquery_ujs', 'jquery.fancybox-1.3.4.pack', 'functions' %>
   <%= csrf_meta_tag %>
 
     <script type="text/javascript" charset="utf-8">
       $(document).ready(function() {
         <%= yield :javascript %>
+
+        $('div.flash_alert').delay(5000).fadeOut(1500);
+        $('div.flash_notice').delay(5000).fadeOut(1500);
+        $('div.flash_error').delay(5000).fadeOut(1500);
       })
     </script>
 
@@ -18,6 +22,10 @@
 <%= render 'layouts/header' %>
 
 <div id="content">
+  <% flash.each do |name, msg| %>
+    <div class="flash_<%= name %>"><%= msg.html_safe %></div>
+  <% end %>
+
   <%= yield %>
 </div>
 

@@ -1,14 +1,18 @@
 <%= content_for :javascript do %>
-  $("a#webconference_join_mobile").fancybox({
+  $("a.webconference_join_mobile").fancybox({
     'hideOnContentClick' : false,
     'frameWidth' : 250,
     'frameHeight' : 500
   });
-  $("a#webconference_user_new").fancybox({
+  $("a.webconference_user_new").fancybox({
     'hideOnContentClick' : false,
     'frameWidth' : 250,
     'frameHeight' : 500
   });
+  $("a.webconference_join").click(function() {
+    return open_webconference_room($(this).attr('href'));
+  });
+
 <% end %>
 
 <h1>Home</h1>
@@ -19,7 +23,7 @@
 <h1>My Webconference Rooms</h1>
 
 <div id="home_menu">
-  <%= link_to 'Create Room', user_new_room_path(current_user), :id => 'webconference_user_new' %>
+  <%= link_to 'Create Room', user_new_room_path(current_user), :class => 'webconference_user_new' %>
   <%= link_to 'View Servers', bigbluebutton_servers_path %>
 </div>
 
@@ -27,13 +31,12 @@
 <% @rooms.each do |room| %>
   <div class="home_webconference_room <%= 'even' if i%2 == 0 %>">
     <div class="buttons_left">
-      <%= link_to 'Join', join_bigbluebutton_server_room_path(room.server, room), :class => 'button red_button small' %>
-      <%= link_to 'Mobile', join_mobile_bigbluebutton_server_room_path(room.server, room), :class => 'button gray_button small', :id => 'webconference_join_mobile' %>
+      <%= link_to 'Join', join_bigbluebutton_server_room_path(room.server, room), :class => 'webconference_join button red_button small' %>
+      <%= link_to 'Mobile', join_mobile_bigbluebutton_server_room_path(room.server, room), :class => 'webconference_join_mobile button gray_button small'  %>
     </div>
     <div class="buttons_right">
       <%= invite_bigbluebutton_server_room_url(room.server, room) %>
-      <%= link_to 'View', bigbluebutton_server_room_path(room.server, room), :class => 'button gray_button small' %>
-      <%= link_to 'Edit', edit_bigbluebutton_server_room_path(room.server, room), :class => 'button gray_button small' %>
+      <%= link_to 'Details', bigbluebutton_server_room_path(room.server, room), :class => 'button gray_button small' %>
       <%= link_to 'Remove', bigbluebutton_server_room_path(room.server, room), :confirm => 'Are you sure?', :method => :delete, :class => 'button gray_button small' %>
     </div>
     <span><%= room.name %></span>
