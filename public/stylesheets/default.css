@@ -24,8 +24,6 @@ a:hover { color: #006; }
   color: #444;
 }
 
-#header a:hover { color: #66c; }
-
 #header_logo {
   font-weight: bold;
   font-size: 14px;
@@ -37,6 +35,7 @@ a:hover { color: #006; }
 }
 
 #header_logo a { color: #777; }
+#header_logo a:hover { color: #66c; }
 
 #header_link {
   color: #444;
@@ -100,43 +99,33 @@ div.field, div.actions {
   list-style: square;
 }
 
-.button {
-  -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-  box-shadow:inset 0px 1px 0px 0px #ffffff;
-  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
-  background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
-  background-color:#ededed;
-  -moz-border-radius:6px;
-  -webkit-border-radius:6px;
-  border-radius:6px;
-  border:1px solid #dcdcdc;
-  display:inline-block;
-  color:#777777;
-  font-family:arial;
-  font-size:15px;
-  font-weight:bold;
-  padding:6px 24px;
-  text-decoration:none;
-  text-shadow:1px 1px 0px #ffffff;
+.home_webconference_room {
+  padding: 5px;
+  clear: both;
 }
-.button:hover {
-  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
-  background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
-  background-color:#dfdfdf;
-  color:#777777;
+
+.even {
+  background: #f0f0f0;
 }
-.button:active {
-  position:relative;
-  top:1px;
+
+.home_webconference_room .buttons_right {
+  float: right;
+  margin-left: 10px;
 }
-.small {
-  -moz-border-radius:6px;
-  -webkit-border-radius:6px;
-  border-radius:6px;
-  font-size:11px;
-  padding:2px 6px;
+
+.home_webconference_room .buttons_left {
+  float: left;
+  margin-right: 10px;
+}
+
+#home_menu {
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 3px;
+  margin-bottom: 10px;
+}
+
+.clearer {
+  clear: both;  
 }
 

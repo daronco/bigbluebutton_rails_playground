@@ -7,7 +7,7 @@ PATH
 PATH
   remote: ../bigbluebutton_rails/
   specs:
-    bigbluebutton_rails (0.0.3)
+    bigbluebutton_rails (0.0.4)
       bigbluebutton-api-ruby (~> 0.0.10)
       rails (~> 3.0.3)
 
@@ -51,6 +51,9 @@ GEM
     erubis (2.6.6)
       abstract (>= 1.0.0)
     i18n (0.5.0)
+    jquery-rails (1.0.9)
+      railties (~> 3.0)
+      thor (~> 0.14)
     mail (2.2.15)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
@@ -97,6 +100,7 @@ DEPENDENCIES
   bigbluebutton-api-ruby!
   bigbluebutton_rails!
   devise
+  jquery-rails
   mysql
   rails (~> 3.0.3)
   sqlite3-ruby

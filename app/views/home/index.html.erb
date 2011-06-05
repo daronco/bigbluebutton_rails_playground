@@ -3,71 +3,29 @@
 <% if user_signed_in? %>
   Hi, <%= current_user.name %> (<%= current_user.email %>)
 
-<br />
-<br />
+<h1>My Webconference Rooms</h1>
 
-  <h1>Server list</h1>
+<div id="home_menu">
+  <%= link_to 'New Room', new_bigbluebutton_server_room_path(BigbluebuttonServer.first), :class => 'button gray_button' %>
+  <%= link_to 'Servers', bigbluebutton_servers_path, :class => 'button gray_button' %>
+</div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Url</th>
-    <th>Salt</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @servers.each do |server| %>
-  <tr>
-    <td><%= server.name %></td>
-    <td><%= server.url %></td>
-    <td><%= server.salt %></td>
-    <td><%= link_to 'Show', server %></td>
-    <td><%= link_to 'Edit', edit_bigbluebutton_server_path(server) %></td>
-    <td><%= link_to 'Destroy', server, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Server', new_bigbluebutton_server_path %>
-
-<br />
-<br />
-<br />
-
-<h1>Room list</h1>
-
-<table>
-  <tr>
-    <th>Server ID</th>
-    <th>Meeting ID</th>
-    <th>Meeting Name</th>
-    <th>Attendee Password</th>
-    <th>Moderator Password</th>
-    <th>Welcome Message</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<% i = 1 %>
 <% @rooms.each do |room| %>
-  <tr>
-    <td><%= room.server.id %></td>
-    <td><%= room.meetingid %></td>
-    <td><%= room.name %></td>
-    <td><%= room.attendee_password %></td>
-    <td><%= room.moderator_password %></td>
-    <td><%= room.welcome_msg %></td>
-    <td><%= link_to 'Show', bigbluebutton_server_room_path(room.server, room) %></td>
-    <td><%= link_to 'Edit', edit_bigbluebutton_server_room_path(room.server, room) %></td>
-    <td><%= link_to 'Destroy', bigbluebutton_server_room_path(room.server, room), :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <div class="home_webconference_room <%= 'even' if i%2 == 0 %>">
+    <div class="buttons_left">
+      <%= link_to 'Join', join_bigbluebutton_server_room_path(room.server, room), :class => 'button red_button small' %>
+    </div>
+    <div class="buttons_right">
+      <%= link_to 'Show', bigbluebutton_server_room_path(room.server, room), :class => 'button gray_button small' %>
+      <%= link_to 'Edit', edit_bigbluebutton_server_room_path(room.server, room), :class => 'button gray_button small' %>
+      <%= link_to 'Destroy', bigbluebutton_server_room_path(room.server, room), :confirm => 'Are you sure?', :method => :delete, :class => 'button gray_button small' %>
+    </div>
+    <span><%= room.name %></span>
+    <div class="clearer"></div>
+  </div>
+  <% i += 1 %>
 <% end %>
-
-</table>
 
 <br />
 

@@ -3,21 +3,18 @@
   <div id="header_login">
     <div class="block">
     <% if user_signed_in? %>
-      Current user: <br />
       <%= current_user.name %>,
       <%= current_user.email %>
-    <% else %>
-      No user logged.
     <% end %>
     </div>
 
     <div class="block">
     <% if user_signed_in? %>
-      <%= link_to 'Edit user', edit_user_registration_path, :class => 'button small' %>
-      <%= link_to 'Logout', destroy_user_session_path, :class => 'button small' %>
+      <%= link_to 'Edit user', edit_user_registration_path, :class => 'button blue_button small' %>
+      <%= link_to 'Logout', destroy_user_session_path, :class => 'button red_button small' %>
     <% else %>
-      <%= link_to 'Login', new_user_session_path, :class => 'button small' %>
-      <%= link_to 'Register', new_user_registration_path, :class => 'button small' %>
+      <%= link_to 'Login', new_user_session_path, :class => 'button blue_button small' %>
+      <%= link_to 'Register', new_user_registration_path, :class => 'button blue_button small' %>
     <% end %>
     </div>
   </div>

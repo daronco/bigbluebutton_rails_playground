@@ -7,4 +7,5 @@ gem 'bigbluebutton-api-ruby', :path => "../bigbluebutton-api-ruby/"
 gem 'mysql'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'devise'
+gem 'jquery-rails'
 
