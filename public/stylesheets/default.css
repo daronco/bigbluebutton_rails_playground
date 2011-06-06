@@ -124,10 +124,17 @@ div.field, div.actions {
 .home_webconference_room {
   padding: 5px;
   clear: both;
+  border: 1px solid white;
 }
 
-.even {
+.home_webconference_room_even {
   background: #f0f0f0;
+  border: 1px solid #f0f0f0;
+}
+
+.home_webconference_room:hover {
+  background: #f0dede;
+  border: 1px solid #f0a2a2;
 }
 
 .home_webconference_room .buttons_right {
@@ -138,6 +145,50 @@ div.field, div.actions {
 .home_webconference_room .buttons_left {
   float: left;
   margin-right: 10px;
+}
+
+.home_webconference_details {
+  /*border: 1px solid red;*/
+  margin-top: 5px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  clear: both;
+  padding: 5px;
+  display: none;
+}
+
+.home_webconference_details h4 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.home_webconference_details .field {
+  margin: 0;
+  clear: both;
+}
+
+.home_webconference_details label {
+  clear: left;
+  float: left;
+  width: 250px;
+  text-align: right;
+  margin-right: 10px;
+  margin-left: 30px;
+  font-weight: bold;
+}
+
+.home_webconference_details .value {
+}
+
+.home_webconference_name {
+  display: block;
+  font-weight: bold;
+  color: #444;
+}
+
+.home_webconference_name:hover, .home_webconference_name:active {
+  color: black;
 }
 
 #home_menu {

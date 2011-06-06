@@ -4,3 +4,8 @@ function open_webconference_room(path) {
   if (window.focus) {newwindow.focus()}
   return false;    
 }
+
+function show_webconference_details(id) {
+  $("div#home_webconference_details_" + id).toggle(80);
+  return false;
+}
