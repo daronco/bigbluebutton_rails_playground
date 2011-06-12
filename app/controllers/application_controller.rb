@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   def bigbluebutton_role(room)
     if room.private or current_user.nil?
-      nil
+      :password
     else
       :moderator
     end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110507234758) do
+ActiveRecord::Schema.define(:version => 20110612020121) do
 
   create_table "bigbluebutton_rooms", :force => true do |t|
     t.integer  "server_id"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20110507234758) do
     t.boolean  "randomize_meetingid", :default => true
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "external",            :default => false
   end
 
   add_index "bigbluebutton_rooms", ["meetingid"], :name => "index_bigbluebutton_rooms_on_meetingid", :unique => true
