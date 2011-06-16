@@ -41,5 +41,8 @@ module BigbluebuttonRailsPlayground
 
     # for jquery-rails
     config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
+
+    # Enable the asset pipeline
+    config.assets.enabled = true
   end
 end
