@@ -1,0 +1,41 @@
+# Default configurations
+default:
+
+  # BigBlueButton default server configuration
+  # This server will be your first and default server
+  bbb_server:
+    name: 'Default Server'
+    url: 'http://my-development-server/bigbluebutton/api'
+    salt: 'my-secret-salt'
+    version: '0.7'
+
+  # Email account used to send all emails from within the application (invitations,
+  # registrations confirmations, etc). For now you have to use a Gmail account.
+  # See config/initializers/mail_conf.rb
+  sendmail:
+    username: "my-username@gmail.com"
+    password: "my-password"
+
+# Development configurations
+#development:
+#  bbb_server:
+#    url: 'http://dev-server/bigbluebutton/api'
+#    salt: 'dev-server-salt'
+#    version: '0.7'
+
+
+# Production configurations
+#production:
+#  bbb_server:
+#    url: 'http://production-server/bigbluebutton/api'
+#    salt: 'production-server-salt'
+#    version: '0.7'
+
+
+# Test configurations
+#test:
+#  bbb_server:
+#    url: 'http://test-server/bigbluebutton/api'
+#    salt: 'test-server-salt'
+#    version: '0.7'
+
