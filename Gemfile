@@ -16,6 +16,7 @@ gem 'uglifier'
 
 # Rails 3.1 - JavaScript
 gem 'jquery-rails'
+gem 'therubyracer', :require => 'v8'
 
 # Rails 3.1 - Heroku
 #group :production do

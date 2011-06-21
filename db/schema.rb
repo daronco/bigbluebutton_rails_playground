@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110612020121) do
+ActiveRecord::Schema.define(:version => 20110621144134) do
 
   create_table "bigbluebutton_rooms", :force => true do |t|
     t.integer  "server_id"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20110612020121) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "external",            :default => false
+    t.string   "param"
   end
 
   add_index "bigbluebutton_rooms", ["meetingid"], :name => "index_bigbluebutton_rooms_on_meetingid", :unique => true
@@ -43,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20110612020121) do
     t.string   "version"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "param"
   end
 
   create_table "spaces", :force => true do |t|
