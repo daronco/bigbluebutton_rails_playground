@@ -1,3 +1,8 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -24,16 +29,23 @@ a:hover { color: #006; }
 .flash_notice { background:#FFF6BF; color:#514721; border-color:#FFD324; }
 
 #header {
-  -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-  box-shadow:inset 0px 1px 0px 0px #ffffff;
-  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
-  background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
-  background-color:#ededed;
-  padding: 10px;
+  -moz-box-shadow:#666 0px 2px 8px 0;
+  -webkit-box-shadow:#666 0px 2px 8px 0;
+  box-shadow:#666 0px 2px 8px 0;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #34618e), color-stop(1, #1F4A75) );
+  background:-moz-linear-gradient( center top, #34618e 5%, #1F4A75 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#34618e', endColorstr='#1F4A75');
+
+  height: 55px;
+  background-color:red;
   color: #444;
-  height: 45px;
+  padding: 5px;
+  margin: 0;
+}
+
+#header_content {
+  width: 1200px;
+  margin: auto;
 }
 
 #header_logo_image {
@@ -46,19 +58,22 @@ a:hover { color: #006; }
   font-size:15px;
   font-weight:bold;
   text-decoration:none;
-  text-shadow:1px 1px 0px #fff;
+  text-shadow:1px 1px 0px #333;
   margin-top: 5px;
 }
 
-#header_logo_text a { color: #777; }
-#header_logo_text a:hover { color: #66c; }
+#header_logo_text a { color: #eee; }
+#header_logo_text a:hover {
+  color: #fff;
+  text-shadow:1px 1px 0px #555;
+}
 
 #header_link {
-  color: #444;
+  color: #bbb;
   font-style: italic;
 }
-#header_link a { color: #444; }
-#header_link a:hover { color: #000; }
+#header_link a { color: #bbb; }
+#header_link a:hover { color: #fff; }
 
 #header_login {
   float: right;
@@ -72,11 +87,13 @@ a:hover { color: #006; }
 
 #header_login .data .button_area {
   display: block;
-  margin-bottom: 5px;  
+  margin-bottom: 5px;
 }
 
 #content {
   padding: 10px;
+  width: 1200px;
+  margin: auto;
 }
 
 
@@ -133,8 +150,11 @@ div.field, div.actions {
 }
 
 .home_webconference_room:hover {
-  background: #f0dede;
-  border: 1px solid #f0a2a2;
+/*  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #34618e), color-stop(1, ) );
+  background: #c6d6e7;
+*/
+  border-bottom: 1px solid #666;
+  border-top: 1px solid #666;
 }
 
 .home_webconference_room .buttons_right {
@@ -216,6 +236,6 @@ div.field, div.actions {
 }
 
 .clearer {
-  clear: both;  
+  clear: both;
 }
 

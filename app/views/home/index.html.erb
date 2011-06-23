@@ -42,8 +42,8 @@
       <%= link_to 'Remove', bigbluebutton_server_room_path(room.server, room), :confirm => 'Are you sure?', :method => :delete, :class => 'button gray_button small' %>
     </div>
     <%= link_to room.name, bigbluebutton_server_room_path(room.server, room), :class => 'webconference_details_button home_webconference_name', :"data-room-id" => room.id %>
-    <%= render :partial => 'home/webconference_details', :locals => { :room => room } %>
   </div>
+  <%= render :partial => 'home/webconference_details', :locals => { :room => room } %>
   <% i += 1 %>
 <% end %>
 
