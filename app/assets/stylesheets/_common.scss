@@ -1,0 +1,26 @@
+$website-width: 1100px;
+
+@mixin rounded($radius: 5px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box_shadow($color: #666, $a1: 0, $a2: 0, $a3: 0, $a4: 0) {
+  -moz-box-shadow: $color $a1 $a2 $a3 $a4;
+  -webkit-box-shadow: $color $a1 $a2 $a3 $a4;
+  box-shadow: $color $a1 $a2 $a3 $a4;
+}
+
+@mixin box_shadow_disabled() {
+  -moz-box-shadow: 0;
+  -webkit-box-shadow: 0;
+  box-shadow: 0;
+}
+
+@mixin gradient($color1, $color2) {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, $color1), color-stop(1, $color2) );
+  background:-moz-linear-gradient( center top, $color1 5%, $color2 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='$color2');
+}
+
