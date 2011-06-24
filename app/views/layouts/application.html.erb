@@ -5,19 +5,6 @@
   <%= stylesheet_link_tag 'application' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tag %>
-
-    <script type="text/javascript" charset="utf-8">
-      <%= yield :javascript_global %>
-
-      $(document).ready(function() {
-        <%= yield :javascript %>
-
-        $('div.flash_alert').delay(5000).fadeOut(1500);
-        $('div.flash_notice').delay(5000).fadeOut(1500);
-        $('div.flash_error').delay(5000).fadeOut(1500);
-      })
-    </script>
-
 </head>
 <body>
 
