@@ -1,4 +1,4 @@
-@import "common";
+@import "compass/css3";
 
 .button {
   font-family:arial;
@@ -6,7 +6,7 @@
   font-weight:bold;
   padding:6px 24px;
   text-decoration:none;
-  @include rounded(3px);
+  @include border-radius(3px);
 }
 
 .gray_button {
@@ -14,20 +14,19 @@
   background-color:#ededed;
   border:1px solid #cdcdcd;
   color:#777777;
-  text-shadow:1px 1px 0px #ffffff;
+  @include text-shadow(#fff 1px 1px 0px);
 
   &:hover, &:visited, &:active {
-    @include box_shadow_disabled();
     background-color:#34618e;
     border:1px solid #1F4A75;
     color:#fff;
-    text-shadow:1px 1px 0px #444;
     background-color:#34618e;
-    @include gradient(#34618e, #1F4A75);
+    @include text-shadow(#444 1px 1px 0px);
+    @include background-image(linear-gradient(top, #34618e, #1F4A75));
   }
 
   &:active {
-    @include gradient(#1F4A75, #34618e);
+    @include background-image(linear-gradient(top, #1F4A75, #34618e));
   }
 }
 
@@ -36,19 +35,18 @@
   background-color:#fa665a;
   border:1px solid #d83526;
   color:#ffffff;
-  text-shadow:1px 1px 0px #98231a;
+  @include text-shadow(#98231a 1px 1px 0px);
 
   &:hover, &:visited, &:active {
-    @include box_shadow_disabled();
     color: #fff;
     background-color:#fa665a;
     border:1px solid #b34940;
-    text-shadow:1px 1px 0px #444;
-    @include gradient(#fa4a3c, #d32d1d);
+    @include text-shadow(#444 1px 1px 0px);
+    @include background-image(linear-gradient(top, #fa4a3c, #d32d1d));
   }
 
   &:active {
-    @include gradient(#d32d1d, #fa4a3c);
+    @include background-image(linear-gradient(top, #d32d1d, #fa4a3c));
   }
 }
 
@@ -57,24 +55,22 @@
   background-color:#79bbff;
   border:1px solid #469df5;
   color:#fff;
-  text-shadow:1px 1px 0px #287ace;
+  @include text-shadow(#287ace 1px 1px 0px);
 
   &:hover, &:visited, &:active {
-    @include box_shadow_disabled();
     background-color:#34618e;
     border:1px solid #1F4A75;
     color:#fff;
-    text-shadow:1px 1px 0px #444;
     background-color:#34618e;
-    @include gradient(#34618e, #1F4A75);
+    @include text-shadow(#444 1px 1px 0px);
+    @include background-image(linear-gradient(top, #34618e, #1F4A75));
   }
 
   &:active {
-    @include gradient(#1F4A75, #34618e);
+    @include background-image(linear-gradient(top, #1F4A75, #34618e));
   }
 
   /*&:hover, &:visited, &:active {
-    @include box_shadow_disabled();
     background-color:#4197ee;
     color: #fff;
     border:1px solid #3284d7;
@@ -88,7 +84,7 @@
 }
 
 .small {
-  @include rounded(3px);
+  @include border-radius(3px);
   font-size:11px;
   padding:2px 7px;
 }

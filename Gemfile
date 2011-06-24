@@ -13,6 +13,7 @@ gem 'json'
 gem 'sass'
 gem 'coffee-script'
 gem 'uglifier'
+gem 'compass'
 
 # Rails 3.1 - JavaScript
 gem 'jquery-rails'
