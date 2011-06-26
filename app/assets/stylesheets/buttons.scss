@@ -13,10 +13,12 @@
   @extend .button;
   background-color:#ededed;
   border:1px solid #cdcdcd;
-  color:#777777;
+  color:#777;
   @include text-shadow(#fff 1px 1px 0px);
 
-  &:hover, &:visited, &:active {
+  &:visited { color: #777; }
+
+  &:hover {
     background-color:#34618e;
     border:1px solid #1F4A75;
     color:#fff;
@@ -26,6 +28,7 @@
   }
 
   &:active {
+    @extend .gray_button:hover;
     @include background-image(linear-gradient(top, #1F4A75, #34618e));
   }
 }
@@ -34,10 +37,12 @@
   @extend .button;
   background-color:#fa665a;
   border:1px solid #d83526;
-  color:#ffffff;
+  color: #fff;
   @include text-shadow(#98231a 1px 1px 0px);
 
-  &:hover, &:visited, &:active {
+  &:visited { color: #fff; }
+
+  &:hover {
     color: #fff;
     background-color:#fa665a;
     border:1px solid #b34940;
@@ -46,6 +51,7 @@
   }
 
   &:active {
+    @extend .red_button:hover;
     @include background-image(linear-gradient(top, #d32d1d, #fa4a3c));
   }
 }
@@ -57,7 +63,9 @@
   color:#fff;
   @include text-shadow(#287ace 1px 1px 0px);
 
-  &:hover, &:visited, &:active {
+  &:visited { color: #fff; }
+
+  &:hover {
     background-color:#34618e;
     border:1px solid #1F4A75;
     color:#fff;
@@ -67,20 +75,9 @@
   }
 
   &:active {
+    @extend .blue_button:hover;
     @include background-image(linear-gradient(top, #1F4A75, #34618e));
   }
-
-  /*&:hover, &:visited, &:active {
-    background-color:#4197ee;
-    color: #fff;
-    border:1px solid #3284d7;
-    text-shadow:1px 1px 0px #444;
-    @include gradient(#79bbff, #4197ee);
-  }
-
-  &:active {
-    @include gradient(#4197ee, #79bbff);
-  }*/
 }
 
 .small {

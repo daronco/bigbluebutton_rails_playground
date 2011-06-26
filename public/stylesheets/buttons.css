@@ -17,11 +17,15 @@
 .gray_button {
   background-color: #ededed;
   border: 1px solid #cdcdcd;
-  color: #777777;
+  color: #777;
   text-shadow: white 1px 1px 0px;
 }
 /* line 19, ../../app/assets/stylesheets/buttons.scss */
-.gray_button:hover, .gray_button:visited, .gray_button:active {
+.gray_button:visited {
+  color: #777;
+}
+/* line 21, ../../app/assets/stylesheets/buttons.scss */
+.gray_button:hover, .gray_button:active {
   background-color: #34618e;
   border: 1px solid #1F4A75;
   color: #fff;
@@ -34,7 +38,7 @@
   background-image: -ms-linear-gradient(top, #34618e, #1f4a75);
   background-image: linear-gradient(top, #34618e, #1f4a75);
 }
-/* line 28, ../../app/assets/stylesheets/buttons.scss */
+/* line 30, ../../app/assets/stylesheets/buttons.scss */
 .gray_button:active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1f4a75), color-stop(100%, #34618e));
   background-image: -webkit-linear-gradient(top, #1f4a75, #34618e);
@@ -44,15 +48,19 @@
   background-image: linear-gradient(top, #1f4a75, #34618e);
 }
 
-/* line 33, ../../app/assets/stylesheets/buttons.scss */
+/* line 36, ../../app/assets/stylesheets/buttons.scss */
 .red_button {
   background-color: #fa665a;
   border: 1px solid #d83526;
-  color: #ffffff;
+  color: #fff;
   text-shadow: #98231a 1px 1px 0px;
 }
-/* line 40, ../../app/assets/stylesheets/buttons.scss */
-.red_button:hover, .red_button:visited, .red_button:active {
+/* line 43, ../../app/assets/stylesheets/buttons.scss */
+.red_button:visited {
+  color: #fff;
+}
+/* line 45, ../../app/assets/stylesheets/buttons.scss */
+.red_button:hover, .red_button:active {
   color: #fff;
   background-color: #fa665a;
   border: 1px solid #b34940;
@@ -64,7 +72,7 @@
   background-image: -ms-linear-gradient(top, #fa4a3c, #d32d1d);
   background-image: linear-gradient(top, #fa4a3c, #d32d1d);
 }
-/* line 48, ../../app/assets/stylesheets/buttons.scss */
+/* line 53, ../../app/assets/stylesheets/buttons.scss */
 .red_button:active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d32d1d), color-stop(100%, #fa4a3c));
   background-image: -webkit-linear-gradient(top, #d32d1d, #fa4a3c);
@@ -74,26 +82,19 @@
   background-image: linear-gradient(top, #d32d1d, #fa4a3c);
 }
 
-/* line 53, ../../app/assets/stylesheets/buttons.scss */
+/* line 59, ../../app/assets/stylesheets/buttons.scss */
 .blue_button {
   background-color: #79bbff;
   border: 1px solid #469df5;
   color: #fff;
   text-shadow: #287ace 1px 1px 0px;
-  /*&:hover, &:visited, &:active {
-    background-color:#4197ee;
-    color: #fff;
-    border:1px solid #3284d7;
-    text-shadow:1px 1px 0px #444;
-    @include gradient(#79bbff, #4197ee);
-  }
-
-  &:active {
-    @include gradient(#4197ee, #79bbff);
-  }*/
 }
-/* line 60, ../../app/assets/stylesheets/buttons.scss */
-.blue_button:hover, .blue_button:visited, .blue_button:active {
+/* line 66, ../../app/assets/stylesheets/buttons.scss */
+.blue_button:visited {
+  color: #fff;
+}
+/* line 68, ../../app/assets/stylesheets/buttons.scss */
+.blue_button:hover, .blue_button:active {
   background-color: #34618e;
   border: 1px solid #1F4A75;
   color: #fff;
@@ -106,7 +107,7 @@
   background-image: -ms-linear-gradient(top, #34618e, #1f4a75);
   background-image: linear-gradient(top, #34618e, #1f4a75);
 }
-/* line 69, ../../app/assets/stylesheets/buttons.scss */
+/* line 77, ../../app/assets/stylesheets/buttons.scss */
 .blue_button:active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1f4a75), color-stop(100%, #34618e));
   background-image: -webkit-linear-gradient(top, #1f4a75, #34618e);
@@ -116,7 +117,7 @@
   background-image: linear-gradient(top, #1f4a75, #34618e);
 }
 
-/* line 86, ../../app/assets/stylesheets/buttons.scss */
+/* line 83, ../../app/assets/stylesheets/buttons.scss */
 .small {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;

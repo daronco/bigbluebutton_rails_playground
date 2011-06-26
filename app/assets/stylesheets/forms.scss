@@ -1,0 +1,20 @@
+@import "compass/css3";
+
+input.string,
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input.password,
+code,
+textarea {
+  padding: 4px;
+  outline: none;
+  border: 1px solid #d0d0d0;
+  background-color: #f7f7f7;
+  @include border-radius(3px);
+
+  &:focus {
+    background-color: #fff;
+    border: 1px solid #4f81bd;
+  }
+}

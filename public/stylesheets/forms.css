@@ -1,0 +1,30 @@
+/* line 9, ../../app/assets/stylesheets/forms.scss */
+input.string,
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input.password,
+code,
+textarea {
+  padding: 4px;
+  outline: none;
+  border: 1px solid #d0d0d0;
+  background-color: #f7f7f7;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 16, ../../app/assets/stylesheets/forms.scss */
+input.string:focus,
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='email']:focus,
+input.password:focus,
+code:focus,
+textarea:focus {
+  background-color: #fff;
+  border: 1px solid #4f81bd;
+}

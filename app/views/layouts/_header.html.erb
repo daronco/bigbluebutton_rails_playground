@@ -5,26 +5,31 @@
     <div id="header_login">
       <div class="data">
         <% if user_signed_in? %>
-          <%= current_user.name %>,
-          <%= current_user.email %>
+          Hi, <%= link_to current_user.name, edit_user_registration_path %>
         <% end %>
       </div>
 
       <div class="data">
-      <% if user_signed_in? %>
-        <div class="button_area"><%= link_to 'Edit user', edit_user_registration_path, :class => 'red_button small' %></div>
-        <div class="button_area"><%= link_to 'Logout', destroy_user_session_path, :class => 'red_button small' %></div>
-      <% else %>
-        <div class="button_area"><%= link_to 'Login', new_user_session_path, :class => 'red_button small' %></div>
-        <div class="button_area"><%= link_to 'Register', new_user_registration_path, :class => 'red_button small' %></div>
-      <% end %>
+        <div class="session_links">
+          <% if user_signed_in? %>
+            <%= link_to 'Account', edit_user_registration_path, :class => 'link' %>
+            <%= link_to 'Logout', destroy_user_session_path, :class => 'link' %>
+          <% else %>
+            <%= link_to 'Login', new_user_session_path, :class => 'link' %>
+            <%= link_to 'Register', new_user_registration_path, :class => 'link' %>
+          <% end %>
+        </div>
       </div>
+
     </div>
 
-
-    <div id="header_logo_image"><a href="<%= home_index_path %>"><%= image_tag "bbb_on_rails_small.png", :size => '35x45' %></a></div>
-    <div id="header_logo_text"><a href="<%= home_index_path %>">Bigbluebutton on Rails Test Application</a></div>
-    <div id="header_link"><a href="https://github.com/mconf/bigbluebutton_rails">https://github.com/mconf/bigbluebutton_rails</a></div>
+    <div id="header_logo">
+      <div class="image"><a href="<%= home_index_path %>"><%= image_tag "bbb_on_rails_small.png", :size => '35x45' %></a></div>
+      <div class="text">
+        <div class="title"><a href="<%= home_index_path %>">Bigbluebutton on Rails Test Application</a></div>
+        <div class="subtitle"><a href="https://github.com/mconf/bigbluebutton_rails">https://github.com/mconf/bigbluebutton_rails</a></div>
+      </div>
+    </div>
 
   </div>
 
