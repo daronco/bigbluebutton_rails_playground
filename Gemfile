@@ -25,4 +25,6 @@ gem 'therubyracer', :require => 'v8'
 #  gem 'pg'
 #end
 
+gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
+
 gem 'configatron'

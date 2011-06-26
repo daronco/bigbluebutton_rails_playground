@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/plataformatec/simple_form.git
+  revision: d529379c72b87ebcd2e1bd7182b47305982eec55
+  specs:
+    simple_form (1.4.1)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
+
 PATH
   remote: ../bigbluebutton-api-ruby/
   specs:
@@ -144,6 +152,7 @@ DEPENDENCIES
   json
   rails (~> 3.1.0.rc1)
   sass
+  simple_form!
   sqlite3-ruby
   therubyracer
   uglifier

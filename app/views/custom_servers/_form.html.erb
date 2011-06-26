@@ -1,4 +1,4 @@
-<%= form_for(@server) do |f| %>
+<%= simple_form_for(@server) do |f| %>
   <% if @server.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@server.errors.count, "error") %> prohibited this bigbluebutton_server from being saved:</h2>
@@ -10,27 +10,10 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
-  </div>
-  <div class="field">
-    <%= f.label :salt %><br />
-    <%= f.text_field :salt %>
-  </div>
-  <div class="field">
-    <%= f.label :version %><br />
-    <%= f.text_field :version %>
-  </div>
-  <div class="field">
-    <%= f.label :param %><br />
-    <%= f.text_field :param %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.input :name %>
+  <%= f.input :url %>
+  <%= f.input :salt %>
+  <%= f.input :version %>
+  <%= f.input :param %>
+  <%= f.button :submit %>
 <% end %>

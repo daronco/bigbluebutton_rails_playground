@@ -1,10 +1,12 @@
-/* line 3, ../../app/assets/stylesheets/buttons.scss */
-.button, .gray_button, .red_button, .blue_button {
+/* line 4, ../../app/assets/stylesheets/buttons.scss */
+.default_button, .gray_button, .button, .red_button, .blue_button {
   font-family: arial;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bold;
-  padding: 6px 24px;
+  padding: 2px 6px;
   text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
@@ -13,19 +15,19 @@
   border-radius: 3px;
 }
 
-/* line 12, ../../app/assets/stylesheets/buttons.scss */
-.gray_button {
+/* line 15, ../../app/assets/stylesheets/buttons.scss */
+.gray_button, .button {
   background-color: #ededed;
   border: 1px solid #cdcdcd;
   color: #777;
   text-shadow: white 1px 1px 0px;
 }
-/* line 19, ../../app/assets/stylesheets/buttons.scss */
-.gray_button:visited {
+/* line 22, ../../app/assets/stylesheets/buttons.scss */
+.gray_button:visited, .button:visited {
   color: #777;
 }
-/* line 21, ../../app/assets/stylesheets/buttons.scss */
-.gray_button:hover, .gray_button:active {
+/* line 24, ../../app/assets/stylesheets/buttons.scss */
+.gray_button:hover, .gray_button:active, .button:active, .button:hover, .gray_button:focus, .button:focus {
   background-color: #34618e;
   border: 1px solid #1F4A75;
   color: #fff;
@@ -38,8 +40,8 @@
   background-image: -ms-linear-gradient(top, #34618e, #1f4a75);
   background-image: linear-gradient(top, #34618e, #1f4a75);
 }
-/* line 30, ../../app/assets/stylesheets/buttons.scss */
-.gray_button:active {
+/* line 33, ../../app/assets/stylesheets/buttons.scss */
+.gray_button:active, .button:active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1f4a75), color-stop(100%, #34618e));
   background-image: -webkit-linear-gradient(top, #1f4a75, #34618e);
   background-image: -moz-linear-gradient(top, #1f4a75, #34618e);
@@ -48,19 +50,19 @@
   background-image: linear-gradient(top, #1f4a75, #34618e);
 }
 
-/* line 36, ../../app/assets/stylesheets/buttons.scss */
+/* line 43, ../../app/assets/stylesheets/buttons.scss */
 .red_button {
   background-color: #fa665a;
   border: 1px solid #d83526;
   color: #fff;
   text-shadow: #98231a 1px 1px 0px;
 }
-/* line 43, ../../app/assets/stylesheets/buttons.scss */
+/* line 50, ../../app/assets/stylesheets/buttons.scss */
 .red_button:visited {
   color: #fff;
 }
-/* line 45, ../../app/assets/stylesheets/buttons.scss */
-.red_button:hover, .red_button:active {
+/* line 52, ../../app/assets/stylesheets/buttons.scss */
+.red_button:hover, .red_button:active, .red_button:focus {
   color: #fff;
   background-color: #fa665a;
   border: 1px solid #b34940;
@@ -72,7 +74,7 @@
   background-image: -ms-linear-gradient(top, #fa4a3c, #d32d1d);
   background-image: linear-gradient(top, #fa4a3c, #d32d1d);
 }
-/* line 53, ../../app/assets/stylesheets/buttons.scss */
+/* line 60, ../../app/assets/stylesheets/buttons.scss */
 .red_button:active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d32d1d), color-stop(100%, #fa4a3c));
   background-image: -webkit-linear-gradient(top, #d32d1d, #fa4a3c);
@@ -82,19 +84,19 @@
   background-image: linear-gradient(top, #d32d1d, #fa4a3c);
 }
 
-/* line 59, ../../app/assets/stylesheets/buttons.scss */
+/* line 66, ../../app/assets/stylesheets/buttons.scss */
 .blue_button {
   background-color: #79bbff;
   border: 1px solid #469df5;
   color: #fff;
   text-shadow: #287ace 1px 1px 0px;
 }
-/* line 66, ../../app/assets/stylesheets/buttons.scss */
+/* line 73, ../../app/assets/stylesheets/buttons.scss */
 .blue_button:visited {
   color: #fff;
 }
-/* line 68, ../../app/assets/stylesheets/buttons.scss */
-.blue_button:hover, .blue_button:active {
+/* line 75, ../../app/assets/stylesheets/buttons.scss */
+.blue_button:hover, .blue_button:active, .blue_button:focus {
   background-color: #34618e;
   border: 1px solid #1F4A75;
   color: #fff;
@@ -107,7 +109,7 @@
   background-image: -ms-linear-gradient(top, #34618e, #1f4a75);
   background-image: linear-gradient(top, #34618e, #1f4a75);
 }
-/* line 77, ../../app/assets/stylesheets/buttons.scss */
+/* line 84, ../../app/assets/stylesheets/buttons.scss */
 .blue_button:active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1f4a75), color-stop(100%, #34618e));
   background-image: -webkit-linear-gradient(top, #1f4a75, #34618e);
@@ -117,7 +119,7 @@
   background-image: linear-gradient(top, #1f4a75, #34618e);
 }
 
-/* line 83, ../../app/assets/stylesheets/buttons.scss */
+/* line 90, ../../app/assets/stylesheets/buttons.scss */
 .small {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -126,5 +128,5 @@
   -khtml-border-radius: 3px;
   border-radius: 3px;
   font-size: 11px;
-  padding: 2px 7px;
+  padding: 0 5px;
 }

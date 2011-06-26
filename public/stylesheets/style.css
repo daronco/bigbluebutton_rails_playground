@@ -177,7 +177,15 @@ h1 {
   margin-top: 10px;
 }
 
-/* line 36, ../../app/assets/stylesheets/style.scss */
+/* line 35, ../../app/assets/stylesheets/style.scss */
+h2 {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 12px;
+  margin-top: 8px;
+}
+
+/* line 42, ../../app/assets/stylesheets/style.scss */
 .flash_standard, .flash_alert, .flash_error, .flash_notice {
   padding: 10px;
   margin: 10px;
@@ -190,21 +198,21 @@ h1 {
   border-radius: 5px;
 }
 
-/* line 43, ../../app/assets/stylesheets/style.scss */
+/* line 49, ../../app/assets/stylesheets/style.scss */
 .flash_alert, .flash_error {
   background: #FBE3E4;
   color: #8a1f11;
   border-color: #FBC2C4;
 }
 
-/* line 50, ../../app/assets/stylesheets/style.scss */
+/* line 56, ../../app/assets/stylesheets/style.scss */
 .flash_notice {
   background: #FFF6BF;
   color: #514721;
   border-color: #FFD324;
 }
 
-/* line 57, ../../app/assets/stylesheets/style.scss */
+/* line 63, ../../app/assets/stylesheets/style.scss */
 #header {
   -moz-box-shadow: #666666 0 2px 8px;
   -webkit-box-shadow: #666666 0 2px 8px;
@@ -223,14 +231,14 @@ h1 {
   margin: 0;
 }
 
-/* line 68, ../../app/assets/stylesheets/style.scss */
+/* line 74, ../../app/assets/stylesheets/style.scss */
 #header_content {
   width: 1100px;
   margin: auto;
   color: #ccc;
   padding: 5px;
 }
-/* line 74, ../../app/assets/stylesheets/style.scss */
+/* line 80, ../../app/assets/stylesheets/style.scss */
 #header_content a {
   color: #bbbbbb;
 }
@@ -251,20 +259,20 @@ h1 {
   color: #d83526;
 }
 
-/* line 77, ../../app/assets/stylesheets/style.scss */
+/* line 83, ../../app/assets/stylesheets/style.scss */
 #header_logo {
   float: left;
 }
-/* line 80, ../../app/assets/stylesheets/style.scss */
+/* line 86, ../../app/assets/stylesheets/style.scss */
 #header_logo .image {
   float: left;
   margin-right: 10px;
 }
-/* line 85, ../../app/assets/stylesheets/style.scss */
+/* line 91, ../../app/assets/stylesheets/style.scss */
 #header_logo .text {
   float: right;
 }
-/* line 88, ../../app/assets/stylesheets/style.scss */
+/* line 94, ../../app/assets/stylesheets/style.scss */
 #header_logo .text .title {
   font-family: arial;
   font-size: 15px;
@@ -273,7 +281,7 @@ h1 {
   text-shadow: #222222 1px 1px 0px;
   margin-top: 5px;
 }
-/* line 96, ../../app/assets/stylesheets/style.scss */
+/* line 102, ../../app/assets/stylesheets/style.scss */
 #header_logo .text .title a {
   color: #eeeeee;
 }
@@ -293,15 +301,15 @@ h1 {
 #header_logo .text .title a:active {
   color: #dddddd;
 }
-/* line 98, ../../app/assets/stylesheets/style.scss */
+/* line 104, ../../app/assets/stylesheets/style.scss */
 #header_logo .text .title a:hover {
   text-shadow: #444444 1px 1px 0px;
 }
-/* line 104, ../../app/assets/stylesheets/style.scss */
+/* line 110, ../../app/assets/stylesheets/style.scss */
 #header_logo .text .subtitle {
   font-style: italic;
 }
-/* line 106, ../../app/assets/stylesheets/style.scss */
+/* line 112, ../../app/assets/stylesheets/style.scss */
 #header_logo .text .subtitle a {
   color: #dddddd;
 }
@@ -322,16 +330,16 @@ h1 {
   color: #fa665a;
 }
 
-/* line 113, ../../app/assets/stylesheets/style.scss */
+/* line 119, ../../app/assets/stylesheets/style.scss */
 #header_login {
   float: right;
   text-align: center;
 }
-/* line 117, ../../app/assets/stylesheets/style.scss */
+/* line 123, ../../app/assets/stylesheets/style.scss */
 #header_login .data {
   margin-bottom: 5px;
 }
-/* line 120, ../../app/assets/stylesheets/style.scss */
+/* line 126, ../../app/assets/stylesheets/style.scss */
 #header_login .data .session_links {
   color: #fff;
   padding: 2px 10px;
@@ -348,7 +356,7 @@ h1 {
   -khtml-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 128, ../../app/assets/stylesheets/style.scss */
+/* line 134, ../../app/assets/stylesheets/style.scss */
 #header_login .data .session_links a {
   color: #dddddd;
 }
@@ -368,41 +376,40 @@ h1 {
 #header_login .data .session_links a:active {
   color: #fa665a;
 }
-/* line 130, ../../app/assets/stylesheets/style.scss */
+/* line 136, ../../app/assets/stylesheets/style.scss */
 #header_login .data .session_links .link {
   text-shadow: #222222 1px 1px 0px;
   margin: 0 8px;
 }
 
-/* line 138, ../../app/assets/stylesheets/style.scss */
+/* line 144, ../../app/assets/stylesheets/style.scss */
 #content {
   padding: 10px;
   width: 1100px;
   margin: auto;
 }
 
-/* line 144, ../../app/assets/stylesheets/style.scss */
+/* line 150, ../../app/assets/stylesheets/style.scss */
 .home_webconference_room, .home_webconference_room_even {
   clear: both;
 }
-/* line 147, ../../app/assets/stylesheets/style.scss */
+/* line 153, ../../app/assets/stylesheets/style.scss */
 .home_webconference_room .buttons_right, .home_webconference_room_even .buttons_right {
   float: right;
   margin: 5px 10px;
 }
-/* line 151, ../../app/assets/stylesheets/style.scss */
+/* line 157, ../../app/assets/stylesheets/style.scss */
 .home_webconference_room .buttons_left, .home_webconference_room_even .buttons_left {
   float: left;
   margin: 5px 10px;
 }
 
-/* line 157, ../../app/assets/stylesheets/style.scss */
+/* line 163, ../../app/assets/stylesheets/style.scss */
 .home_webconference_room_even {
   background: #f0f0f0;
-  border: 1px solid #f0f0f0;
 }
 
-/* line 163, ../../app/assets/stylesheets/style.scss */
+/* line 168, ../../app/assets/stylesheets/style.scss */
 .home_webconference_details {
   margin-top: 5px;
   border-top: 1px solid #ddd;
@@ -411,18 +418,18 @@ h1 {
   padding: 5px;
   display: none;
 }
-/* line 171, ../../app/assets/stylesheets/style.scss */
+/* line 176, ../../app/assets/stylesheets/style.scss */
 .home_webconference_details h4 {
   text-align: center;
   margin: 0;
   margin-bottom: 10px;
 }
-/* line 177, ../../app/assets/stylesheets/style.scss */
+/* line 182, ../../app/assets/stylesheets/style.scss */
 .home_webconference_details .field {
   margin: 0;
   clear: both;
 }
-/* line 182, ../../app/assets/stylesheets/style.scss */
+/* line 187, ../../app/assets/stylesheets/style.scss */
 .home_webconference_details label {
   clear: left;
   float: left;
@@ -433,26 +440,26 @@ h1 {
   font-weight: bold;
 }
 
-/* line 193, ../../app/assets/stylesheets/style.scss */
+/* line 198, ../../app/assets/stylesheets/style.scss */
 .home_webconference_name {
   display: block;
   font-weight: bold;
   color: #444;
   padding: 5px;
 }
-/* line 199, ../../app/assets/stylesheets/style.scss */
+/* line 204, ../../app/assets/stylesheets/style.scss */
 .home_webconference_name:hover, .home_webconference_name:active {
   color: black;
 }
 
-/* line 204, ../../app/assets/stylesheets/style.scss */
+/* line 209, ../../app/assets/stylesheets/style.scss */
 #home_menu {
   background: #f0f0f0;
   border: 1px solid #ddd;
   padding: 5px;
   margin-bottom: 10px;
 }
-/* line 210, ../../app/assets/stylesheets/style.scss */
+/* line 215, ../../app/assets/stylesheets/style.scss */
 #home_menu a, #home_menu span {
   font-weight: bold;
   font-size: 12px;
@@ -468,36 +475,36 @@ h1 {
   -khtml-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 221, ../../app/assets/stylesheets/style.scss */
+/* line 226, ../../app/assets/stylesheets/style.scss */
 #home_menu a:hover {
   color: #333;
   background: #ddd;
 }
 
-/* line 227, ../../app/assets/stylesheets/style.scss */
+/* line 232, ../../app/assets/stylesheets/style.scss */
 .clearer {
   clear: both;
 }
 
 /*******************/
-/* line 233, ../../app/assets/stylesheets/style.scss */
+/* line 238, ../../app/assets/stylesheets/style.scss */
 div.field, div.actions {
   margin-bottom: 10px;
 }
 
-/* line 237, ../../app/assets/stylesheets/style.scss */
+/* line 242, ../../app/assets/stylesheets/style.scss */
 #notice {
   color: green;
 }
 
-/* line 241, ../../app/assets/stylesheets/style.scss */
+/* line 246, ../../app/assets/stylesheets/style.scss */
 .field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
 }
 
-/* line 247, ../../app/assets/stylesheets/style.scss */
+/* line 252, ../../app/assets/stylesheets/style.scss */
 #error_explanation {
   width: 450px;
   border: 2px solid red;
@@ -507,7 +514,7 @@ div.field, div.actions {
   background-color: #f0f0f0;
 }
 
-/* line 256, ../../app/assets/stylesheets/style.scss */
+/* line 261, ../../app/assets/stylesheets/style.scss */
 #error_explanation h2 {
   text-align: left;
   font-weight: bold;
@@ -519,7 +526,7 @@ div.field, div.actions {
   color: #fff;
 }
 
-/* line 267, ../../app/assets/stylesheets/style.scss */
+/* line 272, ../../app/assets/stylesheets/style.scss */
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;

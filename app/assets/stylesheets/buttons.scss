@@ -1,16 +1,19 @@
+@import "common";
 @import "compass/css3";
 
-.button {
-  font-family:arial;
-  font-size:15px;
-  font-weight:bold;
-  padding:6px 24px;
-  text-decoration:none;
+.default_button {
+  font-family: arial;
+  font-size: $font-size-default;
+  font-weight: bold;
+  padding: 2px 6px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
   @include border-radius(3px);
 }
 
 .gray_button {
-  @extend .button;
+  @extend .default_button;
   background-color:#ededed;
   border:1px solid #cdcdcd;
   color:#777;
@@ -18,7 +21,7 @@
 
   &:visited { color: #777; }
 
-  &:hover {
+  &:hover, &:focus {
     background-color:#34618e;
     border:1px solid #1F4A75;
     color:#fff;
@@ -33,8 +36,12 @@
   }
 }
 
+.button {
+  @extend .gray_button;
+}
+
 .red_button {
-  @extend .button;
+  @extend .default_button;
   background-color:#fa665a;
   border:1px solid #d83526;
   color: #fff;
@@ -42,7 +49,7 @@
 
   &:visited { color: #fff; }
 
-  &:hover {
+  &:hover, &:focus {
     color: #fff;
     background-color:#fa665a;
     border:1px solid #b34940;
@@ -57,7 +64,7 @@
 }
 
 .blue_button {
-  @extend .button;
+  @extend .default_button;
   background-color:#79bbff;
   border:1px solid #469df5;
   color:#fff;
@@ -65,7 +72,7 @@
 
   &:visited { color: #fff; }
 
-  &:hover {
+  &:hover, &:focus {
     background-color:#34618e;
     border:1px solid #1F4A75;
     color:#fff;
@@ -83,5 +90,5 @@
 .small {
   @include border-radius(3px);
   font-size:11px;
-  padding:2px 7px;
+  padding: 0 5px;
 }
