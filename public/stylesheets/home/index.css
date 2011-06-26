@@ -1,0 +1,96 @@
+/* line 4, ../../../app/assets/stylesheets/home/index.scss */
+.home_webconference_room, .home_webconference_room_even {
+  clear: both;
+}
+/* line 7, ../../../app/assets/stylesheets/home/index.scss */
+.home_webconference_room .buttons_right, .home_webconference_room_even .buttons_right {
+  float: right;
+  margin: 5px 10px;
+}
+/* line 11, ../../../app/assets/stylesheets/home/index.scss */
+.home_webconference_room .buttons_left, .home_webconference_room_even .buttons_left {
+  float: left;
+  margin: 5px 10px;
+}
+
+/* line 17, ../../../app/assets/stylesheets/home/index.scss */
+.home_webconference_room_even {
+  background: #f0f0f0;
+}
+
+/* line 22, ../../../app/assets/stylesheets/home/index.scss */
+.home_webconference_details {
+  margin-top: 5px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  clear: both;
+  padding: 5px;
+  display: none;
+}
+/* line 30, ../../../app/assets/stylesheets/home/index.scss */
+.home_webconference_details h4 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 10px;
+}
+/* line 36, ../../../app/assets/stylesheets/home/index.scss */
+.home_webconference_details .field {
+  margin: 0;
+  clear: both;
+}
+/* line 41, ../../../app/assets/stylesheets/home/index.scss */
+.home_webconference_details label {
+  clear: left;
+  float: left;
+  width: 250px;
+  text-align: right;
+  margin-right: 10px;
+  margin-left: 30px;
+  font-weight: bold;
+}
+
+/* line 52, ../../../app/assets/stylesheets/home/index.scss */
+.home_webconference_name {
+  display: block;
+  font-weight: bold;
+  color: #444;
+  padding: 5px;
+}
+/* line 58, ../../../app/assets/stylesheets/home/index.scss */
+.home_webconference_name:hover, .home_webconference_name:active {
+  color: black;
+}
+
+/* line 63, ../../../app/assets/stylesheets/home/index.scss */
+#home_menu {
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+/* line 69, ../../../app/assets/stylesheets/home/index.scss */
+#home_menu a, #home_menu span {
+  font-weight: bold;
+  font-size: 12px;
+  font-family: arial;
+  text-decoration: none;
+  text-shadow: white 1px 1px 0px;
+  color: #777;
+  padding: 3px 6px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 80, ../../../app/assets/stylesheets/home/index.scss */
+#home_menu a:hover {
+  color: #333;
+  background: #ddd;
+}
+
+/* line 86, ../../../app/assets/stylesheets/home/index.scss */
+.clearer {
+  clear: both;
+}

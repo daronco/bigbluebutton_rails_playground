@@ -9,6 +9,7 @@ code,
 textarea {
   padding: 3px;
   outline: none;
+  color: #333;
   border: 1px solid #d0d0d0;
   background-color: #f7f7f7;
   width: 250px;
@@ -19,7 +20,7 @@ textarea {
   -khtml-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 18, ../../app/assets/stylesheets/forms.scss */
+/* line 19, ../../app/assets/stylesheets/forms.scss */
 input.string:focus,
 input[type='text']:focus,
 input[type='password']:focus,
@@ -29,26 +30,27 @@ input.password:focus,
 code:focus,
 textarea:focus {
   background-color: #fff;
+  color: #000;
   border: 1px solid #4f81bd;
 }
 
-/* line 26, ../../app/assets/stylesheets/forms.scss */
+/* line 28, ../../app/assets/stylesheets/forms.scss */
 .simple_form .input {
   margin-bottom: 4px;
   clear: both;
 }
-/* line 31, ../../app/assets/stylesheets/forms.scss */
+/* line 33, ../../app/assets/stylesheets/forms.scss */
 .simple_form label {
   float: left;
   margin: 3px 8px 0 0;
   width: 150px;
   text-align: right;
 }
-/* line 38, ../../app/assets/stylesheets/forms.scss */
+/* line 40, ../../app/assets/stylesheets/forms.scss */
 .simple_form input[type=submit] {
   margin-left: 160px;
 }
-/* line 42, ../../app/assets/stylesheets/forms.scss */
+/* line 44, ../../app/assets/stylesheets/forms.scss */
 .simple_form .hint {
   font-variant: italic;
   margin-left: 5px;
