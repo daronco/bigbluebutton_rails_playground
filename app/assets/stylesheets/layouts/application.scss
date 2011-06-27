@@ -20,6 +20,21 @@
   padding: 5px;
 
   a { @include link-colors(#bbb, #fff, #d83526, #bbb, #fff); }
+
+  .avatar {
+    float: right;
+    margin-left: 5px;
+    padding: 4px;
+    background: #202020;
+    background-color: rgba(0, 0, 0, 0.2);
+    @include box-shadow(rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 5px 0px inset);
+    @include border-radius(4px);
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.07);
+    }
+  }
+
 }
 
 #header_logo {
@@ -56,6 +71,7 @@
       }
     }
   }
+
 }
 
 #header_login {

@@ -2,6 +2,12 @@
 
   <div id="header_content">
 
+    <% if user_signed_in? %>
+      <%= link_to home_index_path do %>
+        <%= gravatar_for current_user.email, :size => 38, :class => 'avatar' %>
+      <% end %>
+    <% end %>
+
     <div id="header_login">
       <div class="data">
         <% if user_signed_in? %>
@@ -20,7 +26,6 @@
           <% end %>
         </div>
       </div>
-
     </div>
 
     <div id="header_logo">

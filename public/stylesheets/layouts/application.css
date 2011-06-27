@@ -44,21 +44,43 @@
 #header_content a:active {
   color: #d83526;
 }
+/* line 24, ../../../app/assets/stylesheets/layouts/application.scss */
+#header_content .avatar {
+  float: right;
+  margin-left: 5px;
+  padding: 4px;
+  background: #202020;
+  background-color: rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 5px 0px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 5px 0px inset;
+  -o-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 5px 0px inset;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 5px 0px inset;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 33, ../../../app/assets/stylesheets/layouts/application.scss */
+#header_content .avatar:hover {
+  background-color: rgba(0, 0, 0, 0.07);
+}
 
-/* line 25, ../../../app/assets/stylesheets/layouts/application.scss */
+/* line 40, ../../../app/assets/stylesheets/layouts/application.scss */
 #header_logo {
   float: left;
 }
-/* line 28, ../../../app/assets/stylesheets/layouts/application.scss */
+/* line 43, ../../../app/assets/stylesheets/layouts/application.scss */
 #header_logo .image {
   float: left;
   margin-right: 10px;
 }
-/* line 33, ../../../app/assets/stylesheets/layouts/application.scss */
+/* line 48, ../../../app/assets/stylesheets/layouts/application.scss */
 #header_logo .text {
   float: right;
 }
-/* line 36, ../../../app/assets/stylesheets/layouts/application.scss */
+/* line 51, ../../../app/assets/stylesheets/layouts/application.scss */
 #header_logo .text .title {
   font-family: arial;
   font-size: 15px;
@@ -67,7 +89,7 @@
   text-shadow: #222222 1px 1px 0px;
   margin-top: 5px;
 }
-/* line 44, ../../../app/assets/stylesheets/layouts/application.scss */
+/* line 59, ../../../app/assets/stylesheets/layouts/application.scss */
 #header_logo .text .title a {
   color: #eeeeee;
 }
@@ -87,15 +109,15 @@
 #header_logo .text .title a:active {
   color: #dddddd;
 }
-/* line 46, ../../../app/assets/stylesheets/layouts/application.scss */
+/* line 61, ../../../app/assets/stylesheets/layouts/application.scss */
 #header_logo .text .title a:hover {
   text-shadow: #444444 1px 1px 0px;
 }
-/* line 52, ../../../app/assets/stylesheets/layouts/application.scss */
+/* line 67, ../../../app/assets/stylesheets/layouts/application.scss */
 #header_logo .text .subtitle {
   font-style: italic;
 }
-/* line 54, ../../../app/assets/stylesheets/layouts/application.scss */
+/* line 69, ../../../app/assets/stylesheets/layouts/application.scss */
 #header_logo .text .subtitle a {
   color: #dddddd;
 }
@@ -116,16 +138,16 @@
   color: #fa665a;
 }
 
-/* line 61, ../../../app/assets/stylesheets/layouts/application.scss */
+/* line 77, ../../../app/assets/stylesheets/layouts/application.scss */
 #header_login {
   float: right;
   text-align: center;
 }
-/* line 65, ../../../app/assets/stylesheets/layouts/application.scss */
+/* line 81, ../../../app/assets/stylesheets/layouts/application.scss */
 #header_login .data {
   margin-bottom: 5px;
 }
-/* line 68, ../../../app/assets/stylesheets/layouts/application.scss */
+/* line 84, ../../../app/assets/stylesheets/layouts/application.scss */
 #header_login .data .session_links {
   color: #fff;
   padding: 2px 10px;
@@ -142,7 +164,7 @@
   -khtml-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 76, ../../../app/assets/stylesheets/layouts/application.scss */
+/* line 92, ../../../app/assets/stylesheets/layouts/application.scss */
 #header_login .data .session_links a {
   color: #dddddd;
 }
@@ -162,13 +184,13 @@
 #header_login .data .session_links a:active {
   color: #fa665a;
 }
-/* line 78, ../../../app/assets/stylesheets/layouts/application.scss */
+/* line 94, ../../../app/assets/stylesheets/layouts/application.scss */
 #header_login .data .session_links .link {
   text-shadow: #222222 1px 1px 0px;
   margin: 0 8px;
 }
 
-/* line 86, ../../../app/assets/stylesheets/layouts/application.scss */
+/* line 102, ../../../app/assets/stylesheets/layouts/application.scss */
 #content {
   padding: 10px;
   width: 1100px;
