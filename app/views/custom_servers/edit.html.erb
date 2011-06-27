@@ -1,6 +1,6 @@
-<h1>Edit <%= BigbluebuttonServer.model_name.human %>:</h1>
+<h1><%= t('.title') %>:</h1>
 <%= render 'form' %>
 
-<%= link_to 'Show', @server %> |
-<%= link_to 'Back', bigbluebutton_servers_path %>
+<%= link_to t('show'), @server %> |
+<%= link_to t('back'), bigbluebutton_servers_path %>
 

@@ -1,0 +1,24 @@
+# yet to be changed:
+./devise/passwords/new.html.erb
+./devise/passwords/edit.html.erb
+./devise/sessions/new.html.erb
+./devise/registrations/new.html.erb
+./devise/registrations/edit.html.erb
+./devise/unlocks/new.html.erb
+./devise/mailer/unlock_instructions.html.erb
+./devise/mailer/confirmation_instructions.html.erb
+./devise/mailer/reset_password_instructions.html.erb
+./devise/confirmations/new.html.erb
+./layouts/_header.html.erb
+./layouts/application.html.erb
+./home/_webconference_details.html.erb
+./home/index.html.erb
+./custom_rooms/new.html.erb
+./custom_rooms/_form.html.erb
+./custom_rooms/index.html.erb
+./custom_rooms/user_new.html.erb
+./custom_rooms/invite.html.erb
+./custom_rooms/edit.html.erb
+./custom_rooms/show.html.erb
+./custom_rooms/join_mobile.html.erb
+./custom_rooms/join.html.erb

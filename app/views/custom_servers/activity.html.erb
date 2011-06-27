@@ -8,19 +8,19 @@
 
   function serverActivityUpdateMeetingsStart() {
     clearInterval(serverActivityCountdown);
-    $(".bbbrails_countdown_value").html("Now...");
+    $(".bbbrails_countdown_value").html("<%= t('.now_dots') %>");
     serverActivityUpdateMeetingsLoad();
   }
 
   function serverActivityUpdateMeetingsEnd() {
-    $(".bbbrails_countdown_value").html("Done!");
+    $(".bbbrails_countdown_value").html("<%= t('.done_exclam') %>");
     serverActivitySetCountdown();
   }
 
   function serverActivitySetCountdown() {
     var count = serverActivityCountdownInterval;
     serverActivityCountdown = setInterval(function(){
-      $(".bbbrails_countdown_value").html(count + " seconds");
+      $(".bbbrails_countdown_value").html(count + "<%= t('.x_seconds') %>");
       if (count == 0) {
         serverActivityUpdateMeetingsStart();
       }
@@ -40,11 +40,11 @@
 </script>
 
 <div class="bbbrails_countdown">
-  Refreshing in: <span class="bbbrails_countdown_value"></span>
-  (<a class="bbbrails_refresh_now" href="<%= activity_bigbluebutton_server_path(@server) %>">refresh now</a>)
+  <%= I18n.t('custom_servers.activity.refreshing_in') %>  <span class="bbbrails_countdown_value"></span>
+  (<a class="bbbrails_refresh_now" href="<%= activity_bigbluebutton_server_path(@server) %>"><%= t('.refresh_now') %></a>)
 </div>
 
-<h1>Server activity monitor:</h1>
+<h1><%= t('.title') %>:</h1>
 
 <div id="bbbrails_server_activity_meetings">
   <%= render :partial => 'activity_list' %>

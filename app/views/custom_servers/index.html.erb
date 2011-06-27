@@ -1,7 +1,7 @@
-<h1>Listing <%= BigbluebuttonServer.model_name.human %>:</h1>
+<h1><%= t('.title') %>:</h1>
 
 <div id="bbbrails_servers_links">
-  <%= link_to 'New server', new_bigbluebutton_server_path %>
+  <%= link_to t('.new_server'), new_bigbluebutton_server_path %>
 </div>
 
 <ul id="bbbrails_servers_list">
@@ -13,11 +13,11 @@
       <div><label><%= BigbluebuttonServer.human_attribute_name(:version) %></label> <%= server.version %></div>
       <div><label><%= BigbluebuttonServer.human_attribute_name(:param) %></label> <%= server.param %></div>
       <div><label>Access</label>
-        <%= link_to 'Show', server %> |
-        <%= link_to 'View rooms', bigbluebutton_server_rooms_path(server) %> |
-        <%= link_to 'Activity monitor', activity_bigbluebutton_server_path(server) %> |
-        <%= link_to 'Edit', edit_bigbluebutton_server_path(server) %> |
-        <%= link_to 'Destroy', server, :confirm => 'Are you sure?', :method => :delete %>
+        <%= link_to t('show'), server, :class => 'button small' %>
+        <%= link_to t('.view_rooms'), bigbluebutton_server_rooms_path(server), :class => 'button small' %>
+        <%= link_to t('.activity_monitor'), activity_bigbluebutton_server_path(server), :class => 'button small' %>
+        <%= link_to t('edit'), edit_bigbluebutton_server_path(server), :class => 'button small' %>
+        <%= link_to t('destroy'), server, :confirm => t('are_you_sure'), :method => :delete, :class => 'button small' %>
       </div>
     </li>
   <% end %>
