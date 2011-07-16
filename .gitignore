@@ -6,4 +6,6 @@ tmp/
 *~
 config/setup_conf.yml
 config/database.yml
-public/stylesheets/*.css
+public/stylesheets/
+public/images/
+public/javascripts/
