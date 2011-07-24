@@ -4,7 +4,12 @@ gem "rails", "~> 3.1.0.rc1"
 #gem "mysql2", "0.3.2"
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
+# general purpose
 gem 'devise'
+gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
+gem 'configatron'
+
+# BigBlueButton
 gem 'bigbluebutton_rails', :path => "../bigbluebutton_rails/"
 gem 'bigbluebutton-api-ruby', :path => "../bigbluebutton-api-ruby/"
 
@@ -25,6 +30,11 @@ gem 'therubyracer', :require => 'v8'
 #  gem 'pg'
 #end
 
-gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
-
-gem 'configatron'
+group :development, :test do
+  gem 'rspec-rails', '~> 2.6'
+  gem 'rspec-instafail'
+  gem 'shoulda-matchers'
+  gem 'cucumber-rails', '~> 0.5.0'
+  gem 'database_cleaner'
+  gem 'factory_girl'
+end
