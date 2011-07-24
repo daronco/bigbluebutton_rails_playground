@@ -97,7 +97,13 @@ GEM
       multi_json (~> 1.0)
     factory_girl (2.0.1)
     ffi (1.0.9)
+    forgery (0.3.12)
+      nokogiri (~> 1.4)
     fssm (0.2.7)
+    fuubar (0.0.5)
+      rspec (~> 2.0)
+      rspec-instafail (~> 0.1.4)
+      ruby-progressbar (~> 0.0.10)
     gherkin (2.4.5)
       json (>= 1.4.6)
     hike (1.1.0)
@@ -157,6 +163,7 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.6.0)
+    ruby-progressbar (0.0.10)
     rubyzip (0.9.4)
     sass (3.1.2)
     selenium-webdriver (0.2.2)
@@ -202,6 +209,8 @@ DEPENDENCIES
   database_cleaner
   devise
   factory_girl
+  forgery
+  fuubar
   jquery-rails
   json
   rails (~> 3.1.0.rc1)

@@ -33,8 +33,10 @@ gem 'therubyracer', :require => 'v8'
 group :development, :test do
   gem 'rspec-rails', '~> 2.6'
   gem 'rspec-instafail'
+  gem 'fuubar'
   gem 'shoulda-matchers'
   gem 'cucumber-rails', '~> 0.5.0'
   gem 'database_cleaner'
   gem 'factory_girl'
+  gem 'forgery'
 end

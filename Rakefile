@@ -12,7 +12,7 @@ require 'rake'
 desc 'Default: run specs and features.'
 task :default => [:spec, :cucumber]
 
-RSpec::Core::RakeTask.new(:spec => ["db:test:prepare"])
+#RSpec::Core::RakeTask.new(:spec => ["db:test:prepare"])
 #RSpec::Core::RakeTask.new(:spec => ["db:test:prepare", "db:seed"]) # to run dependencies first
 
 BigbluebuttonRailsPlayground::Application.load_tasks
