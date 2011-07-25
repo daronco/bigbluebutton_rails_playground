@@ -1,0 +1,6 @@
+B1;2790;0c#!/bin/bash
+
+#TODO: incomplete list
+PACKAGES_COMMON=( )
+PACKAGES_PRODUCTION=( ${PACKAGES_COMMON[@]} )
+PACKAGES_DEVELOPMENT=( ${PACKAGES_COMMON[@]} libsqlite3-dev )

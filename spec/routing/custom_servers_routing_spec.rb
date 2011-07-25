@@ -12,6 +12,7 @@ describe CustomServersController do
     it { should route(:get, "/bigbluebutton/servers/server-1").to(:action => :show, :id => "server-1") }
     it { should route(:put, "/bigbluebutton/servers/server-1").to(:action => :update, :id => "server-1") }
     it { should route(:delete, "/bigbluebutton/servers/server-1").to(:action => :destroy, :id => "server-1") }
+    it { should route(:get, "/bigbluebutton/servers/server-1/activity").to(:action => :activity, :id => "server-1") }
   end
 
 end

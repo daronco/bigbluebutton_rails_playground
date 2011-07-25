@@ -2,7 +2,6 @@ source 'http://rubygems.org'
 
 gem "rails", "~> 3.1.0.rc1"
 #gem "mysql2", "0.3.2"
-gem 'sqlite3-ruby', :require => 'sqlite3'
 
 # general purpose
 gem 'devise'
@@ -31,6 +30,7 @@ gem 'therubyracer', :require => 'v8'
 #end
 
 group :development, :test do
+  gem 'sqlite3-ruby', :require => 'sqlite3'
   gem 'rspec-rails', '~> 2.6'
   gem 'rspec-instafail'
   gem 'fuubar'
