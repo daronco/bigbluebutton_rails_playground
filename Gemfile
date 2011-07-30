@@ -39,4 +39,9 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_girl'
   gem 'forgery'
+  gem 'rails_best_practices'
+end
+
+group :test do
+  gem 'simplecov', '>= 0.4.0', :require => false
 end

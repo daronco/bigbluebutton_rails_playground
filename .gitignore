@@ -9,3 +9,5 @@ config/database.yml
 public/stylesheets/
 public/images/
 public/javascripts/
+coverage/
+rails_best_practices_output.html

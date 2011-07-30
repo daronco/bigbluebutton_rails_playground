@@ -69,6 +69,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.1.1)
+    colored (1.2)
     compass (0.11.3)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
@@ -106,6 +107,7 @@ GEM
       ruby-progressbar (~> 0.0.10)
     gherkin (2.4.5)
       json (>= 1.4.6)
+    haml (3.1.2)
     hike (1.1.0)
     i18n (0.6.0)
     jquery-rails (1.0.11)
@@ -140,6 +142,14 @@ GEM
       activesupport (= 3.1.0.rc4)
       bundler (~> 1.0)
       railties (= 3.1.0.rc4)
+    rails_best_practices (0.10.1)
+      activesupport
+      colored
+      erubis
+      haml
+      i18n
+      ruby-progressbar
+      ruby_parser
     railties (3.1.0.rc4)
       actionpack (= 3.1.0.rc4)
       activesupport (= 3.1.0.rc4)
@@ -164,6 +174,8 @@ GEM
       railties (~> 3.0)
       rspec (~> 2.6.0)
     ruby-progressbar (0.0.10)
+    ruby_parser (2.0.6)
+      sexp_processor (~> 3.0)
     rubyzip (0.9.4)
     sass (3.1.2)
     selenium-webdriver (0.2.2)
@@ -171,7 +183,11 @@ GEM
       ffi (>= 1.0.7)
       json_pure
       rubyzip
+    sexp_processor (3.0.5)
     shoulda-matchers (1.0.0.beta3)
+    simplecov (0.4.2)
+      simplecov-html (~> 0.4.4)
+    simplecov-html (0.4.5)
     sprockets (2.0.0.beta.10)
       hike (~> 1.0)
       rack (~> 1.0)
@@ -214,11 +230,13 @@ DEPENDENCIES
   jquery-rails
   json
   rails (~> 3.1.0.rc1)
+  rails_best_practices
   rspec-instafail
   rspec-rails (~> 2.6)
   sass
   shoulda-matchers
   simple_form!
+  simplecov (>= 0.4.0)
   sqlite3-ruby
   therubyracer
   uglifier
