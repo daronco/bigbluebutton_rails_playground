@@ -10,16 +10,6 @@ require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
 desc 'Default: run specs and features.'
-task :default => [:spec, :cucumber]
-
-#RSpec::Core::RakeTask.new(:spec => ["db:test:prepare"])
-#RSpec::Core::RakeTask.new(:spec => ["db:test:prepare", "db:seed"]) # to run dependencies first
-
-task :best_practices do |app|
-  sh "rails_best_practices -f html --spec &>/dev/null"
-  puts
-  puts "Output will be in the file rails_best_practices_output.html"
-  puts
-end
+task :default => ["db:test:prepare", "db:seed", :spec, :cucumber]
 
 BigbluebuttonRailsPlayground::Application.load_tasks
