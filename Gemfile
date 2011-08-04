@@ -9,8 +9,9 @@ gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 gem 'configatron'
 
 # BigBlueButton
-gem 'bigbluebutton_rails', :path => "../bigbluebutton_rails/"
-gem 'bigbluebutton-api-ruby', :path => "../bigbluebutton-api-ruby/"
+gem 'bigbluebutton_rails', :git => 'git://github.com/mconf/bigbluebutton_rails.git'
+#gem 'bigbluebutton_rails', :path => "../bigbluebutton_rails/"
+#gem 'bigbluebutton-api-ruby', :path => "../bigbluebutton-api-ruby/"
 
 # Rails 3.1 - Asset Pipeline
 gem 'json'
@@ -43,5 +44,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'simplecov', '>= 0.4.0', :require => false
+  if RUBY_VERSION >= "1.9"
+    gem 'simplecov', '>= 0.4.0', :require => false
+  end
 end

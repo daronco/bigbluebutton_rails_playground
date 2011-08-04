@@ -1,6 +1,8 @@
-require 'simplecov'
-SimpleCov.start 'rails'
-SimpleCov.coverage_dir 'coverage/rspec'
+if RUBY_VERSION >= "1.9"
+  require 'simplecov'
+  SimpleCov.start 'rails'
+  SimpleCov.coverage_dir 'coverage/rspec'
+end
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'

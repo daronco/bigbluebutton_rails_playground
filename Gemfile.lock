@@ -1,23 +1,18 @@
 GIT
+  remote: git://github.com/mconf/bigbluebutton_rails.git
+  revision: 1f1f66181fdd4d880fa5c503acd654088fad8e57
+  specs:
+    bigbluebutton_rails (0.0.5)
+      bigbluebutton-api-ruby (~> 0.0.10)
+      rails (>= 3.0.3)
+
+GIT
   remote: git://github.com/plataformatec/simple_form.git
   revision: d529379c72b87ebcd2e1bd7182b47305982eec55
   specs:
     simple_form (1.4.1)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
-
-PATH
-  remote: ../bigbluebutton-api-ruby/
-  specs:
-    bigbluebutton-api-ruby (0.0.10)
-      nokogiri (~> 1.4.0)
-
-PATH
-  remote: ../bigbluebutton_rails/
-  specs:
-    bigbluebutton_rails (0.0.5)
-      bigbluebutton-api-ruby (~> 0.0.10)
-      rails (>= 3.0.3)
 
 GEM
   remote: http://rubygems.org/
@@ -54,6 +49,8 @@ GEM
       multi_json (~> 1.0)
     arel (2.1.1)
     bcrypt-ruby (2.1.4)
+    bigbluebutton-api-ruby (0.0.10)
+      nokogiri (~> 1.4.0)
     builder (3.0.0)
     capybara (1.0.0)
       mime-types (>= 1.16)
@@ -216,7 +213,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bigbluebutton-api-ruby!
   bigbluebutton_rails!
   coffee-script
   compass
