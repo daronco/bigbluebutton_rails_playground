@@ -4,4 +4,5 @@ before_script:
   - "cp config/setup_conf.yml.example config/setup_conf.yml"
 script: bundle exec rake travis
 rvm:
+  - 1.8.7
   - 1.9.2
