@@ -1,17 +1,16 @@
 source 'http://rubygems.org'
 
-gem "rails", "3.1.0.rc5"
+gem "rails", "~> 3.1.0"
 #gem "mysql2", "0.3.2"
 
 # general purpose
 gem 'devise'
-gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
+gem 'simple_form', '>= 1.4.2'
 gem 'configatron'
 
 # BigBlueButton
 gem 'bigbluebutton_rails', :git => 'git://github.com/mconf/bigbluebutton_rails.git'
-#gem 'bigbluebutton_rails', :path => "../bigbluebutton_rails/"
-#gem 'bigbluebutton-api-ruby', :path => "../bigbluebutton-api-ruby/"
+gem 'bigbluebutton-api-ruby', :git => 'git://github.com/mconf/bigbluebutton-api-ruby.git'
 
 # Rails 3.1 - Asset Pipeline
 gem 'json'

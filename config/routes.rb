@@ -2,7 +2,7 @@ BigbluebuttonRailsPlayground::Application.routes.draw do
 
   get "home/index"
 
-  devise_for :users, :skip => [:sessions] do
+  devise_for :users do
     get "/login" => "devise/sessions#new"
     post "/login" => "devise/sessions#create"
     get "/logout" => "devise/sessions#destroy"
