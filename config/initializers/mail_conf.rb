@@ -11,3 +11,7 @@ ActionMailer::Base.smtp_settings = {
     :user_name            => configatron.sendmail.username,
     :password             => configatron.sendmail.password
 }
+
+# FIXME: Temporary default url. Could be taken from Site.current.
+ActionMailer::Base.default_url_options[:host] = "localhost:3000"
+
