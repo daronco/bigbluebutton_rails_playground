@@ -3,13 +3,9 @@
 @import "compass/typography/links";
 
 #header {
-  @include box-shadow(#666 0 2px 8px);
+  @include box-shadow(#666 2 2px 8px);
   @include background-image(linear-gradient(top, #34618e, #1F4A75));
-
-  height: 55px;
-  background-color:red;
   color: #444;
-  padding: 5px;
   margin: 0;
 }
 
@@ -17,86 +13,118 @@
   width: $website-width;
   margin: auto;
   color: #ccc;
-  padding: 5px;
-
-  a { @include link-colors(#bbb, #fff, #d83526, #bbb, #fff); }
-
-  .avatar {
-    float: right;
-    margin-left: 5px;
-    padding: 4px;
-    background: #202020;
-    background-color: rgba(0, 0, 0, 0.2);
-    @include box-shadow(rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 5px 0px inset);
-    @include border-radius(4px);
-
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.07);
-    }
-  }
-
+  height: $header-height;
 }
 
 #header_logo {
   float: left;
 
-  .image {
-    float: left;
-    margin-right: 10px;
-  }
-
-  .text {
+  .title {
     float: right;
+    font-family: arial;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    @include text-shadow(#222 1px 1px 0px);
+    margin-top: 5px;
 
-    .title {
-      font-family: arial;
-      font-size: 15px;
-      font-weight: bold;
-      text-decoration: none;
-      @include text-shadow(#222 1px 1px 0px);
-      margin-top: 5px;
-
-      a {
-        @include link-colors(#eee, #fff, #ddd, #eee, #fff);
-        &:hover {
-          @include text-shadow(#444 1px 1px 0px);
-        }
-      }
-    }
-
-    .subtitle {
-      font-style: italic;
-      a {
-        @include link-colors(#ddd, #fff, #fa665a, #ddd, #fff);
+    a {
+      @include link-colors(#eee, #fff, #ddd, #eee, #fff);
+      &:hover {
+        @include text-shadow(#444 1px 1px 0px);
       }
     }
   }
 
 }
 
-#header_login {
+#header_buttons {
   float: right;
   text-align: center;
 
-  .data {
-    margin-bottom: 5px;
+  .session_button {
+    float: left;
+    color: #fff;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.07);
+    display: block;
+    height: $header-height - 10px; // discounts 2xPadding
+    font-size: $font-size-bigger;
+    border-right: 1px solid #3f6e9d;
 
-    .session_links {
-      color: #fff;
-      padding: 2px 10px;
-      background: #202020;
-      background-color: rgba(0, 0, 0, 0.25);
-      @include box-shadow(rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 5px 0px inset);
+    &:hover {
+      background-color: rgba(0,0,0, 0.1);
+    }
+    &:active {
+      background-color: rgba(0,0,0, 0.35);
+    }
+  }
+}
+
+#sub_header {
+  background-color: #EDEBE1;
+  border-bottom: 1px solid #c7c6bd;
+  padding: 5px;
+}
+
+#sub_header_content {
+  height: 35px;
+  width: $website-width;
+  margin: auto;
+
+  .avatar {
+    float: right;
+    border: 1px solid #888;
+
+    &:hover {
+      border: 1px solid #aaa;
+    }
+  }
+
+  .user_data {
+    text-align: right;
+    margin-right: 10px;
+    float: right;
+    color: #444;
+    @include text-shadow(#ddd 1px 1px 0px);
+
+    .user_details {
+      font-size: 12px;
+    }
+    .user_name {
+      float: left;
+      font-size: 14px;
+      margin-right: 5px;
+    }
+
+  }
+
+  .menu {
+    float: left;
+
+    .menu_button {
+      margin-top: 4px;
+      margin-right: 10px;
+      float: left;
+      color: #444;
+      padding: 3px 10px;
+      font-size: 16px;
+      letter-spacing: normal;
+      white-space: no-wrap;
+      line-height: 22px;
       @include border-radius(4px);
 
-      a { @include link-colors(#ddd, #fff, #fa665a, #ddd, #fff); }
 
-      .link {
-        @include text-shadow(#222 1px 1px 0px);
-        margin: 0 8px;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.08);
+        @include box-shadow(rgba(0, 0, 0, 0.2) 0 0px 5px 0px inset);
+      }
+      &:active {
+        background-color: rgba(0, 0, 0, 0.15);
       }
     }
   }
+
 }
 
 #content {

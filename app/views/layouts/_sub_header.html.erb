@@ -1,0 +1,28 @@
+<% if user_signed_in? %>
+  <div id="sub_header">
+    <div id="sub_header_content">
+
+      <%= link_to home_index_path do %>
+        <%= gravatar_for current_user.email, :size => 34, :class => 'avatar' %>
+      <% end %>
+
+      <div class="user_data">
+        <div class="user_name">
+          <%= current_user.name %>
+        </div>
+        (<a href="#">profile</a>)
+        <div class="user_details">
+          <%= current_user.email %>
+        </div>
+      </div>
+
+      <div class="menu">
+        <%= link_to 'Home', edit_user_registration_path, :class => 'menu_button' %>
+        <%= link_to 'Groups', logout_path, :class => 'menu_button' %>
+        <%= link_to 'Past Meetings', edit_user_registration_path, :class => 'menu_button' %>
+        <%= link_to 'Admin', logout_path, :class => 'menu_button' %>
+      </div>
+
+    </div>
+  </div>
+<% end %>

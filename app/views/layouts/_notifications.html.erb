@@ -1,0 +1,5 @@
+<div id="notification_wrapper">
+  <% flash.each do |name, msg| %>
+    <div class="flash_<%= name %>"><%= msg.html_safe %></div>
+  <% end %>
+</div>
