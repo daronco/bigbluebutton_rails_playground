@@ -6,11 +6,11 @@
 
   .buttons_right {
     float: right;
-    margin: 5px 10px;
+    margin: 0 0 0 10px;
   }
   .buttons_left {
     float: left;
-    margin: 5px 10px;
+    margin: 0 10px 0 0;
   }
 }
 
@@ -85,4 +85,140 @@
 
 .clearer {
   clear: both;
+}
+
+
+/*** MOCKUP ***/
+
+.home_active_meeting {
+  @extend .home_webconference_room;
+  margin-bottom: 15px;
+  clear: both;
+  //border-bottom: 1px solid #eee;
+  border: 1px solid #eee;
+  @include border-radius(4px);
+
+  .header {
+    //@include border-radius(4px);
+    //@include background-image(linear-gradient(top, #EDEBE1, #fff));
+    padding: 8px;
+
+    .meeting_name {
+      float: left;
+      font-weight: bold;
+      font-size: 16px;
+      color: #444;//#1F4A75;
+    }
+
+    .meeting_info {
+      float: left;
+      margin-left: 10px;
+      margin-top: 2px;
+    }
+
+  }
+
+  .body {
+    clear: both;
+    padding: 0 8px 8px 8px;
+
+    .meeting_name_subtitle {
+      float: left;
+      margin-left: 25px;
+      .emph {
+        font-weight: bold;
+      }
+    }
+  }
+
+}
+
+.home_past_meeting {
+  @extend .home_webconference_room;
+
+  padding: 3px;
+  margin-bottom: 2px;
+  //border-bottom: 1px solid #ddd;
+  clear: both;
+
+  .meeting_details {
+    //background: #ddd;
+    clear: both;
+  }
+
+  .meeting_name {
+    font-weight: bold;
+    font-size: 14px;
+    float: left;
+  }
+
+  .meeting_name_subtitle {
+    margin-left: 5px;
+    float: left;
+
+    .emph {
+      font-weight: bold;
+    }
+  }
+
+}
+
+
+.home_group {
+  @extend .home_webconference_room;
+  clear: both;
+  border-bottom: 1px solid #eee;
+
+  .header {
+    @include border-radius(4px);
+    padding: 8px;
+
+    .group_name {
+      float: left;
+      font-weight: bold;
+      font-size: 16px;
+      color: #444; //#1F4A75;
+    }
+
+    .group_info {
+      float: left;
+      margin-left: 10px;
+      .emph {
+        font-weight: bold;
+      }
+    }
+
+  }
+
+}
+
+.home_group_active {
+  @extend .home_group;
+  @include background-image(linear-gradient(left, #c8d5e1, #fff));
+}
+
+.h1_buttons {
+  margin-top: 20px;
+
+  h1 {
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 18px;
+  }
+
+  .button_wrapper {
+    margin-right: 15px;
+    margin-top: 5px;
+    float: right;
+  }
+
+}
+
+.button_with_icon {
+  font-size: 14px;
+
+  img {
+    float: left;
+    margin-right: 5px;
+  }
 }

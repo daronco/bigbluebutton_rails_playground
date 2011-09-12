@@ -65,8 +65,8 @@
 
 .blue_button {
   @extend .default_button;
-  background-color:#79bbff;
-  border:1px solid #469df5;
+  background-color:#34618e;
+  border:1px solid #1F4A75;
   color:#fff;
   @include text-shadow(#287ace 1px 1px 0px);
 
@@ -83,6 +83,54 @@
 
   &:active {
     @extend .blue_button:hover;
+    @include background-image(linear-gradient(top, #1F4A75, #34618e));
+  }
+}
+
+.green_button {
+  @extend .default_button;
+  background-color:#ededed;
+  border:1px solid #cdcdcd;
+  color:#777;
+  @include text-shadow(#fff 1px 1px 0px);
+
+  &:visited { color: #777; }
+
+  &:hover, &:focus {
+    background-color:#34618e;
+    border:1px solid #1F4A75;
+    color:#fff;
+    background-color:#34618e;
+    @include text-shadow(#444 1px 1px 0px);
+    @include background-image(linear-gradient(top, #34618e, #1F4A75));
+  }
+
+  &:active {
+    @extend .gray_button:hover;
+    @include background-image(linear-gradient(top, #1F4A75, #34618e));
+  }
+}
+
+.dark_gray_button {
+  @extend .default_button;
+  background-color:#aaa;
+  border:1px solid #888;
+  color:#000;
+  @include text-shadow(#999 1px 1px 0px);
+
+  &:visited { color: #000; }
+
+  &:hover, &:focus {
+    background-color:#34618e;
+    border:1px solid #1F4A75;
+    color:#fff;
+    background-color:#34618e;
+    @include text-shadow(#444 1px 1px 0px);
+    @include background-image(linear-gradient(top, #34618e, #1F4A75));
+  }
+
+  &:active {
+    @extend .gray_button:hover;
     @include background-image(linear-gradient(top, #1F4A75, #34618e));
   }
 }

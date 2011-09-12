@@ -1,5 +1,13 @@
-<h1>My Webconference Rooms</h1>
+<div class="h1_buttons">
+  <h1>Active Meetings</h1>
+  <div class="button_wrapper">
+    <% # new_group_text = image_tag('icons/play.png').html_safe + ' Start a meeting' %>
+    <% new_group_text = 'Create a meeting' %>
+    <%= link_to new_group_text, '#', :class => 'button_with_icon' %>
+  </div>
+</div>
 
+<!--
 <div id="home_menu">
   <%= link_to 'Create Room', user_new_room_path(current_user), :class => 'webconference_user_new' %>
   <%= link_to 'View Servers', bigbluebutton_servers_path %>
@@ -21,3 +29,134 @@
   <%= render :partial => 'home/webconference_details', :locals => { :room => room } %>
   <% i += 1 %>
 <% end %>
+-->
+
+<div class="home_active_meeting">
+  <div class="header">
+    <span class="meeting_name"><%= image_tag 'icons/lock_closed.png', :size => '16x16', :alt => 'PRIVATE room', :title => 'PRIVATE room' %> My Meeting</span><div class="meeting_info"><a href="/leonardo-daronco/my-meeting">http://mconf.org/leonardo-daronco/my-meeting</a></div>
+    <div class="buttons_right">
+      <%= link_to 'Configure', '#', :class => 'gray_button small' %>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+  <div class="body">
+    <span class="meeting_name_subtitle">Running since 10/08/2011 at <span class="emph">15:32</span>, with <span class="emph">8 participants</span></span>
+    <div class="buttons_right">
+      <!--<%= link_to 'Join this meeting', '#', :class => 'green_button small' %>-->
+      <%= link_to 'End the meeting', '#', :confirm => 'Are you sure?', :method => :get, :class => 'red_button small' %>
+      <%= link_to 'Invite people', '#', :class => 'gray_button small' %>
+      <%= link_to 'Join from a mobile device', '#', :class => 'gray_button small' %>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+</div>
+
+<div class="home_active_meeting">
+  <div class="header">
+    <span class="meeting_name"><%= image_tag 'icons/lock_open.png', :size => '18x16', :alt => 'PUBLIC room', :title => 'PUBLIC room' %> PRAV</span><div class="meeting_info"><a href="/leonardo-daronco/prav">http://mconf.org/leonardo-daronco/prav</a></div>
+    <div class="buttons_right">
+      <%= link_to 'Configure', '#', :class => 'gray_button small' %>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+  <div class="body">
+    <span class="meeting_name_subtitle">Running since 10/08/2011 at <span class="emph">15:32</span>, with <span class="emph">8 participants</span></span>
+    <div class="buttons_right">
+      <!--<%= link_to 'Join this meeting', '#', :class => 'green_button small' %>-->
+      <%= link_to 'End the meeting', '#', :confirm => 'Are you sure?', :method => :get, :class => 'red_button small' %>
+      <%= link_to 'Invite people', '#', :class => 'gray_button small' %>
+      <%= link_to 'Join from a mobile device', '#', :class => 'gray_button small' %>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+</div>
+
+<br/>
+
+<div class="h1_buttons">
+  <h1>Groups</h1>
+  <div class="button_wrapper">
+    <% # new_group_text = image_tag('icons/add.png', :size => '16x16').html_safe + ' New Group' %>
+    <% new_group_text = 'New Group' %>
+    <%= link_to new_group_text, '#', :class => 'button_with_icon' %>
+  </div>
+</div>
+
+<div class="home_group_active">
+  <div class="header">
+    <div class="buttons_left">
+      <%= link_to 'Join meeting', '#', :class => 'blue_button small' %>
+    </div>
+    <span class="group_name">PRAV</span><div class="group_info">14 members -- <span class="emph">Meeting in progress!</span></div>
+    <div class="buttons_right">
+      <%= link_to 'Configure', '#', :class => 'gray_button small' %>
+      <%= link_to 'Remove group', '#', :class => 'gray_button small' %>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+</div>
+
+<div class="home_group">
+  <div class="header">
+    <div class="buttons_left">
+      <%= link_to 'Start meeting', '#', :class => 'blue_button small' %>
+    </div>
+    <span class="group_name">GT-Mconf</span><div class="group_info">7 members</div>
+    <div class="buttons_right">
+      <%= link_to 'Configure', '#', :class => 'gray_button small' %>
+      <%= link_to 'Remove group', '#', :class => 'gray_button small' %>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+</div>
+
+<div class="home_group">
+  <div class="header">
+    <div class="buttons_left">
+      <%= link_to 'Start meeting', '#', :class => 'blue_button small' %>
+    </div>
+    <span class="group_name">Outro grupo com nome grande</span><div class="group_info">2 members</div>
+    <div class="buttons_right">
+      <%= link_to 'Configure', '#', :class => 'gray_button small' %>
+      <%= link_to 'Remove group', '#', :class => 'gray_button small' %>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+</div>
+
+<br/>
+<div class="h1_buttons">
+  <h1>Past Meetings</h1>
+</div>
+
+<div class="home_past_meeting">
+  <div class="buttons_right">
+    <a href="#">details</a> | <a href="#">recordings</a>
+  </div>
+  <span class="meeting_name">My Meeting</span><span class="meeting_name_subtitle"> at <a href="/leonardo-daronco/my-meeting">/leonardo-daronco/my-meeting</a>, from 10/08/2011 at <span class="emph">15:32</span> to 10/08/2011 at <span class="emph">18:02</span>, with <span class="emph">8 participants</span></span>
+  <div style="clear:both;"></div>
+</div>
+
+<div class="home_past_meeting">
+  <div class="buttons_right">
+    <a href="#">details</a> | <a href="#">recordings</a>
+  </div>
+  <span class="meeting_name">PRAV</span><span class="meeting_name_subtitle"> at <a href="/leonardo-daronco/prav">/leonardo-daronco/prav</a>, from 10/08/2011 at <span class="emph">15:32</span> to 10/08/2011 at <span class="emph">18:02</span>, with <span class="emph">8 participants</span></span>
+  <div style="clear:both;"></div>
+</div>
+
+<div class="home_past_meeting">
+  <div class="buttons_right">
+    <a href="#">details</a> | <a href="#">recordings</a>
+  </div>
+  <span class="meeting_name">My Meeting</span><span class="meeting_name_subtitle"> at <a href="/leonardo-daronco/my-meeting">/leonardo-daronco/my-meeting</a>, from 10/08/2011 at <span class="emph">15:32</span> to 10/08/2011 at <span class="emph">18:02</span>, with <span class="emph">8 participants</span></span>
+  <div style="clear:both;"></div>
+</div>
+
+<div class="home_past_meeting">
+  <div class="buttons_right">
+    <a href="#">details</a> | <a href="#">recordings</a>
+  </div>
+  <span class="meeting_name">PRAV</span><span class="meeting_name_subtitle"> at <a href="/leonardo-daronco/prav">/leonardo-daronco/prav</a>, from 10/08/2011 at <span class="emph">15:32</span> to 10/08/2011 at <span class="emph">18:02</span>, with <span class="emph">8 participants</span></span>
+  <div style="clear:both;"></div>
+</div>
