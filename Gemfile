@@ -1,45 +1,48 @@
 source 'http://rubygems.org'
 
-gem "rails", "~> 3.1.0"
-#gem "mysql2", "0.3.2"
+gem "rails", "~> 3.2.0"
 
-# general purpose
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails', '~> 3.2.0'
+  gem 'coffee-rails', '~> 3.2.0'
+  gem 'uglifier', '>= 1.0.3'
+  gem 'yui-compressor'
+  gem 'compass-rails', '~> 1.0'
+
+  # TODO: remove when compass-rails is updated
+  # This compass is here so we can have css3/animation
+  # gem 'compass', '~> 0.13.alpha'
+end
+
+gem 'jquery-rails'
+gem 'therubyracer', :require => 'v8'
+gem 'haml'
+# gem 'json'
+
 gem 'devise'
-gem 'simple_form', '>= 1.4.2'
+gem 'simple_form', '~> 2.0.0'
 gem 'configatron'
+gem 'mysql2', '~> 0.3.0'
 
-# BigBlueButton
 gem 'bigbluebutton_rails', :git => 'git://github.com/mconf/bigbluebutton_rails.git'
 gem 'bigbluebutton-api-ruby', :git => 'git://github.com/mconf/bigbluebutton-api-ruby.git'
 
-# Rails 3.1 - Asset Pipeline
-gem 'json'
-gem 'sass'
-gem 'coffee-script'
-gem 'uglifier'
-gem 'compass'
+group :development do
+  gem 'sqlite3'
+  gem 'rails_best_practices'
+end
 
-# Rails 3.1 - JavaScript
-gem 'jquery-rails'
-gem 'therubyracer', :require => 'v8'
-
-# Rails 3.1 - Heroku
-#group :production do
-#  gem 'therubyracer-heroku', '0.8.1.pre3'
-#  gem 'pg'
-#end
-
-group :development, :test do
-  gem 'sqlite3-ruby', :require => 'sqlite3'
-  gem 'rspec-rails', '~> 2.6'
+group :test do
+  gem 'rspec-rails'
   gem 'rspec-instafail'
   gem 'fuubar'
   gem 'shoulda-matchers'
-  gem 'cucumber-rails', '~> 0.5.0'
+  gem 'cucumber-rails'
   gem 'database_cleaner'
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
   gem 'forgery'
-  gem 'rails_best_practices'
 end
 
 group :test do
