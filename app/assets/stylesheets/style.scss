@@ -1,9 +1,9 @@
 @import "common";
 @import "compass/css3";
-@import "compass/reset";
+/* @import "compass/reset"; */
 @import "compass/typography/links";
 
-@include global-reset;
+/* @include global-reset; */
 
 html {
   margin: 0;

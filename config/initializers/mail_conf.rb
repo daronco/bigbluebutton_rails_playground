@@ -5,7 +5,6 @@ ActionMailer::Base.smtp_settings = {
     :enable_starttls_auto => true,
     :address              => 'smtp.gmail.com',
     :port                 => 587,
-    :tls                  => true,
     :domain               => 'gmail.com',
     :authentication       => :plain,
     :user_name            => configatron.sendmail.username,
@@ -14,4 +13,3 @@ ActionMailer::Base.smtp_settings = {
 
 # FIXME: Temporary default url. Could be taken from Site.current.
 ActionMailer::Base.default_url_options[:host] = "localhost:3000"
-

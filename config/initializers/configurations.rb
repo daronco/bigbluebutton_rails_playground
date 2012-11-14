@@ -18,5 +18,3 @@ config_env = full_config[Rails.env]
 config.merge!(config_env) unless config_env.nil?
 
 configatron.configure_from_hash(config)
-
-

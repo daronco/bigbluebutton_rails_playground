@@ -1,5 +1,4 @@
 class CreateBigbluebuttonRails < ActiveRecord::Migration
-
   def self.up
     create_table :bigbluebutton_servers do |t|
       t.string :name
@@ -34,5 +33,4 @@ class CreateBigbluebuttonRails < ActiveRecord::Migration
     drop_table :bigbluebutton_rooms
     drop_table :bigbluebutton_servers
   end
-
 end

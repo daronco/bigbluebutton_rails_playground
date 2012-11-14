@@ -14,7 +14,7 @@
       <div><label><%= BigbluebuttonServer.human_attribute_name(:param) %></label> <%= server.param %></div>
       <div><label>Access</label>
         <%= link_to t('show'), server, :class => 'button small' %>
-        <%= link_to t('.view_rooms'), bigbluebutton_server_rooms_path(server), :class => 'button small' %>
+        <%= link_to t('.view_rooms'), bigbluebutton_rooms_path(), :class => 'button small' %>
         <%= link_to t('.activity_monitor'), activity_bigbluebutton_server_path(server), :class => 'button small' %>
         <%= link_to t('edit'), edit_bigbluebutton_server_path(server), :class => 'button small' %>
         <%= link_to t('destroy'), server, :confirm => t('are_you_sure'), :method => :delete, :class => 'button small' %>
@@ -22,4 +22,3 @@
     </li>
   <% end %>
 </ul>
-
