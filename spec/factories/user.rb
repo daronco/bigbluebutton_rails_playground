@@ -1,7 +1,10 @@
-Factory.define :user do |u|
-  u.sequence(:name) { |n| "User Name #{n}" }
-  u.sequence(:email) { |n| "user#{n}@example.com" }
-  u.password Forgery(:basic).password :at_least => 10, :at_most => 16
-  u.password_confirmation { |u| u.password }
-  u.after_create { |u| u.confirm! }
+FactoryGirl.define do
+  factory :user do |f|
+    f.sequence(:name) { |n| Forgery::Name.unique_full_name(n) }
+    f.sequence(:username) { |n| Forgery::Internet.unique_user_name(n) }
+    f.sequence(:email) { |n| Forgery::Internet.unique_email_address(n) }
+    f.password Forgery(:basic).password :at_least => 10, :at_most => 16
+    f.password_confirmation { |u| u.password }
+    after(:create) { |u| u.confirm! }
+  end
 end

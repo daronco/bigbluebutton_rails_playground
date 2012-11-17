@@ -34,18 +34,19 @@ group :development do
   gem 'rails_best_practices'
 end
 
-group :test do
+group :test, :development do
   gem 'rspec-rails'
-  gem 'rspec-instafail'
-  gem 'fuubar'
-  gem 'shoulda-matchers'
-  gem 'cucumber-rails'
-  gem 'database_cleaner'
-  gem 'factory_girl_rails'
-  gem 'forgery'
 end
 
 group :test do
+  gem 'rspec-instafail'
+  gem 'fuubar'
+  gem 'shoulda-matchers'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'forgery'
+
   if RUBY_VERSION >= "1.9"
     gem 'simplecov', '>= 0.4.0', :require => false
   end

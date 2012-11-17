@@ -4,9 +4,7 @@ describe Devise::RegistrationsController do
   include Shoulda::Matchers::ActionController
 
   describe "routing" do
-    it { should route(:get, "/register").to(:action => :new) }
-
-    # TODO: disable the standard devise routes for sessions
-    # it { should_not route(:get, "/users/sign_up").to(:action => :new) }
+    it { {:get => "/register"}.should route_to(:controller => "devise/registrations", :action => "new") }
+    it { should route(:get, "/users/signup").to(:action => :new) }
   end
 end

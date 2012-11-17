@@ -39,5 +39,3 @@ RSpec.configure do |config|
   config.include Devise::TestHelpers, :type => :controller
   config.extend ControllerMacros, :type => :controller
 end
-
-FactoryGirl.find_definitions

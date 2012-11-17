@@ -8,7 +8,7 @@
 </p>
 <p>
   <b><%= BigbluebuttonRoom.human_attribute_name(:server_id) %>:</b>
-  <%= @room.server.id %>
+  <%= @room.server.id if @room.server %>
 </p>
 <p>
   <b><%= BigbluebuttonRoom.human_attribute_name(:meetingid) %>:</b>

@@ -1,4 +1,4 @@
-<%= simple_form_for(@server) do |f| %>
+<%= simple_form_for(@server, :url => bigbluebutton_server_path(@server)) do |f| %>
   <%= f.input :name %>
   <%= f.input :url %>
   <%= f.input :salt %>

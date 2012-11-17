@@ -1,4 +1,4 @@
-open_webconference_room = (path) ->
+open_bigbluebuttonerence_room = (path) ->
   url = location.protocol + '//' + document.domain + ":" + location.port + path;
   newwindow = window.open(url, "_blank", "resizable=yes,toolbar=no,menubar=no,addressbar=no,location=no,status=no");
   if (window.focus)

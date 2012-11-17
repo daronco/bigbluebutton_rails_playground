@@ -12,12 +12,14 @@ BigbluebuttonRailsPlayground::Application.routes.draw do
     get "register", :to => "devise/registrations#new"
   end
 
-  # bigbluebutton_rails default routes
-  bigbluebutton_routes :default, :controllers => { :servers => 'custom_servers', :rooms => 'custom_rooms' }
+  # bigbluebutton_rails routes
+  controllers = { :servers => "webconf_servers", :rooms => "webconf_rooms" }
+  bigbluebutton_routes :default, :scope => "webconf",
+                                 :controllers => controllers,
+                                 :as => "bigbluebutton"
 
   resources :users do
-    get :new_room, :to => 'custom_rooms#user_new', :as => 'new_room'
-    bigbluebutton_routes :room_matchers
+    get :new_room, :to => "webconf_rooms#user_new", :as => "new_room"
   end
 
   root :to => "home#index"

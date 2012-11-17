@@ -10,7 +10,7 @@
   mobile_join: "Mobile join"
   end: "End"
   are_you_sure: "Are you sure?"
-  custom_servers:
+  webconf_servers:
     new:
       title: "Add a new server"
     activity_list:

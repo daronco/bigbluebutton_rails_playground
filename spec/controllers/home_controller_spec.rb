@@ -10,10 +10,10 @@ describe HomeController do
     context "assigns current_user rooms" do
       # TODO: try to use login_user
       before {
-        @user = Factory.create(:user)
-        @rooms = [ Factory.create(:bigbluebutton_room, :owner => @user),
-                   Factory.create(:bigbluebutton_room, :owner => @user) ]
-        2.times { Factory.create(:bigbluebutton_room) }
+        @user = FactoryGirl.create(:user)
+        @rooms = [ FactoryGirl.create(:bigbluebutton_room, :owner => @user),
+                   FactoryGirl.create(:bigbluebutton_room, :owner => @user) ]
+        2.times { FactoryGirl.create(:bigbluebutton_room) }
         sign_in @user
       }
       before(:each) { get :index }
