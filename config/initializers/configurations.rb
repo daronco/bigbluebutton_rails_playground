@@ -1,12 +1,10 @@
 # Make sure the config file exists and load it
-CONFIG_FILE = File.join(::Rails.root, "config", "setup_conf.yml")
+CONFIG_FILE = File.join(::Rails.root, "config", "application.yml")
 unless File.exists? CONFIG_FILE
   puts
   puts "ERROR"
   puts "The configuration file does not exists!"
   puts "Path: #{CONFIG_FILE}"
-  puts
-  puts "Did you run \"rake setup:basic\"? Run it and then edit the file generated."
   puts
   exit
 end

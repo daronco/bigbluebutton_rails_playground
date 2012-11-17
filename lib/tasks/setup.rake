@@ -46,7 +46,7 @@ namespace "setup" do
 
   desc "Setup the configuration files"
   task :config do
-    setup_file("config/setup_conf.yml")
+    setup_file("config/application.yml")
     setup_file("config/database.yml")
   end
 
@@ -69,4 +69,3 @@ namespace "setup" do
   end
 
 end
-

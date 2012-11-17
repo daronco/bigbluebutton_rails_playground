@@ -4,7 +4,7 @@ log/*.log
 tmp/
 .sass-cache/
 *~
-config/setup_conf.yml
+config/application.yml
 config/database.yml
 public/stylesheets/
 public/images/
