@@ -1,4 +1,4 @@
-"en-US":
+en:
   simple_form:
     "yes": 'Yes'
     "no": 'No'
@@ -21,4 +21,3 @@
     # hints:
     #   username: 'User name to sign in.'
     #   password: 'No special characters, please.'
-
