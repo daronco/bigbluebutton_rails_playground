@@ -63,12 +63,6 @@ describe WebconfRoomsController do
         to(:action => :auth, :id => "room-1")
     }
 
-    # our custom routes added to /users/
-    it {
-      should route(:get, "/users/1/new_room").
-        to(:action => :user_new, :user_id => "1")
-    }
-
   end
 
 end

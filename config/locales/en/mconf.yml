@@ -1,0 +1,18 @@
+en:
+  are_you_sure: "Are you sure?"
+  back: "Back"
+  destroy: "Destroy"
+  edit: "Edit"
+  show: "Show"
+
+  locales:
+    set:
+      error: "Unable to change language to \"%{lang}\""
+      success: "Language changed to \"%{lang}\""
+
+  activerecord:
+    models:
+      user: "User"
+    attributes:
+      user:
+        login: "Username or email"

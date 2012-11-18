@@ -1,6 +1,7 @@
 BigbluebuttonRailsPlayground::Application.routes.draw do
 
-  get "home/index"
+  get "home", :to => "home#index", :as => "home"
+  root :to => "home#index"
 
   # devise
   # controllers = { :sessions => "sessions", :registrations => "registrations" }
@@ -18,10 +19,7 @@ BigbluebuttonRailsPlayground::Application.routes.draw do
                                  :controllers => controllers,
                                  :as => "bigbluebutton"
 
-  resources :users do
-    get :new_room, :to => "webconf_rooms#user_new", :as => "new_room"
-  end
-
-  root :to => "home#index"
+  # Set locale
+  match "locale/set/:id", :to => "locales#set", :as => "set_locale"
 
 end

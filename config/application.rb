@@ -26,8 +26,14 @@ module BigbluebuttonRailsPlayground
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
 
-    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    # The translations are stored in config/locales/**/*.yml, in separate files
+    # for base strings, gem strings and application strings (mconf.yml). The
+    # application strings should always be loaded after all the others, so they
+    # can override strings.
+    config.i18n.load_path +=
+      Dir[Rails.root.join('config', 'locales', '**', '_*.yml').to_s] +
+      Dir[Rails.root.join('config', 'locales', '**', 'mconf.yml').to_s]
+    config.i18n.fallbacks = true
     config.i18n.default_locale = :en
 
     # Configure the default encoding used in templates for Ruby 1.9.

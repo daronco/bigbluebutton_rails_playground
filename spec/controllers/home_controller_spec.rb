@@ -4,10 +4,9 @@ describe HomeController do
   render_views
 
   describe "#index" do
-
     pending "blocks access to unlogged users"
 
-    context "assigns current_user rooms" do
+    context "assigns rooms" do
       # TODO: try to use login_user
       before {
         @user = FactoryGirl.create(:user)
@@ -22,4 +21,3 @@ describe HomeController do
   end
 
 end
-
