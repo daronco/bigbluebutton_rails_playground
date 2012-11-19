@@ -1,15 +1,6 @@
 # Default configurations
 default:
 
-  # BigBlueButton default server configuration
-  # This server will be your first and default server
-  # This can be changed later on in the management area in the website
-  bbb_server:
-    name: 'Default Server'
-    url: 'http://my-development-server/bigbluebutton/api'
-    salt: 'my-secret-salt'
-    version: '0.7'
-
   # Website default configuration
   # The information will be used to create the Site object, that defines your website.
   # They can be altered after the initial setup using the management area in the application.
@@ -18,13 +9,8 @@ default:
     description: "Mconf Website"               # Website description
     domain: "localhost"                        # Your server's IP or name address
     locale: "en"                               # This will be the default locale for the application
-
-  # Email account used to send all emails from within the application (invitations,
-  # registrations confirmations, etc). For now you have to use a Gmail account.
-  # See config/initializers/mail_conf.rb
-  sendmail:
-    username: "my-username@gmail.com"
-    password: "my-password"
+    smtp_login: "username@gmail.com"
+    smtp_password: "secret-password"
 
 # Configurations for each environment
 # You can find below the sections for each environment available.
@@ -42,23 +28,14 @@ default:
 # Also remember to maintain the file indented with 2 spaces. The YML file must be well
 # formatted to be valid.
 
-# Development configurations
 #development:
-#  bbb_server:
-#    url: 'http://dev-server/bigbluebutton/api'
-#    salt: 'dev-server-salt'
-#    version: '0.7'
+#  site:
+#    name: "Mconf Dev"
 
-# Production configurations
 #production:
-#  bbb_server:
-#    url: 'http://production-server/bigbluebutton/api'
-#    salt: 'production-server-salt'
-#    version: '0.7'
+#  site:
+#    name: "Mconf Dev"
 
-# Test configurations
 #test:
-#  bbb_server:
-#    url: 'http://test-server/bigbluebutton/api'
-#    salt: 'test-server-salt'
-#    version: '0.7'
+#  site:
+#    name: "Mconf Dev"
