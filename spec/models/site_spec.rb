@@ -8,7 +8,6 @@ describe Site do
     FactoryGirl.build(:site).should be_valid
   end
 
-  # to ensure that the migration is correct
   context "db" do
     it { should have_db_column(:name).of_type(:string) }
     it { should have_db_column(:description).of_type(:text) }

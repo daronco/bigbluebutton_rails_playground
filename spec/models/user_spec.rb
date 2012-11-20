@@ -7,6 +7,36 @@ describe User do
     FactoryGirl.build(:user).should be_valid
   end
 
+  context "db" do
+    it { should have_db_column(:name).of_type(:string) }
+    it { should have_db_column(:username).of_type(:string) }
+    it { should have_db_column(:email).of_type(:string) }
+    it { should have_db_column(:locale).of_type(:string) }
+    it { should have_db_column(:superuser).of_type(:boolean) }
+    it { should have_db_column(:created_at).of_type(:datetime) }
+    it { should have_db_column(:updated_at).of_type(:datetime) }
+    it { should have_db_column(:encrypted_password).of_type(:string) }
+    it { should have_db_column(:reset_password_token).of_type(:string) }
+    it { should have_db_column(:reset_password_sent_at).of_type(:datetime) }
+    it { should have_db_column(:remember_created_at).of_type(:datetime) }
+    it { should have_db_column(:sign_in_count).of_type(:integer) }
+    it { should have_db_column(:current_sign_in_at).of_type(:datetime) }
+    it { should have_db_column(:last_sign_in_at).of_type(:datetime) }
+    it { should have_db_column(:confirmation_token).of_type(:string) }
+    it { should have_db_column(:confirmed_at).of_type(:datetime) }
+    it { should have_db_column(:confirmation_sent_at).of_type(:datetime) }
+    it { should have_db_column(:unconfirmed_email).of_type(:string) }
+    it { should have_db_index(:username).unique(true) }
+    it { should have_db_index(:email).unique(true) }
+    it { should have_db_index(:reset_password_token).unique(true) }
+    it "default values" do
+      obj = User.new
+      obj.superuser.should be_false
+      obj.email.should eql("")
+      obj.sign_in_count.should be(0)
+    end
+  end
+
   it { should validate_presence_of(:username) }
   it {
     FactoryGirl.create(:user)
@@ -43,6 +73,8 @@ describe User do
 
   it { should validate_presence_of(:name) }
   it { should allow_mass_assignment_of(:name) }
+
+  it { should allow_mass_assignment_of(:superuser) }
 
   it { should allow_mass_assignment_of(:password) }
 

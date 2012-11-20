@@ -6,6 +6,7 @@ en:
     attributes:
       user:
         login: "Username or email"
+        superuser: "Administrator"
       site:
         analytics_code: "Analytics Code"
         chat_enabled: "Enable Chat"

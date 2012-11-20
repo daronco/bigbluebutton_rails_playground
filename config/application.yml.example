@@ -1,6 +1,14 @@
 # Default configurations
 default:
 
+  # Admin account
+  # You can change the password after the initial setup from within the application.
+  admin:
+    username: "admin"                          # Admin user login (e.g. mconf)
+    name: "Mconf Admin"                        # Admin user full name
+    email: "admin@default.com"                 # Admin user email
+    password: "admin"                          # Admin user password
+
   # Website default configuration
   # The information will be used to create the Site object, that defines your website.
   # They can be altered after the initial setup using the management area in the application.

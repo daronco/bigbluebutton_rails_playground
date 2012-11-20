@@ -41,3 +41,23 @@ if Site.count > 0
 else
   Site.create! params
 end
+
+puts "* Create the administrator account"
+puts "  username: #{configatron.admin.username}"
+puts "  fullname: #{configatron.admin.name}"
+puts "  email: #{configatron.admin.email}"
+puts "  password: #{configatron.admin.password}"
+params = {
+  :username => configatron.admin.username,
+  :email => configatron.admin.email,
+  :password => configatron.admin.password,
+  :password_confirmation => configatron.admin.password,
+  :name => configatron.admin.name,
+  :superuser => true
+}
+u = User.new params
+u.skip_confirmation!
+unless u.save
+  puts "ERROR!"
+  puts u.errors.inspect
+end

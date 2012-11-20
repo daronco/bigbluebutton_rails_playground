@@ -6,6 +6,7 @@ pt-BR:
     attributes:
       user:
         login: "Usuário ou e-mail"
+        superuser: "Administrador"
       site:
         analytics_code: "Código do Google Analytics"
         chat_enabled: "Habilitar Chat"

@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
 
   ## Validations
 
-  attr_accessible :name
+  attr_accessible :name, :superuser
 
   # format: alphanumeric and '_', with '-' only in the center
   validates :username, :presence => true,
