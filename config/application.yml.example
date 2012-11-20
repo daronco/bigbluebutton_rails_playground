@@ -9,19 +9,19 @@ default:
     description: "Mconf Website"               # Website description
     domain: "localhost"                        # Your server's IP or name address
     locale: "en"                               # This will be the default locale for the application
-    smtp_login: "username@gmail.com"
+    smtp_user_name: "username@gmail.com"
     smtp_password: "secret-password"
 
 # Configurations for each environment
 # You can find below the sections for each environment available.
 # Uncomment the lines from one of them to define specific configurations for that environment.
 # You can copy any of the parameters from the default section and override them here.
-# Remember to copy the entire sections: if you want to override "site.smtp_login" and
+# Remember to copy the entire sections: if you want to override "site.smtp_user_name" and
 # "admin.username", you must do something like:
 #
 # development:
 #   site:
-#     smtp_login: "override the SMTP login"
+#     smtp_user_name: "override the SMTP login"
 #   admin:
 #     username: "my-special-admin"
 #

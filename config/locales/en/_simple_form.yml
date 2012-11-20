@@ -1,4 +1,37 @@
 en:
+  activerecord:
+    models:
+      site: "Site"
+      user: "User"
+    attributes:
+      user:
+        login: "Username or email"
+      site:
+        analytics_code: "Analytics Code"
+        chat_enabled: "Enable Chat"
+        description: "Description"
+        domain: "Application Domain"
+        exception_notifications: "Send email on error"
+        exception_notifications_email: "Debug emails recipients"
+        exception_notifications_prefix: "Debug emails subject prefix"
+        feedback_url: "Feedback URL"
+        locale: "Language"
+        name: "Name"
+        shib_email_field: "Shibboleth field for email"
+        shib_enabled: "Enable Shibboleth"
+        shib_name_field: "Shibboleth field for name"
+        signature: Signature
+        smtp_auth_type: STMP authentication type
+        smtp_auto_tls: Auto start TLS in SMTP
+        smtp_domain: STMP domain
+        smtp_user_name: SMTP login
+        smtp_password: SMTP password
+        smtp_port: SMTP port
+        smtp_sender: SMTP sender
+        smtp_server: SMTP server
+        xmpp_domain: "XMPP Chat Domain"
+        xmpp_server: "XMPP Server Address"
+
   simple_form:
     "yes": 'Yes'
     "no": 'No'
@@ -10,14 +43,15 @@ en:
       # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: "Some errors were found, please take a look:"
-    # Labels and hints examples
-    # labels:
-    #   password: 'Password'
-    #   user:
-    #     new:
-    #       email: 'E-mail para efetuar o sign in.'
-    #     edit:
-    #       email: 'E-mail.'
-    # hints:
-    #   username: 'User name to sign in.'
-    #   password: 'No special characters, please.'
+    hints:
+      site:
+        analytics_code: "Code for your Google Analytics account. Leave it blank to disable. Example: \"UA-12345678-9\""
+        exception_notifications: "Send debugging emails whenever the application crashes."
+        exception_notifications_email: "Use either spaces, commas or semi-colons to separate different emails."
+        feedback_url: "The users will be redirected to this URL when they log out of a webconference. If not set they are redirected to the default URL."
+        shib_email_field: "When a user authenticates in a Shibboleth service provider this field will be used to obtain the user's email. Example: Shib-inetOrgPerson-mail"
+        shib_name_field: "When a user authenticates in a Shibboleth service provider this field will be used to obtain the user's name. Example: Shib-inetOrgPerson-sn"
+        smtp_user_name: "The login email to your SMTP server."
+        smtp_password: "The password for your email account in your SMTP server."
+        xmpp_domain: "Domain used to identify the XMPP server (e.g. \"myserver.com\")."
+        xmpp_server: "Address where's located the XMPP server (e.g. http://myserver.com:5280/http-bind)."

@@ -17,25 +17,22 @@ describe Site do
     it { should have_db_column(:locale).of_type(:string) }
     it { should have_db_column(:feedback_url).of_type(:string) }
     it { should have_db_column(:analytics_code).of_type(:string) }
-    it { should have_db_column(:current).of_type(:boolean) }
     it { should have_db_column(:exception_notifications).of_type(:boolean) }
     it { should have_db_column(:exception_notifications_email).of_type(:string) }
     it { should have_db_column(:exception_notifications_prefix).of_type(:string) }
     it { should have_db_column(:shib_enabled).of_type(:boolean) }
     it { should have_db_column(:shib_name_field).of_type(:string) }
     it { should have_db_column(:shib_email_field).of_type(:string) }
-    it { should have_db_column(:smtp_login).of_type(:string) }
+    it { should have_db_column(:smtp_user_name).of_type(:string) }
     it { should have_db_column(:smtp_password).of_type(:string) }
     it { should have_db_column(:smtp_auto_tls).of_type(:boolean) }
     it { should have_db_column(:smtp_server).of_type(:string) }
     it { should have_db_column(:smtp_port).of_type(:integer) }
-    it { should have_db_column(:smtp_use_tls).of_type(:boolean) }
     it { should have_db_column(:smtp_domain).of_type(:string) }
     it { should have_db_column(:smtp_auth_type).of_type(:string) }
     it { should have_db_column(:smtp_sender).of_type(:string) }
     it "default values" do
       obj = Site.new
-      obj.current.should be_false
       obj.exception_notifications.should be_false
       obj.shib_enabled.should be_false
       obj.chat_enabled.should be_false

@@ -14,7 +14,7 @@ ActiveSupport.on_load(:after_initialize) do
       :domain => nil,
       :enable_starttls_auto => false,
       :authentication => nil,
-      :tls => false,
+      :tls => false, # always false, see http://www.redmine.org/issues/11034
       :user_name => nil,
       :password => nil
     }
@@ -34,11 +34,8 @@ ActiveSupport.on_load(:after_initialize) do
     if site.respond_to?(:smtp_auth_type) and not site.smtp_auth_type.blank?
       settings[:authentication] = site.smtp_auth_type
     end
-    if site.respond_to?(:smtp_use_tls) and not site.smtp_use_tls.blank?
-      settings[:tls] = true
-    end
-    if site.respond_to?(:smtp_login) and not site.smtp_login.blank?
-      settings[:user_name] = site.smtp_login
+    if site.respond_to?(:smtp_user_name) and not site.smtp_user_name.blank?
+      settings[:user_name] = site.smtp_user_name
     end
     if site.respond_to?(:smtp_password) and not site.smtp_password.blank?
       settings[:password] = site.smtp_password

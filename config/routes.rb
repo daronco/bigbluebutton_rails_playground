@@ -3,7 +3,10 @@ BigbluebuttonRailsPlayground::Application.routes.draw do
   get "home", :to => "home#index", :as => "home"
   root :to => "home#index"
 
-  # devise
+  # Set locale
+  match "locale/set/:id", :to => "locales#set", :as => "set_locale"
+
+  # Devise
   # controllers = { :sessions => "sessions", :registrations => "registrations" }
   paths = { :sign_in => "login", :sign_out => "logout", :sign_up => "signup" }
   devise_for :users, :path_names => paths #, :controllers => controllers
@@ -19,7 +22,7 @@ BigbluebuttonRailsPlayground::Application.routes.draw do
                                  :controllers => controllers,
                                  :as => "bigbluebutton"
 
-  # Set locale
-  match "locale/set/:id", :to => "locales#set", :as => "set_locale"
+  # The unique Site is created in db/seeds and can only be edited
+  resource :site, :only => [:show, :edit, :update]
 
 end

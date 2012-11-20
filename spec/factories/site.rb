@@ -5,7 +5,7 @@ FactoryGirl.define do
       f.description Forgery::Basic.text
       f.domain Forgery::Internet.domain_name
       f.signature Forgery::Name.company_name
-      f.smtp_login Forgery::Internet.user_name
+      f.smtp_user_name Forgery::Internet.user_name
       f.locale "en"
       f.exception_notifications false
       f.shib_enabled false

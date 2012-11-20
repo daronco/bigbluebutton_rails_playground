@@ -1,4 +1,37 @@
 pt-BR:
+  activerecord:
+    models:
+      site: "Site"
+      user: "Usuário"
+    attributes:
+      user:
+        login: "Usuário ou e-mail"
+      site:
+        analytics_code: "Código do Google Analytics"
+        chat_enabled: "Habilitar Chat"
+        description: "Descrição"
+        domain: "Domínio da Aplicação"
+        exception_notifications: "Enviar e-mails de depuração"
+        exception_notifications_email: "Destinatários dos e-mails de depuração"
+        exception_notifications_prefix: "Prefixo no assunto dos e-mails de depuração"
+        feedback_url: "Feedback URL"
+        locale: "Idioma"
+        name: "Nome"
+        shib_email_field: "Campo Shibboleth para email"
+        shib_enabled: "Habilitar Shibboleth"
+        shib_name_field: "Campo Shibboleth para nome"
+        signature: Assinatura
+        smtp_auth_type: "Tipo de autenticação STMP"
+        smtp_auto_tls: "Auto-iniciar TLS no SMTP"
+        smtp_domain: "Domínio STMP"
+        smtp_user_name: "Login SMTP"
+        smtp_password: Senha SMTP
+        smtp_port: Porta SMTP
+        smtp_sender: Remetente SMTP
+        smtp_server: Servidor SMTP
+        xmpp_domain: "Domínio do servidor XMPP"
+        xmpp_server: "Endereço do servidor XMPP"
+
   simple_form:
     "yes": 'Sim'
     "no": 'Não'
@@ -7,3 +40,15 @@ pt-BR:
       mark: '*'
     error_notification:
       default_message: "Alguns erros foram encontrados, veja abaixo:"
+    hints:
+      site:
+        analytics_code: "Código para sua conta do Google Analytics. Deixe em branco para desabilitar. Exemplo: \"UA-12345678-9\""
+        exception_notifications: "Enviar e-mails de depuração sempre que ocorrer um erro grave na aplicação."
+        exception_notifications_email: "Use espaços, vírgulas ou ponto-e-vírgulas para separar diferentes e-mails."
+        feedback_url: "Os usuários serão redirecionados para esta URL quando eles sairem de uma conferência. Se o campo ficar em branco, eles serão redirecionados para '%{default_url}'."
+        shib_email_field: "Quando um usuário se autentica em provedor de serviços Shibboleth este campo será utilizado para obter o e-mail do usuário. Exemplo: Shib-inetOrgPerson-mail"
+        shib_name_field: "Quando um usuário se autentica em provedor de serviços Shibboleth este campo será utilizado para obter o nome do usuário. Exemplo: Shib-inetOrgPerson-sn"
+        smtp_user_name: "O e-mail de login no servidor SMTP."
+        smtp_password: "A senha para sua conta de e-mail no servidor SMTP."
+        xmpp_domain: "Domínio usado para identificar o servidor XMPP (e.g. \"myserver.com\")."
+        xmpp_server: "Endereço onde está localizado o servidor XMPP (e.g. http://myserver.com:5280/http-bind)."

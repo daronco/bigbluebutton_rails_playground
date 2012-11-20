@@ -19,19 +19,18 @@ puts "  name: #{configatron.site.name}"
 puts "  description: #{configatron.site.description}"
 puts "  locale: #{configatron.site.locale}"
 puts "  domain: #{configatron.site.domain}"
-puts "  smtp_login: #{configatron.site.smtp_login}"
+puts "  smtp_user_name: #{configatron.site.smtp_user_name}"
 puts "  smtp_password: #{configatron.site.smtp_password.gsub(/./, "*") unless configatron.site.smtp_password.blank?}"
 puts "  smtp configurations defaults to Gmail"
 params = {
   :name => configatron.site.name,
   :description => configatron.site.description,
-  :smtp_login => configatron.site.smtp_login,
-  :smtp_sender => configatron.site.smtp_login,
+  :smtp_user_name => configatron.site.smtp_user_name,
+  :smtp_sender => configatron.site.smtp_user_name,
   :smtp_password => configatron.site.smtp_password,
   :smtp_auto_tls => true,
   :smtp_server => "smtp.gmail.com",
   :smtp_port => 587,
-  :smtp_use_tls => true,
   :smtp_domain => "gmail.com",
   :smtp_auth_type => :plain,
   :locale => configatron.site.locale,

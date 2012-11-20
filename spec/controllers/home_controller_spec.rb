@@ -3,6 +3,8 @@ require 'spec_helper'
 describe HomeController do
   render_views
 
+  pending "calls authenticate_user! for all"
+
   describe "#index" do
     pending "blocks access to unlogged users"
 

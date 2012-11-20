@@ -6,7 +6,7 @@ class Site < ActiveRecord::Base
 
   # Returns the current (default) Site
   def self.current
-    Site.where(:current => true).first
+    first || create
   end
 
   # HTTP protocol based on SSL settings

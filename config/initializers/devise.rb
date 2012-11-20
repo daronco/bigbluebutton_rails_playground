@@ -4,7 +4,10 @@ Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
-  config.mailer_sender = configatron.sendmail.username
+  if Site.table_exists? and Site.current and
+      Site.current.respond_to?(:smtp_user_name)
+    config.mailer_sender = Site.current.smtp_user_name
+  end
 
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"

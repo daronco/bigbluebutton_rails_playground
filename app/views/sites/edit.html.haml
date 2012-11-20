@@ -1,0 +1,35 @@
+-# = render :partial => 'manage/menu'
+
+-# = content_for :sidebar do
+-#   .affix-top{ :"data-spy" => "affix", :"data-offset-top" => "160" }
+-#     = link_to t('save'), "#form-edit-site", :class => "btn btn-primary btn-block submit-form"
+
+#manage
+  = simple_form_for @site, :url => site_path, :html => { :id => "form-edit-site", :method => :put, :multipart => true, :class => 'single-column' } do |f|
+    .left-column
+      = f.input :name
+      = f.input :description, :as => :text, :input_html => { :rows => 5 }
+      = f.input :domain
+      = f.input :locale, :collection => I18n.available_locales
+      = f.input :signature, :as => :text, :input_html => { :rows => 5 }
+      = f.input :feedback_url
+      = f.input :analytics_code
+      = f.input :shib_enabled, :as => :boolean
+      = f.input :shib_email_field
+      = f.input :shib_name_field
+    .right-column
+      = f.input :smtp_user_name
+      = f.input :smtp_password, :as => :showable_password
+      = f.input :smtp_sender
+      = f.input :smtp_domain
+      = f.input :smtp_server
+      = f.input :smtp_port
+      = f.input :smtp_auto_tls
+      = f.input :smtp_auth_type
+      = f.input :exception_notifications, :as => :boolean
+      = f.input :exception_notifications_email
+      = f.input :exception_notifications_prefix
+      = f.input :chat_enabled, :as => :boolean
+      = f.input :xmpp_domain
+      = f.input :xmpp_server
+      = f.button :submit

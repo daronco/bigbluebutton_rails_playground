@@ -9,10 +9,3 @@ pt-BR:
     set:
       error: "Não foi possível mudar a linguagem para \"%{lang}\""
       success: "Linguagem modificada para \"%{lang}\""
-
-  activerecord:
-    models:
-      user: "Usuário"
-    attributes:
-      user:
-        login: "Usuário ou e-mail"
