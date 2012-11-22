@@ -115,10 +115,6 @@ GEM
     ffi (1.1.5)
     forgery (0.5.0)
     fssm (0.2.9)
-    fuubar (1.1.0)
-      rspec (~> 2.0)
-      rspec-instafail (~> 0.2.0)
-      ruby-progressbar (~> 1.0.0)
     gherkin (2.11.5)
       json (>= 1.4.6)
     haml (3.1.7)
@@ -186,10 +182,6 @@ GEM
       json (~> 1.4)
     responders (0.9.3)
       railties (~> 3.1)
-    rspec (2.12.0)
-      rspec-core (~> 2.12.0)
-      rspec-expectations (~> 2.12.0)
-      rspec-mocks (~> 2.12.0)
     rspec-core (2.12.0)
     rspec-expectations (2.12.0)
       diff-lcs (~> 1.1.3)
@@ -202,7 +194,6 @@ GEM
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)
       rspec-mocks (~> 2.12.0)
-    ruby-progressbar (1.0.2)
     rubyzip (0.9.9)
     sass (3.2.3)
     sass-rails (3.2.5)
@@ -225,6 +216,10 @@ GEM
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
     simplecov-html (0.7.1)
+    spork (1.0.0rc3)
+    spork-rails (3.2.0)
+      rails (>= 3.0.0, < 3.3.0)
+      spork (>= 1.0rc0)
     sprockets (2.2.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -280,7 +275,6 @@ DEPENDENCIES
   exception_notification
   factory_girl_rails
   forgery
-  fuubar
   haml
   inherited_resources
   jquery-rails
@@ -293,6 +287,7 @@ DEPENDENCIES
   shoulda-matchers
   simple_form (~> 2.0.0)
   simplecov (>= 0.4.0)
+  spork-rails
   sqlite3
   therubyracer
   uglifier (>= 1.0.3)

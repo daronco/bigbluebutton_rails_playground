@@ -1,9 +1,13 @@
 require 'spec_helper'
 
 describe HomeController do
+  include Devise::TestHelpers
   render_views
 
-  pending "calls authenticate_user! for all"
+  describe "disallow member-only actions when not logged in" do
+    after { response.should redirect_to new_user_session_path }
+    it { get :index }
+  end
 
   describe "#index" do
     pending "blocks access to unlogged users"
