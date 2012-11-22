@@ -4,11 +4,6 @@ describe HomeController do
   include Devise::TestHelpers
   render_views
 
-  describe "disallow member-only actions when not logged in" do
-    after { response.should redirect_to new_user_session_path }
-    it { get :index }
-  end
-
   describe "#index" do
     pending "blocks access to unlogged users"
 
@@ -26,4 +21,8 @@ describe HomeController do
     end
   end
 
+  describe "authentication:" do
+    after { response.should redirect_to new_user_session_path }
+    its("#index") { get :index }
+  end
 end
