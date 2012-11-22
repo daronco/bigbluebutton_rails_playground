@@ -1,24 +1,25 @@
 require 'rubygems'
-require 'spork'
+require "spork"
 #uncomment the following line to use spork with the debugger
-#require 'spork/ext/ruby-debug'
+#require "spork/ext/ruby-debug"
 
-ENV["RAILS_ENV"] ||= 'test'
+ENV["RAILS_ENV"] ||= "test"
 
 Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However,
-  # if you change any configuration or code from libraries loaded here, you'll
+  # if you change any configuration or code from libraries loaded here, you"ll
   # need to restart spork for it take effect.
 
   if RUBY_VERSION >= "1.9"
-    require 'simplecov'
-    SimpleCov.start 'rails'
-    SimpleCov.coverage_dir 'coverage/rspec'
+    require "simplecov"
+    SimpleCov.start "rails"
+    SimpleCov.coverage_dir "coverage/rspec"
   end
 
   require File.expand_path("../../config/environment", __FILE__)
-  require 'rspec/rails'
+  require "rspec/rails"
   require "shoulda-matchers"
+  require "cancan/matchers"
 
   # Requires supporting ruby files with custom matchers and macros, etc,
   # in spec/support/ and its subdirectories.
@@ -48,6 +49,7 @@ Spork.prefork do
 
     config.include Devise::TestHelpers, :type => :controller
     config.extend ControllerMacros, :type => :controller
+    config.extend Helpers::ClassMethods
   end
 
 end

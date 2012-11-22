@@ -104,4 +104,33 @@ describe User do
     end
   end
 
+  describe "abilities:" do
+    subject { ability }
+    let(:ability) { Abilities.ability_for(user) }
+    let(:target) { FactoryGirl.create(:user) }
+
+    context "a superuser" do
+      let(:user) { FactoryGirl.create(:superuser) }
+      it { should be_able_to(:manage, target) }
+    end
+
+    context "the user himself" do
+      let(:user) { target }
+      it {
+        allowed = [:read, :update, :destroy]
+        should_not be_able_to_do_anything_to(target).except(allowed)
+      }
+    end
+
+    context "a normal user (but not the target user)" do
+      let(:user) { User.new }
+      it { should_not be_able_to_do_anything_to(target).except([:read]) }
+    end
+
+    context "an anonymous user" do
+      let(:user) { User.new }
+      it { should_not be_able_to_do_anything_to(target).except([:read]) }
+    end
+  end
+
 end
