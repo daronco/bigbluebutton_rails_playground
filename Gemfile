@@ -24,6 +24,7 @@ gem 'simple_form', '~> 2.0.0'
 gem 'mysql2', '~> 0.3.0'
 gem 'configatron'
 gem 'exception_notification'
+gem 'inherited_resources'
 # gem 'json'
 
 gem 'bigbluebutton_rails', :git => 'git://github.com/mconf/bigbluebutton_rails.git'
