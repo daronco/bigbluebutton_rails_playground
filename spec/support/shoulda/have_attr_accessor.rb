@@ -43,7 +43,15 @@ module Shoulda
         end
 
         def description
-          "ensure the model has reader and/or writer methods for #{@attribute}"
+          msg = "have "
+          if @ro
+            msg += "read only"
+          elsif @wo
+            msg += "write only"
+          else
+            msg += "read and write"
+          end
+          msg += " accessors for #{@attribute}"
         end
 
         def failure_message

@@ -5,8 +5,6 @@ describe HomeController do
   render_views
 
   describe "#index" do
-    pending "blocks access to unlogged users"
-
     context "assigns rooms" do
       # TODO: try to use login_user
       before {
@@ -25,4 +23,20 @@ describe HomeController do
     after { response.should redirect_to new_user_session_path }
     its("#index") { get :index }
   end
+
+  describe "abilities:" do
+
+    # non-members are blocked in the authentication, no need to test here
+
+    context "a superuser" do
+      login_superuser
+      it { should_not deny_access_to(:index) }
+    end
+
+    context "a normal user" do
+      login_user
+      it { should_not deny_access_to(:index) }
+    end
+  end
+
 end

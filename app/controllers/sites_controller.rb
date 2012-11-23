@@ -4,6 +4,8 @@ class SitesController < ApplicationController
 
   before_filter :authenticate_user!
 
+  authorize_resource :class => false
+
   respond_to :html
 
   def update

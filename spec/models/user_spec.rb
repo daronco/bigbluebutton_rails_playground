@@ -44,6 +44,7 @@ describe User do
   }
   it { should ensure_length_of(:username).is_at_least(3) }
   it { should allow_mass_assignment_of(:username) }
+  # TODO: replace validate_format_of by allow_value
   it { should validate_format_of(:username).with('_user') }
   it { should validate_format_of(:username).with("_abc") }
   it { should validate_format_of(:username).with("abc") }
@@ -123,13 +124,13 @@ describe User do
     end
 
     context "a normal user (but not the target user)" do
-      let(:user) { User.new }
+      let(:user) { FactoryGirl.create(:user) }
       it { should_not be_able_to_do_anything_to(target).except([:read]) }
     end
 
     context "an anonymous user" do
       let(:user) { User.new }
-      it { should_not be_able_to_do_anything_to(target).except([:read]) }
+      it { should_not be_able_to_do_anything_to(target) }
     end
   end
 

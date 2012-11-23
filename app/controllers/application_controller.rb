@@ -1,7 +1,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  check_authorization :unless => :devise_controller?
+
   before_filter :load_locale
+
+  def current_ability
+    @current_ability ||= Abilities.ability_for(current_user)
+  end
 
   def bigbluebutton_role(room)
     if room.private or current_user.nil?

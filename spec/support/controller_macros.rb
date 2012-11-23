@@ -1,9 +1,9 @@
 module ControllerMacros
 
-  def login_admin
+  def login_superuser
     before(:each) do
       @request.env["devise.mapping"] = Devise.mappings[:admin]
-      sign_in FactoryGirl.create(:admin)
+      sign_in FactoryGirl.create(:superuser)
     end
   end
 

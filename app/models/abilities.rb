@@ -25,8 +25,11 @@ module Abilities
     def initialize(user)
 
       # Users
-      can [:read], User
+      can :read, User
       can [:update, :destroy], User, :id => user.id
+
+      # Home
+      can :read, :home
 
     end
   end
@@ -35,7 +38,7 @@ module Abilities
     include CanCan::Ability
 
     def initialize
-      can [:read], User
+      #can :read, User
     end
   end
 

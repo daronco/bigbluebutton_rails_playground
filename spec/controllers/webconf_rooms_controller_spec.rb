@@ -21,7 +21,6 @@ describe WebconfRoomsController do
       its("#join") { get :join, :id => room }
       its("#join_mobile") { get :join_mobile, :id => room }
       its("#end") { get :end, :id => room }
-      its("#external") { get :external, :server_id => server.id }
       its("#external_auth") { post :external_auth, :server_id => server.id }
     end
 
@@ -31,7 +30,12 @@ describe WebconfRoomsController do
         controller.should respond_with(:success)
       }
       its("#running") {
-        get :invite, :id => room
+        # TODO: is taking a long time to run :activity, try to optimize it
+        get :running, :id => room
+        controller.should respond_with(:success)
+      }
+      its("#external") {
+        get :external, :id => room, :server_id => server.id, :meeting => "any"
         controller.should respond_with(:success)
       }
 
@@ -46,6 +50,25 @@ describe WebconfRoomsController do
         it { should redirect_to("/back/from/auth") }
       end
     end
-
   end
+
+  describe "abilities:" do
+    let(:target) { FactoryGirl.create(:bigbluebutton_room) }
+    let(:server) { FactoryGirl.create(:bigbluebutton_server) }
+
+    context "a superuser" do
+      login_superuser
+      it { should_not deny_access_to(:index) }
+      pending "other actions"
+    end
+
+    context "a normal user" do
+      login_user
+      it { should deny_access_to(:index) }
+      pending "other actions"
+    end
+
+    pending "an anonymous user"
+  end
+
 end
