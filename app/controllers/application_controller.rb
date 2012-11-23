@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
   before_filter :load_locale
 
+  # def current_user=(user)
+  #   current_user = user
+  # end
+
   def current_ability
     @current_ability ||= Abilities.ability_for(current_user)
   end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121120113432) do
+ActiveRecord::Schema.define(:version => 20121123180528) do
 
   create_table "bigbluebutton_rooms", :force => true do |t|
     t.integer  "server_id"
@@ -46,6 +46,26 @@ ActiveRecord::Schema.define(:version => 20121120113432) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "param"
+  end
+
+  create_table "oauth_access_grants", :force => true do |t|
+    t.string   "code"
+    t.string   "access_token"
+    t.string   "refresh_token"
+    t.datetime "access_token_expires_at"
+    t.integer  "user_id"
+    t.integer  "oauth_app_id"
+    t.string   "state"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+  end
+
+  create_table "oauth_apps", :force => true do |t|
+    t.string   "name"
+    t.string   "app_id"
+    t.string   "app_secret"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "sites", :force => true do |t|

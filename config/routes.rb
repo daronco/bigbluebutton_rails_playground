@@ -25,4 +25,10 @@ BigbluebuttonRailsPlayground::Application.routes.draw do
   # The unique Site is created in db/seeds and can only be edited
   resource :site, :only => [:show, :edit, :update]
 
+  # Provider stuff
+  get "/auth/mconf_id/authorize" => "oauth#authorize"
+  post "/auth/mconf_id/access_token" => "oauth#access_token"
+  get "/auth/mconf_id/user" => "oauth#user"
+  post "/oauth/token" => "oauth#access_token"
+
 end

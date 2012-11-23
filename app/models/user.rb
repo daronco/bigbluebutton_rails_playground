@@ -23,6 +23,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  ## oauth
+
+  has_many :oauth_access_grants, :dependent => :delete_all # TODO: or destroy_all?
+
   ## Validations
 
   attr_accessible :name, :superuser
