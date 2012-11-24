@@ -31,6 +31,10 @@ module Abilities
       # Home
       can :read, :home
 
+      # Webconf rooms
+      can [:invite, :auth, :running, :join, :join_mobile], BigbluebuttonRoom
+      can :end, BigbluebuttonRoom, :owner_type => "User", :owner_id => user.id
+
     end
   end
 
@@ -38,7 +42,11 @@ module Abilities
     include CanCan::Ability
 
     def initialize
-      #can :read, User
+
+      # Webconf rooms
+      # TODO: :join and :join_mobile should be allowed too?
+      can [:invite, :auth, :running], BigbluebuttonRoom
+
     end
   end
 

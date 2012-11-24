@@ -1,9 +1,9 @@
 class WebconfRoomsController < Bigbluebutton::RoomsController
-  before_filter :authenticate_user!,
-    :except => [:invite, :auth, :running, :external]
-  authorize_resource :class => BigbluebuttonRoom,
-    :except => [:invite, :auth, :running, :join, :end, :external, :join_mobile]
-  skip_authorization_check :only => [:invite, :auth, :running, :join, :end, :external, :join_mobile]
+  # TODO: external and external_auth are never accessible, review
+
+  before_filter :authenticate_user!, :except => [:invite, :auth, :running]
+
+  authorize_resource :class => BigbluebuttonRoom
 
   layout "application", :except => [:join_mobile]
   layout false, :only => [:join_mobile]

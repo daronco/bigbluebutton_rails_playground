@@ -2,7 +2,7 @@ module ControllerMacros
 
   def login_superuser
     before(:each) do
-      @request.env["devise.mapping"] = Devise.mappings[:admin]
+      @request.env["devise.mapping"] = Devise.mappings[:user]
       sign_in FactoryGirl.create(:superuser)
     end
   end

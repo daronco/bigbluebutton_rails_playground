@@ -2,8 +2,8 @@ module Shoulda # :nodoc
   module Matchers
     module ActionController # :nodoc
 
-      # Ensures that the given action is not forbidden using CanCan's
-      # exception: CanCan::AccessDenied
+      # Ensures that the given action is not forbidden using cancan's
+      # exception CanCan::AccessDenied.
       #
       # Options:
       # * <tt>via</tt> - Method to be used (defaults to get): :get, :post,
@@ -22,9 +22,9 @@ module Shoulda # :nodoc
 
       class DenyAccessToMatcher # :nodoc:
 
-        def initialize(action, example_group, params=nil)
+        def initialize(action, context, params=nil)
           @action = action
-          @example_group = example_group
+          @context = context
           @params = params
           @method = :get
         end
@@ -41,9 +41,11 @@ module Shoulda # :nodoc
           @controller.stub(@action)
           @controller.stub(:render)
           begin
-            @example_group.send(@method, @action, @params)
+            @context.send(@method, @action, @params)
           rescue CanCan::AccessDenied
             true
+          rescue Exception => e
+            throw e
           else
             false
           end

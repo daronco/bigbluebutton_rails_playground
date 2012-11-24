@@ -20,8 +20,7 @@ describe HomeController do
   end
 
   describe "authentication:" do
-    after { response.should redirect_to new_user_session_path }
-    its("#index") { get :index }
+    it { should require_authentication_for(:index) }
   end
 
   describe "abilities:" do

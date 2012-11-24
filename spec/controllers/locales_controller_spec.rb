@@ -6,10 +6,7 @@ describe LocalesController do
   pending "#set"
 
   context "can be accessed by non-members" do
-    before { controller.should_receive(:default_return_path) { "/back/from/set" } }
-    before(:each) { get :set, :id => "en" }
-    it { should respond_with(:redirect) }
-    it { should redirect_to("/back/from/set") }
+    it { should_not require_authentication_for(:set, { :id => "en" }) }
   end
 
   describe "abilities:" do
