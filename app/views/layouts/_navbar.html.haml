@@ -1,0 +1,49 @@
+#main-logo
+  - url = user_signed_in? ? home_path : root_path
+  %a.title{:href => url}= current_site.name
+
+%ul#navbar-left-links
+  - if user_signed_in?
+    %li
+      = image_tag('icons/my-home-16x16.png', :size => '16x16', :class => 'icon')
+      = link_to t('.my_home'), home_path
+    - if current_user.superuser?
+      %li.last= link_to t('.manage'), site_path
+
+-# the right menu is not shown in the home page
+- if at_home?
+  %ul#navbar-right-links
+    %li.last= link_to t('.logout', :user => current_user.name), logout_path
+- else
+  %ul#navbar-right-links
+    - if user_signed_in?
+      %li.dropdown.user-info-dropdown.last
+
+        -# small user information in the navbar
+        .user-info.dropdown-toggle{ :"data-toggle" => "dropdown" }
+          %span.user-name= current_user.name
+          %b.caret
+
+        -# dropdown menu opened when clicking in the dropdown
+        .dropdown-menu.arrow-right
+          .user-info-big
+            -# .user-avatar
+            -#   = link_logo(current_user, :size => "64", :url => edit_user_registration_path(current_user), :title => current_user.name).html_safe
+            .user-data
+              = link_to(current_user.name, edit_user_registration_path)
+              = link_to(current_user.email, "mailto: #{current_user.email}")
+              -# %span= current_user.profile.organization unless current_user.profile.organization.nil?
+          .user-links
+            %ul
+              %li= link_to t('.logout', :user => current_user.name), logout_path
+              %li= link_to t('.account'), edit_user_registration_path
+              -# %li
+              -#   = t('.profile') + ":"
+              -#   %span
+              -#     = link_to t('view'), user_path(current_user)
+              -#     = "/ "
+              -#     = link_to t('edit'), edit_user_profile_path(current_user)
+
+    - else
+      %li.last= link_to t('.login'), login_path
+      %li= link_to t('.register'), register_path

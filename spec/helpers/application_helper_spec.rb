@@ -23,7 +23,14 @@ describe ApplicationHelper do
 
   end
 
+  pending "#application_version"
+  pending "#application_revision"
+  pending "#application_branch"
+  pending "#asset_exists?"
+  pending "#javascript_include_tag_for_controller"
+  pending "#stylesheet_link_tag_for_controller"
+  pending "#controller_name_for_view"
+  pending "#github_link_to_revision"
+  pending "#at_home?"
+
 end
-
-
-

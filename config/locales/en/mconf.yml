@@ -5,6 +5,32 @@ en:
   edit: "Edit"
   show: "Show"
 
+  layouts:
+    footer:
+      copyright: "© 2010-2012 %{site}."
+      current_version: "Current version"
+      find_us:
+        gcode: "Google Code"
+        github: GitHub
+        title: "Find more about Mconf"
+        website: "Project website"
+      sponsors:
+        prav: "Projetos em<br/>Áudio e Vídeo"
+        rnp: "Rede Nacional de<br/>Ensino e Pesquisa"
+        title: Sponsors
+      translate:
+        change_language: "Switch language"
+        help_us: "Want this site in your language? Click to see how to help us translate it!"
+        locales:
+          en: English
+          pt-BR: "Português (Brasil)"
+    navbar:
+      login: Login
+      logout: Logout
+      manage: "Manage"
+      my_home: "Home"
+      register: Register
+
   locales:
     set:
       error: "Unable to change language to \"%{lang}\""

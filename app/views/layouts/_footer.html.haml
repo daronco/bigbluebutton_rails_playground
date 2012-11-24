@@ -1,0 +1,45 @@
+#upper-footer-wrapper
+  #upper-footer
+    #footer-logo
+      = link_to current_site.name, "/", :class => 'title'
+      %span= t('.copyright', :site => current_site.name)
+    -# .link-group
+    -#   %h3= t('.links.title')
+    -#   %ul
+    -#     %li= link_to(t('.links.help'), help_path)
+    -#     %li= link_to(t('.links.feedback'), new_feedback_path(), :id => "feedback_link" )
+    -#     %li= link_to(t('.links.statistics'), show_statistics_path )
+    .link-group
+      %h3= t('.find_us.title')
+      %ul
+        %li= link_to t('.find_us.website'), "http://www.inf.ufrgs.br/prav/gtmconf"
+        %li= link_to t('.find_us.gcode'), "http://code.google.com/p/mconf"
+        %li= link_to t('.find_us.github'), "https://github.com/mconf"
+    .link-group.footer-languages
+      = link_to 'http://code.google.com/p/mconf/wiki/MconfWebLocalization' do
+        = icon_info t('.translate.help_us'), :class => 'help-translate-icon'
+      %h3= t('.translate.change_language')
+      - I18n.available_locales.each_slice(3) do |locales|
+        %ul
+          - locales.each do |locale|
+            %li
+              - flag = image_tag("icons/flags/" + locale.to_s + ".png", :title => locale.to_s)
+              - text = t('.translate.locales.' + locale.to_s)
+              - link = link_to(text, set_locale_path(:id => locale.to_s), :method => :post)
+              = (flag + " " + link).html_safe
+    .link-group.footer-sponsors
+      %h3= t('.sponsors.title')
+      %ul
+        %li
+          = image_tag("logos/rnp_small.jpg")
+          = link_to t('.sponsors.rnp').html_safe, "http://www.rnp.br"
+        %li
+          = image_tag("logos/prav_small.png")
+          = link_to t('.sponsors.prav').html_safe, "http://www.inf.ufrgs.br/prav"
+
+#lower-footer-wrapper
+  #lower-footer
+    .current-version
+      = t('.current_version') + ": "
+      = link_to github_link_to_revision(application_revision) do
+        = application_version + "/" + application_branch + "/" + application_revision
