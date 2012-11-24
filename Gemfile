@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem "rails", "~> 3.2.0"
+gem 'rails', '~> 3.2.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -19,6 +19,7 @@ end
 gem 'devise'
 gem 'cancan'
 gem 'jquery-rails'
+gem 'bootstrap-sass'
 gem 'therubyracer', :require => 'v8'
 gem 'haml'
 gem 'simple_form', '~> 2.0.0'
@@ -48,7 +49,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'forgery'
 
-  if RUBY_VERSION >= "1.9"
+  if RUBY_VERSION >= '1.9'
     gem 'simplecov', '>= 0.4.0', :require => false
   end
 end

@@ -1,0 +1,119 @@
+@import "compass/utilities/general";
+
+// fonts
+$font-small: 11px;
+$font-normal: 12px;
+$font-medium: 14px;
+$font-big: 16px;
+$font-gigantic: 28px;
+$font-section-title: 32px;
+$font-color: #333;
+
+// standard colors
+$green: #508817;
+$blue: #005fca;
+$red: #C23321;
+$orange: #C47322;
+$yellow: #BB9403;
+$green-logo: #27535C;
+$gray: #ccc;
+$light-gray: #f6f6f6;
+$bright-blue: #49afcd;
+$transparent: rgba(255,255,255,0);
+
+// alert colors, like the ones in bootstrap alerts
+$alert-bg: #FCF8E3;
+$alert-font: #C09853;
+$alert-success-bg: #DFF0D8;
+$alert-success-font: #468847;
+$alert-info-bg: #D9EDF7;
+$alert-info-font: #3A87AD;
+$alert-danger-bg: #F2DEDE;
+$alert-danger-font: #B94A48;
+
+$site-bg-color: #fff;
+$main-color: $green-logo;
+$second-color: $bright-blue;
+
+// width of the central container and standard sidebar
+$contents-width: 980px;
+$sidebar-width: 240px;
+
+// links
+$link-color: lighten($main-color, 10);
+$link-color-hover: $second-color;
+$link-color-active: darken($link-color-hover, 15);
+
+// headers
+$navbar-bg-color: darken($green-logo, 10);
+$subnav-bg-color: #eee;
+
+// global footer
+$upper-footer-bg-color: $light-gray;
+$lower-footer-bg-color: #fff;
+
+// h1, h2, h3, ...
+$h-font-color: #404040;
+$h-font-color-alternative: $green-logo;
+
+// titles in the page headers
+$page-title-color: #505050;
+
+// z-indexes
+// TODO: not being used yet
+$z-index-navbar: 100;
+$z-index-dialog: 200;
+$z-index-tooltip: 999999;
+
+@mixin mconf-clearfix {
+  @include clearfix;
+  @include pie-clearfix;
+}
+
+/* // user logos in a thread with several snippets */
+/* // e.g. list of posts, list of recent users, etc. */
+/* @mixin logo-in-thread { */
+/*   float: left; */
+/*   margin-right: 5px; */
+
+/*   img.logo { */
+/*     padding: 2px; */
+/*     border: 1px solid #ddd; */
+/*     @include border-radius(2px); */
+/*     &:hover { border: 1px solid desaturate(lighten($second-color, 20), 10); } */
+
+/*     // default dimensions for logos inside threads */
+/*     &.logo-space { */
+/*       height: 36px; */
+/*       width: 48px; */
+/*     } */
+/*     &.logo-user { */
+/*       height: 32px; */
+/*       width: 32px; */
+/*     } */
+/*   } */
+/* } */
+
+/* // to 'hide' it and move it off the screen */
+/* // we can't just hide it because it won't be clickable */
+/* @mixin hide-input-file { */
+/*   opacity: 0; */
+/*   position: absolute; */
+/*   left: -1000px; */
+/*   top: -1000px; */
+/*   width: 0; */
+/*   height: 0; */
+
+/*   label { display: none; } */
+/*   input[type=file] { */
+/*     opacity: 0; */
+/*     position: absolute; */
+/*     width: 0; */
+/*     height: 0; */
+/*   } */
+/* } */
+
+/* @mixin danger-text { */
+/*   color: $red; */
+/*   @include link-colors($red, lighten($red, 10), darken($red, 10)); */
+/* } */
