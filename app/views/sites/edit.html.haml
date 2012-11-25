@@ -5,8 +5,8 @@
 -#     = link_to t('save'), "#form-edit-site", :class => "btn btn-primary btn-block submit-form"
 
 #manage
-  = simple_form_for @site, :url => site_path, :html => { :id => "form-edit-site", :method => :put, :multipart => true, :class => 'single-column' } do |f|
-    .left-column
+  = simple_form_for @site, :url => site_path, :html => { :id => "form-edit-site", :method => :put, :multipart => true, :class => 'row-fluid' } do |f|
+    .span6
       = f.input :name
       = f.input :description, :as => :text, :input_html => { :rows => 5 }
       = f.input :domain
@@ -17,7 +17,7 @@
       = f.input :shib_enabled, :as => :boolean
       = f.input :shib_email_field
       = f.input :shib_name_field
-    .right-column
+    .span5
       = f.input :smtp_user_name
       = f.input :smtp_password, :as => :showable_password
       = f.input :smtp_sender

@@ -5,7 +5,7 @@ class ShowablePasswordInput < SimpleForm::Inputs::PasswordInput
     field = @builder.password_field(attribute_name, input_html_options)
     cb_name = attribute_name.to_s + '_show'
     cb = check_box_tag cb_name, 'show', false, :class => 'showable_password_show'
-    cb_label = label_tag cb_name, I18n.t('show_question'), :class => 'showable_password_show_label'
+    cb_label = content_tag :span, I18n.t('simple_form.show_question'), :class => 'showable_password_show_label', :name => cb_name
     "#{field}#{cb}#{cb_label}".html_safe
   end
 end

@@ -7,7 +7,7 @@ describe HomeController do
   pending "#show"
 
   describe "authentication:" do
-    it { should require_authentication_for(:index) }
+    it { should require_authentication_for(:show) }
   end
 
   describe "abilities:" do
@@ -16,12 +16,12 @@ describe HomeController do
 
     context "a superuser" do
       login_superuser
-      it { should_not deny_access_to(:index) }
+      it { should_not deny_access_to(:show) }
     end
 
     context "a normal user" do
       login_user
-      it { should_not deny_access_to(:index) }
+      it { should_not deny_access_to(:show) }
     end
   end
 

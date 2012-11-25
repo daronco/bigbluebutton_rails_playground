@@ -26,7 +26,7 @@
 .icon-info {
   float: right;
   cursor: pointer;
-  background: url(asset_path("icons/information-16x16.png", image)) no-repeat 0 0;
+  background: url(image_path("icons/information-16x16.png")) no-repeat 0 0;
   width: 16px;
   height: 16px;
   &:hover { background-position: -16px 0; }

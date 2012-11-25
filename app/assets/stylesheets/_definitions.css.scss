@@ -58,7 +58,7 @@ $second-color: $bright-blue;
 
 // width of the central container and standard sidebar
 $contents-width: 980px;
-$sidebar-width: 240px;
+$sidebar-width: 240px; // TODO: not fixed anymore?
 
 // links
 $link-color: lighten($main-color, 10);

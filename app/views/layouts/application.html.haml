@@ -33,12 +33,15 @@
               = yield :page_menu
 
       #content-wrapper
-        #content
-          #content-middle
-            = yield
+        #content.row-fluid
           - if content_for?(:sidebar)
-            #sidebar
+            #content-middle.span10
+              = yield
+            #sidebar.span2
               = yield :sidebar
+          - else
+            #content-middle.span12
+              = yield
 
       = render :partial => "layouts/footer"
 

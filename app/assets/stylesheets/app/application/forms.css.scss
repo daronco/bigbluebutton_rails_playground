@@ -1,0 +1,122 @@
+@import "compass/css3";
+@import "definitions";
+
+form {
+
+  .control-group {
+    margin-bottom: 15px;
+
+    /* label { */
+    /*   cursor: pointer; */
+
+    /*   &.collection_radio_buttons { */
+    /*     display: inline; */
+    /*     margin-left: 5px; */
+    /*     margin-right: 10px; */
+    /*   } */
+    /* } */
+
+    abbr {
+      border: 0;
+      margin: 0;
+      color: red;
+    }
+
+    .input-block-level {
+      .text, .string, .select, .numeric, .password {
+        width: 95%;
+        display: block;
+      }
+    }
+
+    .showable_password_show {
+      margin: 0 5px;
+    }
+
+    /* // limit the height of a textarea by default */
+    /* textarea { */
+    /*   max-height: 150px; */
+    /* } */
+
+    // hints
+    $hint-bg: #f6f6f6;
+    $hint-border: #e6e6e6; //darken($hint-bg, 5);
+    .help-block {
+      margin-top: 5px;
+      @include mconf-font-size(normal);
+      border: 1px solid $hint-border;
+      @include border-radius(3px);
+      padding: 5px 10px;
+      z-index: $z-index-tooltip;
+      position: relative;
+      color: #666;
+      background: $hint-bg;
+      //max-width: 300px;
+    }
+    .help-block::before {
+      /* background: url(image_path("icons/help-16x16.png")) no-repeat right; */
+      /* background-position: -16px 0; */
+      /* content: ''; */
+      /* width: 16px; */
+      /* height: 16px; */
+      display: inline-block;
+      margin-top: 2px;
+      margin-right: 5px;
+      content: '';
+      border-left: 7px solid $transparent;
+      border-right: 7px solid $transparent;
+      border-bottom: 7px solid $hint-border;
+      border-bottom-color: $hint-border;
+      position: absolute;
+      top: -9px;
+      left: 5px;
+    }
+    /* // focusing or hovering shows the hint */
+    /* .controls { */
+    /*   //&:hover .help-block, *:focus ~ .help-block { display: block; } */
+    /*   &:hover .help-block { display: block; } */
+    /* } */
+
+    &.disabled .help-block {
+      display: none;
+    }
+
+
+  }
+
+  /* .field_with_errors { */
+  /*   input, textarea { border-color: $red; } */
+
+  /*   .error { */
+  /*     margin-left: 5px; */
+  /*     color: $red; */
+  /*     font-style: italic; */
+  /*   } */
+  /* } */
+
+  /* // forms with a single column, where no information can be */
+  /* // shown at the side of an input */
+  /* &.single-column { */
+  /*   .field_with_errors .error { */
+  /*     display: block; */
+  /*     text-align: right; */
+  /*   } */
+
+  /*   input.string, input.password, textarea, select, */
+  /*   ul.token-input-list-facebook { */
+  /*     width: 97% */
+  /*   } */
+  /*   input.showable_password { */
+  /*     width: 78% */
+  /*   } */
+  /* } */
+
+  /* .input-prepend .add-on, .input-prepend .btn { */
+  /*   margin-right: -4px; */
+  /* } */
+
+  /* div.controls { */
+  /*   display: inline; */
+  /* } */
+
+}

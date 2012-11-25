@@ -415,7 +415,7 @@ body {
 
 #lower-footer {
   @include mconf-clearfix;
-  width: $contents-width;
+  max-width: $contents-width;
   margin: 0 auto;
   color: #999;
   @include mconf-font-size(small);
@@ -433,7 +433,7 @@ body {
 }
 
 #page-header {
-  width: $contents-width;
+  max-width: $contents-width;
   margin: 0 auto;
   @include mconf-clearfix;
   overflow: visible;
@@ -484,7 +484,7 @@ body {
 }
 
 #content {
-  width: $contents-width;
+  max-width: $contents-width;
   margin: 0 auto;
   padding: 20px 10px 0 0;
 
@@ -496,7 +496,6 @@ body {
 
 #sidebar, .sidebar {
   float: right;
-  width: $sidebar-width;
 
   .content-block-wrapper {
     padding: 5px;
@@ -562,7 +561,6 @@ body {
 
 #content-middle {
   float: left;
-  width: $contents-width - $sidebar-width - 20px; // less right-margin
   @include mconf-clearfix;
   overflow: visible;
 
