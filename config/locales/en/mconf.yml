@@ -25,6 +25,7 @@ en:
           en: English
           pt-BR: "Português (Brasil)"
     navbar:
+      account: View and edit your account
       login: Login
       logout: Logout
       manage: "Manage"

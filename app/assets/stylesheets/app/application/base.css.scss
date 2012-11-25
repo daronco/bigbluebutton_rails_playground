@@ -1,0 +1,673 @@
+@import "compass/css3";
+@import "compass/typography";
+@import "definitions";
+
+
+//
+// General tags
+//
+
+body {
+  background-color: $site-bg-color;
+}
+
+.clearfix {
+  @include mconf-clearfix; // in _definitions
+}
+
+// Blocks that will only be visible on hover
+.visible-on-hover { display: none; }
+
+.danger-text {
+  @include danger-text;
+}
+
+// Blocks that can be automatically expanded/collapsed
+.block-expanded { display: none; }
+.block-collapsed { }
+
+/* // user logos in a thread with several snippets */
+/* // e.g. list of posts, list of recent users, etc. */
+/* .logo-in-thread { */
+/*   @include logo-in-thread; // in _definitions */
+/* } */
+
+/* // Unified style for threads: posts, news, attachments */
+/* .thread { */
+/*   clear: both; */
+/*   padding: 10px; */
+
+/*   .thread-content { */
+/*     margin-left: 60px; */
+/*   } */
+
+/*   .thread-title { */
+/*     margin-bottom: 5px; */
+/*     white-space: nowrap; */
+/*     overflow: hidden; */
+
+/*     a { */
+/*       background-color: #eee; */
+/*       padding: 1px 4px 2px; */
+/*       vertical-align: middle; */
+/*       white-space: nowrap; */
+/*       @include border-radius(3px); */
+
+/*       &:hover { */
+/*         background: #d6d6d6; */
+/*         color: #444; */
+/*       } */
+/*     } */
+
+/*     h2 { margin-bottom: 0; } */
+
+/*     .spam-icon { */
+/*       display: inline-block; */
+/*       margin-bottom: -3px; */
+/*       margin-right: 3px; */
+/*     } */
+/*   } */
+
+/*   .thread-updated-at { */
+/*     color: #666; */
+/*     font-size: $font-small; */
+/*   } */
+
+/*   .thread-action-links { */
+/*     float: right; */
+/*     margin: 0; */
+/*     padding: 0; */
+/*     @include mconf-clearfix; */
+/*     @include border-radius(4px); */
+/*     border: 1px solid darken($alert-info-bg, 7); */
+/*     background: lighten($alert-info-bg, 5); */
+
+/*     li { */
+/*       margin: 0; */
+/*       padding: 0; */
+/*       float: left; */
+/*       display: inline-block; */
+/*       margin-left: 10px; */
+/*       &:last-child { */
+/*         margin-right: 10px; */
+/*       } */
+/*     } */
+
+/*   } */
+
+/*   .thread-observation { */
+/*     color: #666; */
+/*     font-style: italic; */
+/*     float: right; */
+/*   } */
+/* } */
+/* // Classes outside .thread so that they can be used anywhere to */
+/* // cycle background colors */
+/* .thread-even { background: $transparent; } */
+/* .thread-odd { background: $light-gray; } */
+
+
+/* // Wrapper around information about a user */
+/* // See users/_simple_user and users/_detailed_user */
+/* .user-wrapper { */
+/*   clear: both; */
+/*   margin-bottom: 10px; */
+/*   margin-top: 5px; */
+/*   @include mconf-clearfix; */
+
+
+/*   &.user-simple { */
+/*     .user-text { margin-left: 45px; } */
+/*     .user-name { display: block; } */
+/*     .user-organization { display: block; } */
+/*   } */
+
+/*   &.user-detailed { */
+/*     .user-text { float: left; } */
+/*     .user-divider { float: left; margin-left: 5px; margin-right: 5px; color: $gray; } */
+/*     .user-name { float: left; } */
+/*     .user-mail { float: left; } */
+/*     .user-organization { float: left; clear: left; } */
+/*     .user-location { float: left; } */
+/*   } */
+/* } */
+
+
+//
+// Page containers, redefined in the layouts
+// Here we define the basic styles used in all layouts
+//
+
+#notification-flashs {
+  top: $navbar-height;
+}
+
+#site {
+  padding: 0;
+  margin: 0;
+}
+
+#navbar {
+  .caret {
+    border-top-color: white;
+  }
+}
+
+#navbar-brand {
+  .title {
+    @include link-colors(#bbb, white, white, #bbb);
+  }
+}
+
+#navbar-left-links {
+  list-style-type: none;
+  float: left;
+  margin: 0 10px;
+  @include mconf-font-size(medium);
+
+  color: #bbb;
+  a {
+    @include link-colors(#bbb, white, white);
+  }
+
+  li {
+    display: inline;
+    float: left;
+    margin-top: 11px;
+    margin-right: 12px;
+    padding-right: 12px;
+    border-right: 1px solid lighten($navbar-bg-color, 13);
+
+    a { float: left; }
+    &:last-child { border: 0; }
+  }
+}
+
+#navbar-right-links {
+  @extend #navbar-left-links;
+  float: right;
+
+  li {
+    margin-left: 10px;
+    margin-right: 0;
+    padding-left: 10px;
+    padding-right: 0;
+    border-left: 1px solid lighten($navbar-bg-color, 13);
+    border-right: 0;
+    margin: 0;
+  }
+
+  // dropdown menu with the user information
+  // it needs some adjustments over the default style
+  .dropdown {
+    margin: 0;
+    padding: 0;
+
+    &.open, &:hover {
+      color: white;
+    }
+    &.open {
+      background: darken($navbar-bg-color, 5);
+    }
+
+    .dropdown-menu {
+      right: 0;
+      left: auto;
+      min-width: 300px;
+      width: 300px;
+      border: 1px solid #ccc;
+      padding: 10px;
+
+      a {
+        @include link-colors($link-color, $link-color-hover, $link-color-active);
+      }
+
+      // big user info shown in the dropdown clicking in the navbar
+      .user-info-big {
+        @include mconf-clearfix;
+
+        .user-data {
+          @include mconf-clearfix;
+          padding-left: 7px;
+          a, span {
+            display: block;
+            float: left;
+            clear: left;
+            margin-bottom: 3px;
+          }
+        }
+
+        .user-name {
+          padding: 4px 10px 4px 5px;
+          float: right;
+          display: block;
+        }
+
+        .user-avatar {
+          position: relative;
+          float: left;
+          border: 1px solid darken($site-bg-color, 15);
+          padding: 1px;
+          height: 64px;
+          width: 64px;
+          @include border-radius(3px);
+          img.logo-user {
+            height: 64px;
+            width: 64px;
+          }
+        }
+      }
+
+      // user links shown in the dropdown clicking in the navbar
+      .user-links {
+        @include mconf-clearfix;
+        clear: both;
+        margin-top: 10px;
+        padding: 2px;
+
+        ul {
+          margin: 0;
+          li {
+            display: block;
+            clear: both;
+            float: none;
+            margin: 0;
+            border: 0;
+            padding: 0;
+            white-space: nowrap;
+            a {
+              clear: none;
+              float: none;
+              display: block;
+              padding: 5px 5px;
+              @include border-radius(4px);
+              &:hover { background: $light-gray; }
+            }
+            &.divider { margin-bottom: 10px; }
+          }
+        }
+      }
+
+    }
+
+    // small user info in the navbar
+    .user-info-small {
+      padding: 12px 10px;
+      cursor: pointer;
+
+      .user-name {
+        padding-left: 8px;
+        float: right;
+        display: block;
+      }
+
+      .user-avatar {
+        position: relative;
+        float: right;
+        border: 1px solid lighten($navbar-bg-color, 5);
+        padding: 1px;
+        height: 22px;
+        width: 22px;
+        @include border-radius(3px);
+
+        img.logo-user {
+          height: 22px;
+          width: 22px;
+        }
+      }
+    }
+
+  }
+
+}
+
+#content-wrapper {
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+#upper-footer-wrapper {
+  border-top: 1px solid darken($upper-footer-bg-color, 8);
+  border-bottom: 1px solid darken($upper-footer-bg-color, 8);
+  background: $upper-footer-bg-color;
+  color: #444;
+  clear: both;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+#upper-footer {
+  @include mconf-clearfix;
+  max-width: $contents-width;
+  margin: 0 auto;
+  color: #666;
+  a {
+    @include link-colors($link-color, $link-color-hover, $link-color-active);
+    text-decoration: none;
+  }
+
+  h3 {
+    @include mconf-font-size(normal);
+    color: #888;
+    padding-bottom: 5px;
+    border-bottom: 1px solid darken($upper-footer-bg-color, 8);
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    li {
+      display: block;
+      position: relative;
+      margin-bottom: 5px;
+    }
+  }
+
+  .link-group {
+    float: left;
+    margin-right: 35px;
+    margin-top: 5px;
+  }
+
+  .footer-sponsors {
+    width: 200px;
+    float: right;
+    margin-right: 0;
+    margin-left: 20px;
+    text-align: right;
+    h3 { text-align: right; }
+    li { margin-bottom: 15px; }
+    img {
+      float: right;
+      margin-left: 10px;
+    }
+  }
+
+  .footer-languages {
+    img { margin-top: -4px; }
+    img.help-translate-icon { float: right; }
+    ul { float: left; margin-right: 20px; }
+    .icon { margin-top: 10px; }
+  }
+
+}
+
+#footer-logo {
+  float: left;
+  color: #888;
+  float: left;
+  margin: 5px 35px 0 0;
+
+  a { @include link-colors(#bbb, $link-color-hover, $link-color-active); }
+
+  .title {
+    font-weight: bold;
+    @include mconf-font-size(larger);
+  }
+
+  span { display: block; }
+}
+
+#lower-footer-wrapper {
+  padding: 10px 0;
+  background: $lower-footer-bg-color;
+}
+
+#lower-footer {
+  @include mconf-clearfix;
+  width: $contents-width;
+  margin: 0 auto;
+  color: #999;
+  @include mconf-font-size(small);
+  a { @include link-colors(desaturate($link-color, 10), $link-color-hover, $link-color-active); }
+
+  .current-version { float: left; }
+  .version-info { float: right; }
+}
+
+#page-header-wrapper {
+  border-bottom: 1px solid darken($light-gray, 7);
+  background: $light-gray;
+  padding: 0;
+  clear: both;
+}
+
+#page-header {
+  width: $contents-width;
+  margin: 0 auto;
+  @include mconf-clearfix;
+  overflow: visible;
+  padding: 20px 0 15px 0;
+  clear: both;
+
+  h1 {
+    margin: 0;
+    border: 0;
+  }
+
+  .current-page-logo {
+    float: left;
+    border: 1px #ccc solid;
+    padding: 1px;
+    height: 64px;
+    &.clean { border: 0; }
+
+    // default size for spaces logos
+    img.logo-space {
+      width: 84px;
+      height: 64px;
+    }
+  }
+
+  .current-page-title {
+    float: left;
+    margin-left: 10px;
+    margin-top: 14px;
+    @include mconf-font-size(gigantic);
+    font-weight: bold;
+    @include text-shadow(darken($site-bg-color, 10) 1px 1px 10px);
+    color: $page-title-color;
+
+    a { @include link-colors($page-title-color, $link-color-hover, $link-color-active); }
+
+    .small-title {
+      @include mconf-font-size(larger);
+      margin-top: 5px;
+    }
+  }
+
+  .current-page-extra {
+    float: right;
+    margin: 10px 10px 0 0;
+    text-align: right;
+  }
+}
+
+#content {
+  width: $contents-width;
+  margin: 0 auto;
+  padding: 20px 10px 0 0;
+
+  // best way found to use mconf-clearfix and still get the element
+  // centralized and with the correct margins/paddings
+  @include mconf-clearfix;
+  overflow: visible;
+}
+
+#sidebar, .sidebar {
+  float: right;
+  width: $sidebar-width;
+
+  .content-block-wrapper {
+    padding: 5px;
+    @include border-radius(5px);
+    background: $light-gray;
+    margin-bottom: 10px;
+
+    &.active {
+      background: darken($alert-success-bg, 5);
+    }
+  }
+
+  .content-block {
+    clear: both;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    @include border-radius(5px);
+    background: $site-bg-color;
+
+    h3 {
+      font-size: 1.2em;
+      margin-top: 0;
+      img { margin-bottom: -3px; }
+    }
+  }
+
+  .content-block-middle {
+    clear: both;
+  }
+
+  .content-block-footer {
+    text-align: right;
+    margin-top: 10px;
+    padding-top: 2px;
+    padding-right: 5px;
+    clear: both;
+  }
+
+  .content-block-header {
+    @include mconf-clearfix;
+    img { float: right; margin-left: 3px; }
+    h3 { float: left; }
+  }
+
+  .sidebar-top-action-button {
+    @include mconf-clearfix;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .toolbar {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: $light-gray;
+    @include border-radius(4px);
+    clear: both;
+    text-align: center;
+  }
+
+  .help-icon { float: right; }
+  .info-icon { float: right; }
+}
+
+#content-middle {
+  float: left;
+  width: $contents-width - $sidebar-width - 20px; // less right-margin
+  @include mconf-clearfix;
+  overflow: visible;
+
+  h3 {
+    color: #404040;
+    font-size: 1.4em;
+    //padding-top: 10px;
+    margin-bottom: 5px;
+
+    // horitontal line in the title
+    &.horizontal-line {
+      height: 13px;
+      border-bottom: 3px solid #eee;
+      margin-bottom: 15px;
+      span {
+        background: white;
+        padding-right: 15px;
+      }
+    }
+  }
+
+  .content-block {
+    clear: both;
+    margin-bottom: 30px;
+  }
+
+  .content-block-footer {
+    padding: 4px 10px;
+    text-align: right;
+    background: $light-gray;
+    border-top: 1px solid #ddd;
+    clear: both;
+
+    // adapt bootstrap's .pagination
+    @include mconf-clearfix;
+    .pagination {
+      height: auto;
+      margin: 2px 0;
+      float: right;
+      ul {
+        margin: 0;
+        background-color: white;
+      }
+      a {
+        padding: 0 12px;
+        line-height: 30px;
+      }
+      span {
+        padding: 0;
+        border: 0;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .content-block-middle {
+    padding: 5px;
+    clear: both;
+  }
+
+  .content-block-header {
+    img { float: left; }
+    h3 { float: left; margin: -3px 4px 0 4px; }
+  }
+
+  .help-icon { float: left; }
+  .info-icon { float: left; }
+
+  .loading-icon { float: right; } // TODO: temporary, this may become default in _base
+}
+
+#page-menu {
+  margin-bottom: -17px; // #page-header's bottom margin
+  padding-top: 20px;
+  clear: both;
+
+  ul {
+    margin: 0;
+
+    li {
+      display: inline-block;
+      padding-left: 10px;
+
+      a {
+        display: inline-block;
+        margin-bottom: 0px;
+        @include link-colors(#808080, $link-color-hover, $link-color-active);
+        padding: 5px 10px;
+        font-weight: bold;
+        @include mconf-font-size(medium);
+
+        &.selected {
+          color: $main-color;
+          @include border-top-radius(4px);
+          border: 1px solid darken($light-gray, 12);
+          border-bottom-color: $site-bg-color;
+          background: $site-bg-color;
+        }
+      }
+
+      a.danger-text {
+        @include danger-text;
+        @include opacity(0.8);
+        &.selected { @include opacity(1); }
+      }
+    }
+  }
+}

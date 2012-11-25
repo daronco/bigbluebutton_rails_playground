@@ -19,12 +19,12 @@
     = csrf_meta_tag
 
   %body{:class => "#{controller_name_for_view} #{params[:action]}"}
-    #site
-      #navbar-wrapper
-        #navbar
+    #site.container-fluid
+      #navbar-wrapper.navbar.navbar-static-top
+        #navbar.navbar-inner
           = render :partial => 'layouts/navbar'
 
-      #page-header-wrapper
+      #page-header-wrapper.navbar.navbar-static-top
         #page-header
           - if content_for?(:page_header)
             = yield :page_header

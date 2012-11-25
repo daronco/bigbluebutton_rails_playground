@@ -5,7 +5,23 @@
 @import "compass/css3";
 @import "definitions";
 
+$baseFontSize: $font-normal;
+$baseLineHeight: $font-normal-line-height;
+
+$linkColor: #367380;
+
+$btnPrimaryBackground: #5bc0de;
+$btnPrimaryBackgroundHighlight: #2f96b4;
+
+$navbarBackground: $navbar-bg-color;
+$navbarBackgroundHighlight: lighten($navbar-bg-color, 10);
+
 @import "bootstrap";
+@import "bootstrap-responsive";
+
+a:hover {
+  text-decoration: none;
+}
 
 /* .form-inline { */
 /*   padding: 0; */
