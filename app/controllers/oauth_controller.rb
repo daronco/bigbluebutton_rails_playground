@@ -4,10 +4,6 @@ class OauthController < ApplicationController
 
   skip_authorization_check
 
-  # def welcome
-  #   render :text => "Hiya! #{current_user.first_name} #{current_user.last_name}"
-  # end
-
   def authorize
     OauthAccessGrant.prune!
     access_grant = current_user.oauth_access_grants.create({:oauth_app => application, :state => params[:state]}, :without_protection => true)
@@ -36,10 +32,6 @@ class OauthController < ApplicationController
     }
   end
 
-  # def failure
-  #   render :text => "ERROR: #{params[:message]}"
-  # end
-
   def user
     hash = {
       :provider => "mconf_id",
@@ -53,18 +45,6 @@ class OauthController < ApplicationController
     }
     render :json => hash.to_json
   end
-
-  # # Incase, we need to check timeout of the session from a different application!
-  # # This will be called ONLY if the user is authenticated and token is valid
-  # # Extend the UserManager session
-  # def isalive
-  #   warden.set_user(current_user, :scope => :user)
-  #   response = { 'status' => 'ok' }
-
-  #   respond_to do |format|
-  #     format.any { render :json => response.to_json }
-  #   end
-  # end
 
   protected
 

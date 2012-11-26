@@ -5,7 +5,8 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable,
+         :token_authenticatable, :timeoutable
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username
@@ -26,6 +27,12 @@ class User < ActiveRecord::Base
   ## oauth
 
   has_many :oauth_access_grants, :dependent => :delete_all # TODO: or destroy_all?
+
+  self.token_authentication_key = "oauth_token"
+
+  def self.find_for_token_authentication(conditions)
+    where(["oauth_access_grants.access_token = ? AND (oauth_access_grants.access_token_expires_at IS NULL OR oauth_access_grants.access_token_expires_at > ?)", conditions[token_authentication_key], Time.now]).joins(:oauth_access_grants).select("users.*").first
+  end
 
   ## Validations
 

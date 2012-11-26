@@ -116,6 +116,7 @@ ActiveRecord::Schema.define(:version => 20121123180528) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+    t.string   "authentication_token"
     t.string   "locale"
     t.boolean  "superuser",              :default => false
   end
