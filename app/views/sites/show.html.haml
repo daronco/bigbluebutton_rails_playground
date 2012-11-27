@@ -5,7 +5,7 @@
 -#     = link_to t('button.edit'), edit_site_path, :class => "btn btn-primary btn-block"
 
 #manage
-  = simple_form_for @site, :url => "", :html => { :class => 'row-fluid' } do |f|
+  = simple_form_for @site, :url => "", :html => { :class => 'row-fluid form-block-level' } do |f|
     .span6
       = f.input :name, :disabled => true
       = f.input :description, :as => :text, :input_html => { :rows => 5 }, :disabled => true

@@ -4,6 +4,7 @@
 $font-normal: 13px;
 $font-normal-line-height: 18px;
 $font-color: #333;
+$font-color-inputs: #666;
 
 @mixin mconf-font-size($size: normal) {
   @if $size == mini {

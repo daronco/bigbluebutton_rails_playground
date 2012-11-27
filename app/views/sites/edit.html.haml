@@ -5,7 +5,7 @@
 -#     = link_to t('save'), "#form-edit-site", :class => "btn btn-primary btn-block submit-form"
 
 #manage
-  = simple_form_for @site, :url => site_path, :html => { :id => "form-edit-site", :method => :put, :multipart => true, :class => 'row-fluid' } do |f|
+  = simple_form_for @site, :url => site_path, :html => { :id => "form-edit-site", :method => :put, :multipart => true, :class => 'row-fluid form-block-level' } do |f|
     .span6
       = f.input :name
       = f.input :description, :as => :text, :input_html => { :rows => 5 }
@@ -32,4 +32,4 @@
       = f.input :chat_enabled, :as => :boolean
       = f.input :xmpp_domain
       = f.input :xmpp_server
-      = f.button :submit
+    = f.button :wrapped, :cancel => site_path

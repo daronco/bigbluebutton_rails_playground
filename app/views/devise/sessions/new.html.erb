@@ -1,14 +1,15 @@
-<h2>Sign in</h2>
+<%= render_page_title "Sign in" %>
 
-<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+<%= simple_form_for(resource, :as => resource_name, :url =>
+session_path(resource_name), :html => { :class => "form-horizontal" }) do |f| %>
   <div class="inputs">
     <%= f.input :login, :required => true, :autofocus => true %>
     <%= f.input :password, :required => true %>
     <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
   </div>
 
-  <div class="actions">
-    <%= f.button :submit, "Sign in" %>
+  <div class="form-actions">
+   <%= f.button :submit, "Sign in", :class => "btn-primary" %>
   </div>
 <% end %>
 

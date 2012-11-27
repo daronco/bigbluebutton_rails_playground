@@ -1,3 +1,5 @@
+require 'simple_form_extensions'
+
 # Use this setup block to configure all options available in SimpleForm.
 # From: https://github.com/rafaelfranca/simple_form-bootstrap/
 SimpleForm.setup do |config|
@@ -52,7 +54,7 @@ SimpleForm.setup do |config|
     b.use :placeholder
     b.use :label
     b.wrapper :tag => 'div', :class => 'controls' do |ba|
-      ba.use :input, :class => 'input-block-level'
+      ba.use :input
       ba.use :error, :wrap_with => { :tag => 'span', :class => 'help-inline' }
       ba.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
     end
