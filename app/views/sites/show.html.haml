@@ -1,3 +1,7 @@
+= content_for :page_header_extra do
+  = link_to t("edit"), edit_site_path, :class => "btn btn-primary"
+= render_page_title t(".page_title")
+
 -# = render :partial => 'manage/menu'
 
 -# = content_for :sidebar do
@@ -5,30 +9,4 @@
 -#     = link_to t('button.edit'), edit_site_path, :class => "btn btn-primary btn-block"
 
 #manage
-  = simple_form_for @site, :url => "", :html => { :class => 'row-fluid form-block-level' } do |f|
-    .span6
-      = f.input :name, :disabled => true
-      = f.input :description, :as => :text, :input_html => { :rows => 5 }, :disabled => true
-      = f.input :domain, :disabled => true
-      = f.input :locale, :collection => I18n.available_locales, :disabled => true
-      = f.input :signature, :as => :text, :input_html => { :rows => 5 }, :disabled => true
-      = f.input :feedback_url, :disabled => true
-      = f.input :analytics_code, :disabled => true
-      = f.input :shib_enabled, :as => :boolean, :disabled => true
-      = f.input :shib_email_field, :disabled => true
-      = f.input :shib_name_field, :disabled => true
-    .span5
-      = f.input :smtp_user_name, :disabled => true
-      = f.input :smtp_password, :disabled => true
-      = f.input :smtp_sender, :disabled => true
-      = f.input :smtp_domain, :disabled => true
-      = f.input :smtp_server, :disabled => true
-      = f.input :smtp_port, :disabled => true
-      = f.input :smtp_auto_tls, :disabled => true
-      = f.input :smtp_auth_type, :disabled => true
-      = f.input :exception_notifications, :as => :boolean, :disabled => true
-      = f.input :exception_notifications_email, :disabled => true
-      = f.input :exception_notifications_prefix, :disabled => true
-      = f.input :chat_enabled, :as => :boolean, :disabled => true
-      = f.input :xmpp_domain, :disabled => true
-      = f.input :xmpp_server, :disabled => true
+  = render :partial => 'sites/form', :action => "show"

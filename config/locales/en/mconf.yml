@@ -3,6 +3,7 @@ en:
   back: "Back"
   destroy: "Destroy"
   edit: "Edit"
+  save: "Save"
   show: "Show"
 
   layouts:
@@ -31,6 +32,11 @@ en:
       manage: "Manage"
       my_home: "Home"
       register: Register
+  sites:
+    edit:
+      page_title: "Management: Site"
+    show:
+      page_title: "Management: Site"
 
   locales:
     set:
