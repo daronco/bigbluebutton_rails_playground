@@ -6,6 +6,7 @@ FactoryGirl.define do
     f.superuser false
     f.password Forgery(:basic).password :at_least => 10, :at_most => 16
     f.password_confirmation { |u| u.password }
+    f.association :profile
     after(:create) { |u| u.confirm! }
   end
 

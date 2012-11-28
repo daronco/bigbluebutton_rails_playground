@@ -83,6 +83,23 @@ describe User do
 
   it { should allow_mass_assignment_of(:remember_me) }
 
+  it { should have_one(:profile).dependent(:destroy) }
+  it "should create the user's profile after creating the user" do
+    user = User.new FactoryGirl.attributes_for(:user)
+    user.save!
+    user.profile.should_not be_nil
+    user.profile.should be_an_instance_of(Profile)
+  end
+
+  # TODO: method not available yet, see
+  #       https://github.com/thoughtbot/shoulda-matchers/commits/master/lib/shoulda/matchers/independent/delegate_matcher.rb
+  # it { should delegate_method(:organization).to(:profile) }
+  # it { should delegate_method(:address).to(:profile) }
+  # it { should delegate_method(:phone).to(:profile) }
+  # it { should delegate_method(:city).to(:profile) }
+  # it { should delegate_method(:country).to(:profile) }
+  # it { should delegate_method(:about).to(:profile) }
+
   context "devise" do
     # TODO: test the modules that were enabled?
 

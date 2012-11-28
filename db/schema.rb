@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121120113432) do
+ActiveRecord::Schema.define(:version => 20121128015845) do
 
   create_table "bigbluebutton_rooms", :force => true do |t|
     t.integer  "server_id"
@@ -46,6 +46,18 @@ ActiveRecord::Schema.define(:version => 20121120113432) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "param"
+  end
+
+  create_table "profiles", :force => true do |t|
+    t.string   "organization"
+    t.string   "address"
+    t.string   "phone"
+    t.string   "city"
+    t.string   "country"
+    t.text     "about"
+    t.integer  "user_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "sites", :force => true do |t|

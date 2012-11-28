@@ -1,5 +1,11 @@
 class User < ActiveRecord::Base
 
+  has_one :profile, :dependent => :destroy
+
+  delegate :organization, :address, :phone, :city, :country, :about, :to => :profile!
+
+  after_create :set_default_associations
+
   ## Devise block
 
   # Include default devise modules. Others available are:
@@ -43,6 +49,12 @@ class User < ActiveRecord::Base
   # Returns true if the user is anonymous (not registered)
   def anonymous?
     self.new_record?
+  end
+
+  private
+
+  def set_default_associations
+    create_profile
   end
 
 end
