@@ -57,6 +57,15 @@ en:
         smtp_password: "The password for your email account in your SMTP server."
         xmpp_domain: "Domain used to identify the XMPP server (e.g. \"@myserver.com\")."
         xmpp_server: "Address where's located the XMPP server (e.g. \"http://myserver.com:5280/http-bind\")."
+      user:
+        edit:
+          current_password: "We need your current password to confirm your changes"
+          password: "Leave it blank if you don't want to change it"
+    placeholders:
+      profile:
+        edit:
+          about: "Write something about you"
+
     creating: "Creating..."
     updating: 'Updating...'
     buttons:

@@ -99,9 +99,13 @@ form {
   }
 
   .form-actions {
-    padding: 10px;
     clear: both;
     margin-top: 5px;
+
+    &.form-actions-clean {
+      background: none;
+      border: 0;
+    }
   }
 
   &.form-horizontal {

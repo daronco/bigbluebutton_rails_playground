@@ -18,6 +18,7 @@
     = f.input :shib_enabled, :as => :boolean, :disabled => disabled
     = f.input :shib_email_field, :disabled => disabled
     = f.input :shib_name_field, :disabled => disabled
+  -# TODO: why span6 doesn't work?
   .span5
     = f.input :smtp_user_name, :disabled => disabled
     = f.input :smtp_password, :as => :showable_password, :disabled => disabled

@@ -30,4 +30,34 @@ describe Profile do
   it { should allow_mass_assignment_of(:country) }
 
   it { should allow_mass_assignment_of(:about) }
+
+  describe "abilities:" do
+    subject { ability }
+    let(:ability) { Abilities.ability_for(user) }
+    let(:target) { FactoryGirl.create(:profile) }
+
+    context "a superuser" do
+      let(:user) { FactoryGirl.create(:superuser) }
+      it { should be_able_to(:manage, target) }
+    end
+
+    context "a normal user" do
+      let(:user) { FactoryGirl.create(:user) }
+
+      context "on another's profile" do
+        it { should_not be_able_to_do_anything_to(target) }
+      end
+
+      context "on his profile" do
+        let(:target) { user.profile }
+        it { should_not be_able_to_do_anything_to(target).except([:read, :update]) }
+      end
+    end
+
+    context "an anonymous user" do
+      let(:user) { User.new }
+      it { should_not be_able_to_do_anything_to(target) }
+    end
+  end
+
 end

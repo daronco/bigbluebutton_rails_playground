@@ -28,6 +28,9 @@ module Abilities
       can :read, User
       can [:update, :destroy], User, :id => user.id
 
+      # Profile
+      can [:read, :update], Profile, :user_id => user.id
+
       # Home
       can :read, :home
 

@@ -10,7 +10,6 @@ describe SitesController do
   pending "#update"
 
   describe "authentication:" do
-    let(:site) { FactoryGirl.create(:site) }
     it { should require_authentication_for(:show) }
     it { should require_authentication_for(:edit) }
     it { should require_authentication_for(:update) }

@@ -16,8 +16,9 @@ BigbluebuttonRailsPlayground::Application.routes.draw do
     get "register", :to => "devise/registrations#new"
   end
 
-  # The unique Site is created in db/seeds and can only be edited
   scope "/manage" do
+
+    # The unique Site is created in db/seeds and can only be edited
     resource :site, :only => [:show, :edit, :update]
 
     # bigbluebutton_rails routes
@@ -25,6 +26,14 @@ BigbluebuttonRailsPlayground::Application.routes.draw do
     bigbluebutton_routes :default, :scope => "webconf",
       :controllers => controllers,
       :as => "bigbluebutton"
+
+  end
+
+  scope "/users" do
+
+    # automatically created, can only be updated
+    resource :profile, :only => [:update]
+
   end
 
 end

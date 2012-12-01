@@ -1,0 +1,23 @@
+@import "definitions";
+@import "compass/css3";
+
+body.devise-registrations.edit, body.devise-registrations.update {
+
+  input.string, input.password, textarea {
+    width: 95%;
+    max-width: 95%;
+  }
+
+  #cancel-account {
+    margin-top: 20px;
+    h3 { color: $alert-danger-font; }
+  }
+
+  #edit-profile {
+    textarea {
+      height: 100px;
+      max-height: 100px;
+    }
+  }
+
+}

@@ -1,0 +1,33 @@
+= render_page_title t(".title")
+
+.span6
+
+  #edit-account-info
+    %h3= t('.account_info')
+    = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => "form-horizontal" } ) do |f|
+      = f.input :name, :autofocus => true
+      = f.input :email
+      = f.input :password
+      = f.input :password_confirmation
+      = f.input :current_password, :required => true
+      = f.button :wrapped, :value => t("save"), :wrapper_class => "form-actions-clean"
+
+    #cancel-account.form-horizontal
+      %h3= t('.danger_zone')
+      .control-group
+        %label.control-label= t(".cancel_account")
+        .controls
+          = link_to t(".yes_cancel_account"), registration_path(resource_name), :confirm => t("are_you_sure"), :method => :delete, :class => 'btn btn-small btn-danger'
+
+.span6
+
+  #edit-profile
+    %h3= t('.profile')
+    = simple_form_for resource.profile, :url => profile_path, :html => { :method => :put, :class => "form-horizontal" } do |f|
+      = f.input :about, :as => :text
+      = f.input :organization
+      = f.input :address
+      = f.input :city
+      = f.input :country, :as => :string
+      = f.input :phone
+      = f.button :wrapped, :value => t("save"), :wrapper_class => "form-actions-clean"

@@ -6,6 +6,15 @@ en:
   save: "Save"
   show: "Show"
 
+  devise:
+    registrations:
+      edit:
+        account_info: "Account information and password"
+        danger_zone: "Danger zone!"
+        cancel_account: "Cancel account?"
+        profile: "Profile information"
+        title: "Edit your account and profile"
+        yes_cancel_account: "Yes, cancel my account"
   layouts:
     footer:
       copyright: "© 2010-2012 %{site}."
