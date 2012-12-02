@@ -1,8 +1,6 @@
 require "spec_helper"
 
 describe Devise::SessionsController do
-  include Shoulda::Matchers::ActionController
-
   describe "routing" do
     it { {:get => "/login"}.should route_to(:controller => "devise/sessions", :action => "new") }
     it { should route(:get, "/users/login").to(:action => :new) }
