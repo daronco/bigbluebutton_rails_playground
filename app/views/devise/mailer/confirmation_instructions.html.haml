@@ -1,0 +1,3 @@
+%h4= t(".title", :user => @resource.email)
+%p= t(".confirm_sentence")
+%p= link_to t(".confirm_it"), confirmation_url(@resource, :confirmation_token => @resource.confirmation_token)

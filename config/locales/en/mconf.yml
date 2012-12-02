@@ -11,7 +11,23 @@ en:
       new:
         send_it: "Resend confirmation instructions"
         title: "Resend confirmation instructions"
+    mailer:
+      confirmation_instructions:
+        confirm_it: "Confirm my account"
+        confirm_sentence: "You can confirm your account through the link below:"
+        title: "Welcome %{user}!"
+      reset_password_instructions:
+        change_password: "Change my password"
+        not_requested: "If you didn't request this, please ignore this email."
+        reset_requested: "Someone has requested a link to change your password, and you can do this through the link below."
+        title: "Hello %{user}!"
+        wont_change: "Your password won't change until you access the link above and create a new one."
     passwords:
+      edit:
+        change_it: "Change my password"
+        confirm_new_password: "Confirm your new password"
+        new_password: "New password"
+        title: "Change your password"
       new:
         send_it: "Send me reset password instructions"
         title: "Forgot your password?"
@@ -58,7 +74,7 @@ en:
           en: English
           pt-BR: "Português (Brasil)"
     navbar:
-      account: View and edit your account
+      account: "Edit your account and profile"
       login: Login
       logout: Logout
       manage: "Manage"
