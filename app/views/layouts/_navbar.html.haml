@@ -28,10 +28,11 @@
         -# dropdown menu opened when clicking in the dropdown
         .dropdown-menu.arrow-right
           .user-info-big
-            -# .user-avatar
-            -#   = link_logo(current_user, :size => "64", :url => edit_user_registration_path(current_user), :title => current_user.name).html_safe
+            .user-avatar
+              = link_to user_path(current_user) do
+                = gravatar_for(current_user.email, :size => 64)
             .user-data
-              = link_to(current_user.name, edit_user_registration_path)
+              = link_to(current_user.name, user_path(current_user))
               = link_to(current_user.email, "mailto: #{current_user.email}")
               -# %span= current_user.profile.organization unless current_user.profile.organization.nil?
           .user-links

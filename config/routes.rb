@@ -29,11 +29,11 @@ BigbluebuttonRailsPlayground::Application.routes.draw do
 
   end
 
+  resources :users, :only => :show
+
+  # profiles are automatically created, can only be updated
   scope "/users" do
-
-    # automatically created, can only be updated
-    resource :profile, :only => [:update]
-
+    resource :profile, :only => :update
   end
 
 end

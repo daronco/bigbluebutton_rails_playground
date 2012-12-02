@@ -443,6 +443,8 @@ body {
     margin: 0;
     border: 0;
     @include mconf-font-size(larger);
+    color: #404040;
+    @include text-shadow(white 2px 2px 3px);
   }
 
   .current-page-logo {

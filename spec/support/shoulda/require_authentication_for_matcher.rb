@@ -50,6 +50,7 @@ module Shoulda # :nodoc
           begin
             @context.send(@method, @action, @params)
           rescue ActionView::MissingTemplate
+          rescue CanCan::AccessDenied # authorization error, not authentication
           end
 
           @redirectTo = RedirectToMatcher.new(@auth_route, @context)

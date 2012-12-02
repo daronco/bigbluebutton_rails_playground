@@ -6,7 +6,7 @@ describe ProfilesController do
   pending "#update"
 
   describe "authentication:" do
-    it { should require_authentication_for(:update) }
+    it { should require_authentication_for(:update).via(:put) }
   end
 
   describe "abilities:" do

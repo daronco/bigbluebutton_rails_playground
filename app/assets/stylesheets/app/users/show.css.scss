@@ -1,0 +1,28 @@
+@import "compass/css3";
+@import "definitions";
+
+body.users.show {
+
+  #profile-in-sidebar {
+    text-align: center;
+    background: $light-gray;
+    @include border-radius(4px);
+    padding: 15px;
+
+    .profile-logo {
+      margin: 5px;
+      border: 1px solid darken($light-gray, 10);
+      padding: 3px;
+      background: $site-bg-color;
+      width: 114px;
+      height: 114px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 5px 0;
+    }
+
+  }
+
+}

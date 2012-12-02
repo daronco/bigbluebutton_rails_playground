@@ -12,7 +12,7 @@ describe SitesController do
   describe "authentication:" do
     it { should require_authentication_for(:show) }
     it { should require_authentication_for(:edit) }
-    it { should require_authentication_for(:update) }
+    it { should require_authentication_for(:update).via(:put) }
   end
 
   describe "abilities:" do
