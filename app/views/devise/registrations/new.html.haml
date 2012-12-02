@@ -1,0 +1,15 @@
+= render_page_title t(".title")
+
+.span6
+  = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => "form-horizontal" }) do |f|
+    = f.input :email, :autofocus => true
+    = f.input :name
+    = f.input :username
+    = f.input :password, :required => true
+    = f.input :password_confirmation, :required => true
+    = f.button :wrapped, :value => t(".sign_up"), :wrapper_class => "form-actions-clean"
+.span6
+  .extra-links
+    .comments
+      %span= t('.confirmation')
+    = render :partial => "devise/shared/links"

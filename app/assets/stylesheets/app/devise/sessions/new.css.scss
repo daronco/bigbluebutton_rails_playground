@@ -1,0 +1,45 @@
+@import "definitions";
+@import "compass/css3";
+
+body.devise-sessions.new, body.devise-sessions.create {
+
+  #content {
+    margin-top: 20px;
+  }
+
+  form {
+    margin-top: 20px;
+  }
+
+  input.string, input.password, textarea {
+    width: 95%;
+    max-width: 95%;
+  }
+
+  .form-actions {
+    float: right;
+    padding: 0;
+    clear: none;
+  }
+
+  .remember-me {
+    float: left;
+    margin: 5px 20px;
+
+    label {
+      margin: 0;
+      float: right;
+      width: auto;
+    }
+
+    .controls {
+      float: right;
+    }
+
+    input[type=checkbox] {
+      margin-top: 8px;
+      margin-right: 5px;
+    }
+  }
+
+}

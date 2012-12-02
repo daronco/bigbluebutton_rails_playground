@@ -5,8 +5,13 @@ en:
       user: "User"
     attributes:
       user:
+        email: "Email"
+        name: "Full name"
         login: "Username or email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
         superuser: "Administrator"
+        username: "Username"
       site:
         analytics_code: "Analytics Code"
         chat_enabled: "Enable Chat"

@@ -1,0 +1,21 @@
+@import "definitions";
+@import "compass/css3";
+
+body.devise-passwords.new, body.devise-sessions.passwords {
+
+  #content {
+    margin-top: 30px;
+  }
+
+  input.string {
+    width: 95%;
+    max-width: 95%;
+  }
+
+  .form-actions {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+}

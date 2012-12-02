@@ -1,0 +1,23 @@
+@import "definitions";
+@import "compass/css3";
+
+body.devise-registrations.new, body.devise-registrations.create {
+
+  #content {
+    margin-top: 30px;
+  }
+
+  input.string, input.password, textarea {
+    width: 95%;
+    max-width: 95%;
+  }
+
+  .extra-links {
+    .comments {
+      font-style: italic;
+      margin-bottom: 20px;
+      span { display: block; }
+    }
+  }
+
+}

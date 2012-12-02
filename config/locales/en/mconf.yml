@@ -7,6 +7,14 @@ en:
   show: "Show"
 
   devise:
+    confirmations:
+      new:
+        send_it: "Resend confirmation instructions"
+        title: "Resend confirmation instructions"
+    passwords:
+      new:
+        send_it: "Send me reset password instructions"
+        title: "Forgot your password?"
     registrations:
       edit:
         account_info: "Account information and password"
@@ -15,6 +23,21 @@ en:
         profile: "Profile information"
         title: "Edit your account and profile"
         yes_cancel_account: "Yes, cancel my account"
+      new:
+        confirmation: "After registering you will receive an email confirmation with the link to activate your account"
+        sign_up: "Sign up"
+        title: "Create an account"
+    sessions:
+      new:
+        sign_in: "Sign in"
+        title: "Sign in"
+    shared:
+      links:
+        login: "Login"
+        lost_password: "Forgot your password?"
+        other_options: "Other options"
+        register: "Register"
+        resend_confirmation: "Didn't receive confirmation instructions?"
   layouts:
     footer:
       copyright: "© 2010-2012 %{site}."
