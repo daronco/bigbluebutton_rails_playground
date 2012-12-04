@@ -1,9 +1,0 @@
-<% target = @server.new_record? ? :bigbluebutton_server : @server %>
-<%= simple_form_for(@server, :url => bigbluebutton_server_path(target)) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :url %>
-  <%= f.input :salt %>
-  <%= f.input :version %>
-  <%= f.input :param %>
-  <%= f.button :submit %>
-<% end %>

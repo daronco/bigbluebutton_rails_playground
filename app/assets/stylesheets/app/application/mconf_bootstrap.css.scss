@@ -23,6 +23,14 @@ a:hover {
   text-decoration: none;
 }
 
+.nav-tabs {
+   li.active {
+    a {
+      background: $green-logo;
+    }
+  }
+}
+
 /* .form-inline { */
 /*   padding: 0; */
 /*   margin: 0; */
@@ -90,6 +98,7 @@ a:hover {
 /*       margin: 0 0 -1px; */
 /*     } */
 /*   } */
+
 
 /*   li:first-child > a { */
 /*     @include border-top-radius(6px); */

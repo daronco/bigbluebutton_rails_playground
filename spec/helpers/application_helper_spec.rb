@@ -33,5 +33,6 @@ describe ApplicationHelper do
   pending "#github_link_to_revision"
   pending "#at_home?"
   pending "#render_page_title"
+  pending "#confirmation_string"
 
 end

@@ -101,10 +101,11 @@ body {
 /*     float: right; */
 /*   } */
 /* } */
-/* // Classes outside .thread so that they can be used anywhere to */
-/* // cycle background colors */
-/* .thread-even { background: $transparent; } */
-/* .thread-odd { background: $light-gray; } */
+
+// Classes outside .thread so that they can be used anywhere to
+// cycle background colors
+.thread-even { background: $transparent; }
+.thread-odd { background: $light-gray; }
 
 
 /* // Wrapper around information about a user */

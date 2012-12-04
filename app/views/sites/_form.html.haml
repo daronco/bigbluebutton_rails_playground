@@ -1,38 +1,36 @@
-- action ||= "show"
-- if action == "edit"
+- editing ||= false
+- if editing
   - url = site_path
-  - disabled = false
 - else
   - url = ""
-  - disabled = true
 
 = simple_form_for @site, :url => url, :html => { :class => 'row-fluid form-block-level' } do |f|
   .span6
-    = f.input :name, :disabled => disabled
-    = f.input :description, :as => :text, :input_html => { :rows => 5 }, :disabled => disabled
-    = f.input :domain, :disabled => disabled
-    = f.input :locale, :collection => I18n.available_locales, :disabled => disabled
-    = f.input :signature, :as => :text, :input_html => { :rows => 5 }, :disabled => disabled
-    = f.input :feedback_url, :disabled => disabled
-    = f.input :analytics_code, :disabled => disabled
-    = f.input :shib_enabled, :as => :boolean, :disabled => disabled
-    = f.input :shib_email_field, :disabled => disabled
-    = f.input :shib_name_field, :disabled => disabled
+    = f.input :name, :disabled => !editing
+    = f.input :description, :as => :text, :input_html => { :rows => 5 }, :disabled => !editing
+    = f.input :domain, :disabled => !editing
+    = f.input :locale, :collection => I18n.available_locales, :disabled => !editing
+    = f.input :signature, :as => :text, :input_html => { :rows => 5 }, :disabled => !editing
+    = f.input :feedback_url, :disabled => !editing
+    = f.input :analytics_code, :disabled => !editing
+    = f.input :shib_enabled, :as => :boolean, :disabled => !editing
+    = f.input :shib_email_field, :disabled => !editing
+    = f.input :shib_name_field, :disabled => !editing
   -# TODO: why span6 doesn't work?
   .span5
-    = f.input :smtp_user_name, :disabled => disabled
-    = f.input :smtp_password, :as => :showable_password, :disabled => disabled
-    = f.input :smtp_sender, :disabled => disabled
-    = f.input :smtp_domain, :disabled => disabled
-    = f.input :smtp_server, :disabled => disabled
-    = f.input :smtp_port, :disabled => disabled
-    = f.input :smtp_auto_tls, :disabled => disabled
-    = f.input :smtp_auth_type, :disabled => disabled
-    = f.input :exception_notifications, :as => :boolean, :disabled => disabled
-    = f.input :exception_notifications_email, :disabled => disabled
-    = f.input :exception_notifications_prefix, :disabled => disabled
-    = f.input :chat_enabled, :as => :boolean, :disabled => disabled
-    = f.input :xmpp_domain, :disabled => disabled
-    = f.input :xmpp_server, :disabled => disabled
-  - if action == "edit"
-    = f.button :wrapped, :cancel => site_path, :value => t("save")
+    = f.input :smtp_user_name, :disabled => !editing
+    = f.input :smtp_password, :as => :showable_password, :disabled => !editing
+    = f.input :smtp_sender, :disabled => !editing
+    = f.input :smtp_domain, :disabled => !editing
+    = f.input :smtp_server, :disabled => !editing
+    = f.input :smtp_port, :disabled => !editing
+    = f.input :smtp_auto_tls, :disabled => !editing
+    = f.input :smtp_auth_type, :disabled => !editing
+    = f.input :exception_notifications, :as => :boolean, :disabled => !editing
+    = f.input :exception_notifications_email, :disabled => !editing
+    = f.input :exception_notifications_prefix, :disabled => !editing
+    = f.input :chat_enabled, :as => :boolean, :disabled => !editing
+    = f.input :xmpp_domain, :disabled => !editing
+    = f.input :xmpp_server, :disabled => !editing
+  - if editing
+    = f.button :wrapped, :cancel => site_path, :value => t("_other.save")

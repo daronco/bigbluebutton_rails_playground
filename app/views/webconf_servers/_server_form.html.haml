@@ -1,0 +1,19 @@
+- editing ||= false
+
+.webconf-server.row-fluid{:class => "#{cycle("thread-even" , "thread-odd")}"}
+
+  = simple_form_for server, :html => { :class => "form-horizontal" } do |f|
+    = f.input :name, :disabled => !editing
+    = f.input :url, :disabled => !editing
+    = f.input :salt, :disabled => !editing
+    = f.input :version, :disabled => !editing
+    = f.input :param, :disabled => !editing
+    - if editing
+      = f.button :wrapped, :value => t("_other.save"), :wrapper_class => "form-actions-clean"
+
+  - unless server.new_record?
+    %ul.nav.nav-tabs.nav-stacked.access-links
+      %li= link_to t('.view_rooms'), rooms_bigbluebutton_server_path(server)
+      %li= link_to t('.activity_monitor'), activity_bigbluebutton_server_path(server)
+      %li= link_to t('_other.destroy'), bigbluebutton_server_path(server), :confirm => confirmation_string, :method => :delete
+      %li= link_to t('_other.edit'), edit_bigbluebutton_server_path(server)

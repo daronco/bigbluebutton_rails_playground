@@ -1,11 +1,13 @@
 en:
-  are_you_sure: "Are you sure?"
-  back: "Back"
-  destroy: "Destroy"
-  edit: "Edit"
-  save: "Save"
-  show: "Show"
-
+  _other:
+    are_you_sure: "Are you sure?"
+    back: "Back"
+    destroy: "Destroy"
+    edit: "Edit"
+    management:
+      page_title: "Management"
+    save: "Save"
+    show: "Show"
   devise:
     confirmations:
       new:
@@ -73,6 +75,9 @@ en:
         locales:
           en: English
           pt-BR: "Português (Brasil)"
+    manage_menu:
+      site: "Site Configuration"
+      webconference: "Web Conference"
     navbar:
       account: "Edit your account and profile"
       login: Login
@@ -84,10 +89,28 @@ en:
     edit:
       page_title: "Management: Site"
     show:
+      edit_site: "Edit this site"
       page_title: "Management: Site"
   users:
     show:
       title: "User profile"
+  webconf_rooms:
+    room_form:
+      destroy: "Destroy the room"
+      edit: "Edit the room"
+      end: "End the meeting"
+      invite: "Invite URL"
+      join: "Join the meeting"
+      mobile_join: "Join from a mobile"
+  webconf_servers:
+    server_form:
+      activity_monitor: "Activity monitor"
+      view_rooms: "Rooms in this server"
+    webconf_menu:
+      new_room: "Create a new room"
+      new_server: "Create a new server"
+      view_all_rooms: "View all rooms"
+      view_all_servers: "View all servers"
 
   locales:
     set:

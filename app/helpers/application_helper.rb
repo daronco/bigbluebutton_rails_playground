@@ -68,6 +68,11 @@ module ApplicationHelper
     block_to_partial('layouts/page_title', options.merge(:page_title => title, :logo => logo))
   end
 
+  # Returns the default string to ask the user to confirm an action
+  def confirmation_string
+    t("_other.are_you_sure")
+  end
+
   private
 
   # Based on http://www.igvita.com/2007/03/15/block-helpers-and-dry-views-in-rails/

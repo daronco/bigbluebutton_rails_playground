@@ -1,0 +1,21 @@
+@import "definitions";
+@import "compass/css3";
+
+body.webconf_servers {
+
+  .webconf-server {
+    @include mconf-clearfix;
+    padding: 15px 0 0 0;
+
+    form {
+      float: left;
+    }
+
+    .access-links {
+      float: left;
+      margin-left: 20px;
+    }
+
+  }
+
+}
