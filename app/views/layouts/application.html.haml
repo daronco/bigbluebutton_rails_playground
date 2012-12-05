@@ -21,8 +21,11 @@
   %body{:class => "#{controller_name_for_view} #{params[:action]}"}
     #site.container-fluid
       #navbar-wrapper.navbar.navbar-static-top
-        #navbar.navbar-inner
-          = render :partial => 'layouts/navbar'
+        - if content_for?(:navbar)
+          = yield :navbar
+        - else
+          #navbar.navbar-inner
+            = render :partial => "layouts/navbar"
 
       #page-header-wrapper.navbar.navbar-static-top
         #page-header
@@ -43,7 +46,10 @@
             #content-middle.span12
               = yield
 
-      = render :partial => "layouts/footer"
+      - if content_for?(:footer)
+        = yield :footer
+      - else
+        = render :partial => "layouts/footer"
 
     = render :partial => "layouts/analytics"
     = render :partial => "layouts/notifications"

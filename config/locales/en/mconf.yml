@@ -41,13 +41,15 @@ en:
         profile: "Profile information"
         title: "Edit your account and profile"
         yes_cancel_account: "Yes, cancel my account"
+      register_form:
+        sign_up: "Sign up"
       new:
         confirmation: "After registering you will receive an email confirmation with the link to activate your account"
-        sign_up: "Sign up"
         title: "Create an account"
     sessions:
-      new:
+      login_form:
         sign_in: "Sign in"
+      new:
         title: "Sign in"
     shared:
       links:
@@ -56,6 +58,13 @@ en:
         other_options: "Other options"
         register: "Register"
         resend_confirmation: "Didn't receive confirmation instructions?"
+  frontpage:
+    show:
+      headline: "A global scalable opensource multiconference system for web and mobile devices"
+      login: "Sign in to your account"
+      lost_password: "Lost your password?"
+      register: "Create a new account"
+      resend_confirmation_email: "Resend confirmation email"
   layouts:
     footer:
       copyright: "© 2010-2012 %{site}."

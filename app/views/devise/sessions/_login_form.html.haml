@@ -1,0 +1,6 @@
+= simple_form_for(resource, :as => :user, :url => session_path(:user), :html => { :class => "form-horizontal form-block-level" }) do |f|
+  = f.input :login, :autofocus => true
+  = f.input :password
+  .remember-me
+    = f.input :remember_me, :as => :boolean
+  = f.button :wrapped, :value => t(".sign_in"), :wrapper_class => "form-actions-clean"

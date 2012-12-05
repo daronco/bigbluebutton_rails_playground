@@ -1,0 +1,16 @@
+#upper-footer-wrapper.navbar.navbar-static-top.footer-simple
+  #upper-footer
+    .link-group
+      #footer-logo.link-group
+        = link_to current_site.name, "/", :class => 'title'
+        %span= t('layouts.footer.copyright', :site => current_site.name)
+    .link-group.footer-languages
+      %h3= t('layouts.footer.translate.change_language')
+      - I18n.available_locales.each_slice(3) do |locales|
+        %ul
+          - locales.each do |locale|
+            %li
+              - flag = image_tag("icons/flags/" + locale.to_s + ".png", :title => locale.to_s)
+              - text = t('layouts.footer.translate.locales.' + locale.to_s)
+              - link = link_to(text, set_locale_path(:id => locale.to_s), :method => :post)
+              = (flag + " " + link).html_safe

@@ -24,6 +24,9 @@ module Abilities
 
     def initialize(user)
 
+      # Frontpage
+      can :read, :frontpage
+
       # Users
       can :read, User
       can [:update, :destroy], User, :id => user.id
@@ -45,6 +48,9 @@ module Abilities
     include CanCan::Ability
 
     def initialize
+
+      # Frontpage
+      can :read, :frontpage
 
       # Webconf rooms
       # TODO: :join and :join_mobile should be allowed too?

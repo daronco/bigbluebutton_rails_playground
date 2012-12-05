@@ -1,0 +1,7 @@
+= simple_form_for(resource, :as => :user, :url => registration_path(:user), :html => { :class => "form-horizontal form-block-level" }) do |f|
+  = f.input :email, :autofocus => true
+  = f.input :name
+  = f.input :username
+  = f.input :password, :required => true
+  = f.input :password_confirmation, :required => true
+  = f.button :wrapped, :value => t(".sign_up"), :wrapper_class => "form-actions-clean"

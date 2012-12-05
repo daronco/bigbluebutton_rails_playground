@@ -1,0 +1,26 @@
+- content_for :navbar do
+  #navbar.navbar-inner
+    #main-logo
+      %a.title{:href => root_path}= image_tag 'logos/mconf-white-transp.png', :size => '231x120'
+
+- content_for :page_header do
+  = t(".headline")
+
+#content.row-fluid
+
+  #login-box.span6
+    %h3= t('.login')
+    = render "devise/sessions/login_form"
+    .action-links
+      %ul
+        %li= link_to t(".lost_password"), new_user_password_path
+        %li= link_to t(".resend_confirmation_email"), new_confirmation_path(:user)
+        - if current_site.shib_enabled?
+          %li= link_to t('.login'), shibboleth_path, :class => 'shibboleth_login'
+
+  #registration-box.span6
+    %h3= t('.register')
+    = render "devise/registrations/register_form"
+
+- content_for :footer do
+  = render :partial => "layouts/footer_simple"

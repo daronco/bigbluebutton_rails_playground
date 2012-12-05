@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe ApplicationController do
+describe FrontpageController do
   describe "routing" do
-    it { {:get => "/"}.should route_to(:controller => "home", :action => "show") }
+    it { {:get => "/"}.should route_to(:controller => "frontpage", :action => "show") }
   end
 
   context "route helpers" do

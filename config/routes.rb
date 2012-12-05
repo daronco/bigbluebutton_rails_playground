@@ -1,7 +1,7 @@
 BigbluebuttonRailsPlayground::Application.routes.draw do
 
   get "home", :to => "home#show", :as => "home"
-  root :to => "home#show"
+  root :to => "frontpage#show"
 
   # Set locale
   match "locale/set/:id", :to => "locales#set", :as => "set_locale"
