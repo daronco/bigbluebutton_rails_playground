@@ -17,6 +17,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # Devise's return path after sign in
+  def after_sign_in_path_for(resource)
+    home_path
+  end
+
   # Returns the deafult path to where the user should be redirected,
   # considering the current params, referer and current user.
   def default_return_path
