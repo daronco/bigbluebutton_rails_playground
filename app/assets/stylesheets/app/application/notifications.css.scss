@@ -1,0 +1,26 @@
+@import "compass/css3";
+@import "definitions";
+
+.notifications.top-middle {
+  top: 3px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.notifications {
+  /* @include box-shadow(3px 3px 10px rgba(0, 0, 0, 0.3)); */
+  @include border-radius(0);
+  text-align: center;
+
+  div {
+    @include border-radius(0);
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .close {
+    top: 0;
+    opacity: 0.4;
+  }
+}

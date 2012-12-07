@@ -1,4 +1,2 @@
-#notification-flashs
-  - flash.each do |name, msg|
-    %div{:name => "#{name}"}
-      = msg.html_safe
+- flash.each do |name, msg|
+  %div.notifications{ :name => "#{name}", :class => "top-middle", :"data-message" => msg.html_safe }
