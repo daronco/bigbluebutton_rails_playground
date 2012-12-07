@@ -8,7 +8,7 @@
 
 #content.row-fluid
 
-  #login-box.span6
+  #login-box.span5
     %h3= t('.login')
     = render "devise/sessions/login_form"
     .action-links
@@ -18,7 +18,7 @@
         - if current_site.shib_enabled?
           %li= link_to t('.login'), shibboleth_path, :class => 'shibboleth_login'
 
-  #registration-box.span6
+  #registration-box.span7
     %h3= t('.register')
     = render "devise/registrations/register_form"
 

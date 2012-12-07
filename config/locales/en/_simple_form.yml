@@ -66,6 +66,10 @@ en:
         edit:
           current_password: "We need your current password to confirm your changes"
           password: "Leave it blank if you don't want to change it"
+        username: "This ID is used to identify your user and your web conference room. Use only letters, numbers and dashes."
+    labels:
+      user:
+        name: "Full name"
     placeholders:
       profile:
         edit:
