@@ -1,8 +1,7 @@
 @import "definitions";
 @import "compass/css3";
 
-body.webconf_rooms,
-body.webconf_servers {
+body.webconf_rooms {
 
   .webconf-room {
     @include mconf-clearfix;

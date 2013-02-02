@@ -8,7 +8,7 @@
 - elsif params[:controller] == "webconf_rooms" and params[:action] == "new"
   - active_tab = 4
 
-%ul.nav.nav-tabs.nav-stacked
+%ul#page-submenu.nav.nav-pills
   %li{ :class => active_tab==1?"active":"" }= link_to t('.view_all_servers'), bigbluebutton_servers_path
   %li{ :class => active_tab==2?"active":"" }= link_to t('.view_all_rooms'), bigbluebutton_rooms_path
   %li{ :class => active_tab==3?"active":"" }= link_to t('.new_server'), new_bigbluebutton_server_path

@@ -1,8 +1,8 @@
 = render_page_title t("_other.management.page_title")
 = render :partial => "layouts/manage_menu"
 
-= content_for :sidebar do
+#manage
   = render "webconf_servers/webconf_menu"
 
-#manage
+  %h3= t('.creating_room')
   = render "webconf_rooms/room_form", :room => @room, :editing => true

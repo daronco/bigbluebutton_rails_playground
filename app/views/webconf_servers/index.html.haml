@@ -1,9 +1,25 @@
 = render_page_title t("_other.management.page_title")
 = render :partial => "layouts/manage_menu"
 
-= content_for :sidebar do
-  = render "webconf_servers/webconf_menu"
 
 #manage
-  - @servers.each do |server|
-    = render "webconf_servers/server_form", :server => server
+  = render "webconf_servers/webconf_menu"
+
+  %table.server-table.table-striped.table-hover.table-condensed
+    %thead
+      %tr
+        %th= t('.table.server_name')
+        %th= t('.table.url')
+        %th= t('.table.links')
+    %tbody
+      - @servers.each do |server|
+        %tr
+          %td= link_to server.name, bigbluebutton_server_path(server)
+          %td= server.url
+          %td
+            %ul.access-links
+              %li= link_to t('_other.show'), bigbluebutton_server_path(server)
+              %li= link_to t('_other.edit'), edit_bigbluebutton_server_path(server)
+              %li= link_to t('_other.destroy'), bigbluebutton_server_path(server), confirm: confirmation_string, method: :delete
+              %li= link_to t('.view_rooms'), rooms_bigbluebutton_server_path(server)
+              %li= link_to t('.activity_monitor'), activity_bigbluebutton_server_path(server)

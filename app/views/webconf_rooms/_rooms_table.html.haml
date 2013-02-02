@@ -1,0 +1,20 @@
+%table.room-table.table-striped.table-hover.table-condensed
+  %thead
+    %tr
+      %th= t('.table.room_name')
+      %th= t('.table.meetingid')
+      %th= t('.table.links')
+  %tbody
+    - rooms.each do |room|
+      %tr
+        %td= link_to room.name, bigbluebutton_room_path(room)
+        %td= room.meetingid
+        %td
+          %ul.access-links
+            %li= link_to t('_other.show'), bigbluebutton_room_path(room)
+            %li= link_to t('_other.edit'), edit_bigbluebutton_room_path(room)
+            %li= link_to t('_other.destroy'), bigbluebutton_room_path(room), :confirm => confirmation_string, :method => :delete
+            %li= link_to t('.join'), join_bigbluebutton_room_path(room)
+            %li= link_to t('.invite'), invite_bigbluebutton_room_path(room)
+            %li= link_to t('.mobile_join'), join_mobile_bigbluebutton_room_path(room)
+            %li= link_to t('.end'), end_bigbluebutton_room_path(room), :confirm => confirmation_string

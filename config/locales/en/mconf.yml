@@ -104,6 +104,10 @@ en:
     show:
       title: "User profile"
   webconf_rooms:
+    edit:
+      editing_room: "Editing the room \"%{room}\""
+    new:
+      creating_room: "Creating a room"
     room_form:
       destroy: "Destroy the room"
       edit: "Edit the room"
@@ -111,10 +115,36 @@ en:
       invite: "Invite URL"
       join: "Join the meeting"
       mobile_join: "Join from a mobile"
+    rooms_table:
+      end: "End the meeting"
+      invite: "Invite URL"
+      join: "Join the meeting"
+      mobile_join: "Join from a mobile"
+      table:
+        links: "Links"
+        meetingid: "Meeting ID"
+        room_name: "Room name"
+    show:
+      showing_room: "Information about the room \"%{room}\""
   webconf_servers:
+    edit:
+      editing_server: "Editing the server \"%{server}\""
+    index:
+      activity_monitor: "Activity monitor"
+      table:
+        links: "Links"
+        url: "URL"
+        server_name: "Server name"
+      view_rooms: "Rooms in this server"
+    new:
+      creating_server: "Creating a server"
+    rooms:
+      view_rooms: "Viewing rooms in the server \"%{server}\""
     server_form:
       activity_monitor: "Activity monitor"
       view_rooms: "Rooms in this server"
+    show:
+      showing_server: "Information about the server \"%{server}\""
     webconf_menu:
       new_room: "Create a new room"
       new_server: "Create a new server"

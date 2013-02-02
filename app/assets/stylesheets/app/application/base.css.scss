@@ -673,6 +673,12 @@ body {
   }
 }
 
+#page-submenu {
+  padding: 3px;
+  background: #f6f6f6;
+  @include border-radius(4px);
+}
+
 /* Simplified footer version */
 #upper-footer-wrapper.footer-simple {
   background: none;
