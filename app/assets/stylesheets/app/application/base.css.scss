@@ -149,6 +149,8 @@ body {
 }
 
 #navbar {
+  max-width: $contents-width;
+  margin: 0 auto;
   .caret {
     border-top-color: white;
   }
@@ -339,6 +341,7 @@ body {
 #upper-footer {
   @include mconf-clearfix;
   max-width: $contents-width;
+  padding: 0 10px;
   margin: 0 auto;
   color: #666;
   a {
@@ -437,7 +440,7 @@ body {
   margin: 0 auto;
   @include mconf-clearfix;
   overflow: visible;
-  padding: 20px 0 15px 0;
+  padding: 20px 10px 15px 10px;
   clear: both;
 
   h1 {

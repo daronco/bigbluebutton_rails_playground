@@ -24,8 +24,9 @@
         - if content_for?(:navbar)
           = yield :navbar
         - else
-          #navbar.navbar-inner
-            = render :partial => "layouts/navbar"
+          .navbar-inner
+            #navbar
+              = render :partial => "layouts/navbar"
 
       #page-header-wrapper.navbar.navbar-static-top
         #page-header
