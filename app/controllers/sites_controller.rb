@@ -1,6 +1,6 @@
 class SitesController < ApplicationController
   inherit_resources
-  actions :show, :edit, :update
+  actions :edit, :update
 
   before_filter :authenticate_user!
 
@@ -9,7 +9,7 @@ class SitesController < ApplicationController
   respond_to :html
 
   def update
-    update!{ site_path }
+    update!{ edit_site_path }
   end
 
   protected

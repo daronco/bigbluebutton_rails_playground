@@ -33,4 +33,4 @@
     = f.input :xmpp_domain, :disabled => !editing
     = f.input :xmpp_server, :disabled => !editing
   - if editing
-    = f.button :wrapped, :cancel => site_path, :value => t("_other.save")
+    = f.button :wrapped, :cancel => edit_site_path, :value => t("_other.save")

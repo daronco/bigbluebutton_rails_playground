@@ -1,4 +1,4 @@
 = content_for :page_menu do
   %ul
-    %li= link_to t('.site'), site_path, :class => "#{'selected' if params[:controller] == 'sites'}"
+    %li= link_to t('.site'), edit_site_path, :class => "#{'selected' if params[:controller] == 'sites'}"
     %li= link_to t('.webconference'), bigbluebutton_servers_path, :class => "#{'selected' if params[:controller] == 'webconf_servers' || params[:controller] == 'webconf_rooms'}"

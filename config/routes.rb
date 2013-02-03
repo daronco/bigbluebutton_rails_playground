@@ -19,7 +19,7 @@ BigbluebuttonRailsPlayground::Application.routes.draw do
   scope "/manage" do
 
     # The unique Site is created in db/seeds and can only be edited
-    resource :site, :only => [:show, :edit, :update]
+    resource :site, :only => [:edit, :update]
 
     # bigbluebutton_rails routes
     controllers = { :servers => "webconf_servers", :rooms => "webconf_rooms" }

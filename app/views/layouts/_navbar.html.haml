@@ -9,7 +9,7 @@
         %i.icon-home.icon-white
         = t('.my_home')
     - if current_user.superuser?
-      %li= link_to t('.manage'), site_path
+      %li= link_to t('.manage'), edit_site_path
 
 -# the right menu is not shown in the home page
 - if at_home?

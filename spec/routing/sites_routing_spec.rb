@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe SitesController do
   describe "routing" do
-    it { should route(:get, "/manage/site").to(:action => :show) }
     it { should route(:put, "/manage/site").to(:action => :update) }
     it { should route(:get, "/manage/site/edit").to(:action => :edit) }
   end
