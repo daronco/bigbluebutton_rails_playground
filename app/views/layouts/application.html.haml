@@ -38,10 +38,10 @@
       #content-wrapper
         #content.row-fluid
           - if content_for?(:sidebar)
-            #content-middle.span9
-              = yield
             #sidebar.span3
               = yield :sidebar
+            #content-middle.span9
+              = yield
           - else
             #content-middle.span12
               = yield
