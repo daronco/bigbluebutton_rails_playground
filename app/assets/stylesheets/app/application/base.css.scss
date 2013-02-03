@@ -673,10 +673,14 @@ body {
   }
 }
 
-#page-submenu {
-  padding: 3px;
-  background: #f6f6f6;
-  @include border-radius(4px);
+#page-submenu, .page-submenu {
+  padding: 2px 5px;
+  border: 1px solid #E6E6E6;
+  background: #F6F6F6;
+  margin: 5px 0 15px 0;
+  .active > a, .active > a:hover {
+    background-color: #666;
+  }
 }
 
 /* Simplified footer version */
