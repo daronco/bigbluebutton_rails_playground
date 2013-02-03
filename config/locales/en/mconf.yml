@@ -140,7 +140,7 @@ en:
       creating_server: "Creating a server"
     rooms:
       view_rooms: "Viewing rooms in the server \"%{server}\""
-    server_form:
+    server_links:
       activity_monitor: "Activity monitor"
       view_rooms: "Rooms in this server"
     show:

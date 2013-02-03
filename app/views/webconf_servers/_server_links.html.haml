@@ -1,0 +1,5 @@
+%ul.nav.nav-tabs.nav-stacked.access-links.content-block-wrapper
+  %li= link_to t('.view_rooms'), rooms_bigbluebutton_server_path(server)
+  %li= link_to t('.activity_monitor'), activity_bigbluebutton_server_path(server)
+  %li= link_to t('_other.destroy'), bigbluebutton_server_path(server), :confirm => confirmation_string, :method => :delete
+  %li= link_to t('_other.edit'), edit_bigbluebutton_server_path(server)

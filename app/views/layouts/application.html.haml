@@ -37,15 +37,19 @@
               = yield :page_menu
 
       #content-wrapper
-        #content.row-fluid
-          - if content_for?(:sidebar)
-            #sidebar.span3
-              = yield :sidebar
-            #content-middle.span9
-              = yield
-          - else
-            #content-middle.span12
-              = yield
+        #content
+          - if content_for?(:page_submenu)
+            .row-fluid
+              = yield :page_submenu
+          .row-fluid
+            - if content_for?(:sidebar)
+              #sidebar.span3
+                = yield :sidebar
+              #content-middle.span9
+                = yield
+            - else
+              #content-middle.span12
+                = yield
 
       - if content_for?(:footer)
         = yield :footer

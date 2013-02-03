@@ -24,10 +24,11 @@ a:hover {
 }
 
 .nav-tabs {
-   li.active {
-    a {
-      background: $green-logo;
-    }
+  li a {
+    background: white;
+  }
+  li.active a {
+    background: $green-logo;
   }
 }
 
