@@ -51,10 +51,12 @@
               #content-middle.span12
                 = yield
 
-      - if content_for?(:footer)
-        = yield :footer
-      - else
-        = render :partial => "layouts/footer"
+      #footer-pusher
+
+    - if content_for?(:footer)
+      = yield :footer
+    - else
+      = render :partial => "layouts/footer"
 
     = render :partial => "layouts/analytics"
     = render :partial => "layouts/notifications"

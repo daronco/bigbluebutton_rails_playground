@@ -88,6 +88,11 @@ $z-index-navbar: 100;
 $z-index-dialog: 200;
 $z-index-tooltip: 999999;
 
+// footers - needed to make it stick to the bottom
+$footer-upper-height: 175px;
+$footer-lower-height: 30px;
+$footer-total-height: $footer-upper-height + $footer-lower-height + 60px;
+
 @mixin mconf-clearfix {
   @include clearfix;
   @include pie-clearfix;
