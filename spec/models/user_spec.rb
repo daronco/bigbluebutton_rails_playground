@@ -91,6 +91,23 @@ describe User do
     user.profile.should be_an_instance_of(Profile)
   end
 
+  it { should have_one(:webconf_room).dependent(:destroy) }
+  it "should create the user's webconf room after creating the user" do
+    user = FactoryGirl.create(:user)
+    user.webconf_room.should_not be_nil
+    user.webconf_room.should be_an_instance_of(BigbluebuttonRoom)
+    user.webconf_room.owner.should be(user)
+    user.webconf_room.server.should be(BigbluebuttonServer.first)
+    user.webconf_room.name.should eq(user.name)
+    user.webconf_room.param.should eq(user.username)
+  end
+  it "should update the webconf room when the user is updated" do
+    user = FactoryGirl.create(:user, :username => "before-update")
+    user.webconf_room.param.should eq("before-update")
+    user.update_attributes(:username => "after-set")
+    user.webconf_room.param.should eq("after-set")
+  end
+
   # TODO: method not available yet, see
   #       https://github.com/thoughtbot/shoulda-matchers/commits/master/lib/shoulda/matchers/independent/delegate_matcher.rb
   # it { should delegate_method(:organization).to(:profile) }

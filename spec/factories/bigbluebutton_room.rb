@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :bigbluebutton_room do |f|
+  factory :bigbluebutton_room, aliases: [:webconf_room] do |f|
     f.association :server, :factory => :bigbluebutton_server
     f.sequence(:meetingid) { |n| "meeting-#{n}-" + SecureRandom.hex(4) }
     f.sequence(:name) { |n| "Name#{n}" }

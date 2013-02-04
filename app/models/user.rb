@@ -1,10 +1,15 @@
 class User < ActiveRecord::Base
 
-  has_one :profile, :dependent => :destroy
+  has_one :profile, dependent: :destroy
+  has_one :webconf_room,
+    as: :owner,
+    class_name: 'BigbluebuttonRoom',
+    dependent: :destroy
 
-  delegate :organization, :address, :phone, :city, :country, :about, :to => :profile!
+  delegate :organization, :address, :phone, :city, :country, :about, to: :profile!
 
   after_create :set_default_associations
+  after_update :update_webconf
 
   ## Devise block
 
@@ -22,7 +27,7 @@ class User < ActiveRecord::Base
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)
-      where_clause = ["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]
+      where_clause = ["lower(username) = :value OR lower(email) = :value", { value: login.downcase }]
       where(conditions).where(where_clause).first
     else
       where(conditions).first
@@ -34,15 +39,15 @@ class User < ActiveRecord::Base
   attr_accessible :name, :superuser
 
   # format: alphanumeric and '_', with '-' only in the center
-  validates :username, :presence => true,
-    :uniqueness => { :case_sensitive => false },
-    :format => /^[a-zA-Z\d_]+[a-zA-Z\d_-]*[a-zA-Z\d_]+$/,
-    :length => { :minimum => 3 }
+  validates :username, presence: true,
+    uniqueness: { case_sensitive: false },
+    format: /^[a-zA-Z\d_]+[a-zA-Z\d_-]*[a-zA-Z\d_]+$/,
+    length: { minimum: 3 }
 
-  validates :email, :presence => true,
+  validates :email, presence: true,
     :uniqueness => true
 
-  validates :name, :presence => true
+  validates :name, presence: true
 
   ## Methods
 
@@ -55,6 +60,18 @@ class User < ActiveRecord::Base
 
   def set_default_associations
     create_profile
+    create_webconf_room({ owner: self,
+                          server: BigbluebuttonServer.first,
+                          name: self.name,
+                          param: self.username
+                          # logout_url: "/feedback/webconf/"
+                        })
+  end
+
+  def update_webconf
+    if self.username_changed?
+      webconf_room.update_attributes(param: self.username)
+    end
   end
 
 end
