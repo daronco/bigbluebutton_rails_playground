@@ -61,5 +61,7 @@ describe WebconfRoomsController do
         to(:action => :auth, :id => "room-1")
     }
 
+    it { {:get => "/webconf/room-1"}.should route_to(:controller => "webconf_rooms", :action => "invite", :id => "room-1") }
+
   end
 end

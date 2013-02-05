@@ -32,8 +32,14 @@ BigbluebuttonRailsPlayground::Application.routes.draw do
   resources :users, :only => :show
 
   # profiles are automatically created, can only be updated
+  # TODO: why not inside resource :users ?
   scope "/users" do
     resource :profile, :only => :update
   end
+
+  # Webconf rooms shortcuts
+  match '/webconf/:id',
+    :to => 'webconf_rooms#invite',
+    :as => "join_webconf"
 
 end
