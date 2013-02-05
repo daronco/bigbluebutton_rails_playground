@@ -37,14 +37,14 @@ group :development do
 end
 
 group :test, :development do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 2.12'
 end
 
 group :test do
   gem 'rspec-instafail'
   gem 'shoulda-matchers'
   gem 'spork-rails'
-  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails', '~> 1.3', :require => false
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'forgery'

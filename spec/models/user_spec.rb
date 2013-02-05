@@ -108,14 +108,12 @@ describe User do
     user.webconf_room.param.should eq("after-set")
   end
 
-  # TODO: method not available yet, see
-  #       https://github.com/thoughtbot/shoulda-matchers/commits/master/lib/shoulda/matchers/independent/delegate_matcher.rb
-  # it { should delegate_method(:organization).to(:profile) }
-  # it { should delegate_method(:address).to(:profile) }
-  # it { should delegate_method(:phone).to(:profile) }
-  # it { should delegate_method(:city).to(:profile) }
-  # it { should delegate_method(:country).to(:profile) }
-  # it { should delegate_method(:about).to(:profile) }
+  it { should delegate_method(:organization).to(:profile!) }
+  it { should delegate_method(:address).to(:profile!) }
+  it { should delegate_method(:phone).to(:profile!) }
+  it { should delegate_method(:city).to(:profile!) }
+  it { should delegate_method(:country).to(:profile!) }
+  it { should delegate_method(:about).to(:profile!) }
 
   context "devise" do
     # TODO: test the modules that were enabled?
